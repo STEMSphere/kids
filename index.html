@@ -4,11 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>STEMSphere Kids Academy | Elite Learning for Ages 6-10 | Future Leaders Start Here</title>
-  <meta name="description" content="Award-winning small group classes for kids ages 6-10. Public Speaking, Math, STEM Science & Coding. Preparing tomorrow's leaders today. 12-week programs from $499.">
+  <meta name="description" content="Award-winning small group classes for kids ages 6-10. Public Speaking, Math, STEM Science & Coding. Preparing tomorrow's leaders today. 12-week programs from $799.">
   
   <link rel="icon" type="image/png" sizes="32x32" href="https://learn.stemsphere.academy/assets/favconsp1.2.png">
   
-  <!-- Facebook Pixel Code -->
   <script>
     !function(f,b,e,v,n,t,s)
     {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -25,19 +24,13 @@
     src="https://www.facebook.com/tr?id=580774084540990&ev=PageView&noscript=1"
   /></noscript>
 
-  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-  
-  <!-- Google Translate -->
-  <script type="text/javascript">
-    function googleTranslateElementInit() {
-      new google.translate.TranslateElement({
-        pageLanguage: 'en',
-        includedLanguages: 'en,es,fr,de,pt,zh-CN,ar,hi,ja,ko,ru',
-        layout: google.translate.TranslateElement.InlineLayout.SIMPLE
-      }, 'google_translate_element');
-    }
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17612604770"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-17612604770');
   </script>
-  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
   
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -62,54 +55,46 @@
       overflow-x: hidden;
     }
 
-    .auth-floater {
+    #fallback-translator {
       position: fixed;
-      top: 20px;
-      right: 20px;
-      z-index: 1000;
-      display: flex;
-      gap: 10px;
-      background: rgba(255, 255, 255, 0.95);
-      padding: 10px 20px;
-      border-radius: 50px;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+      top: 10px;
+      right: 10px;
+      background: rgba(255,255,255,0.95);
+      padding: 6px 10px;
+      border-radius: 6px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      z-index: 9999;
       backdrop-filter: blur(10px);
     }
-    .auth-floater a {
-      text-decoration: none;
-      padding: 8px 20px;
-      border-radius: 25px;
-      font-weight: 600;
-      font-size: 0.9em;
-      transition: all 0.3s;
-    }
-    .auth-floater .login-btn {
-      color: var(--primary-blue);
-      border: 2px solid var(--primary-blue);
-    }
-    .auth-floater .login-btn:hover {
-      background: var(--primary-blue);
-      color: white;
-    }
-    .auth-floater .signup-btn {
-      background: linear-gradient(135deg, var(--primary-blue), var(--primary-purple));
-      color: white;
-      border: 2px solid transparent;
-    }
-    .auth-floater .signup-btn:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(74, 144, 226, 0.4);
+
+    #fallback-translator select {
+      font-size: 14px;
+      padding: 5px 8px;
+      border: none;
+      border-radius: 4px;
+      background: #fff;
+      cursor: pointer;
     }
 
-    #google_translate_element {
+    .login-link {
       position: fixed;
-      top: 80px;
-      right: 20px;
-      z-index: 1000;
-      background: white;
-      padding: 5px;
-      border-radius: 15px;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      top: 55px;
+      right: 10px;
+      z-index: 9998;
+      background: linear-gradient(135deg, #007bff, #0056b3);
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95em;
+      box-shadow: 0 4px 12px rgba(0,123,255,0.4);
+      transition: all 0.3s;
+    }
+
+    .login-link:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(0,123,255,0.6);
     }
 
     header {
@@ -189,7 +174,7 @@
 
     .hero {
       background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
-      padding: 60px 5% 80px;
+      padding: 40px 5% 30px;
       text-align: center;
       color: white;
       position: relative;
@@ -213,14 +198,8 @@
     }
     .hero h2 {
       font-size: 3em;
-      margin-bottom: 20px;
+      margin-bottom: 10px;
       animation: fadeInUp 0.8s ease;
-    }
-    .hero p {
-      font-size: 1.3em;
-      margin-bottom: 30px;
-      opacity: 0.95;
-      animation: fadeInUp 1s ease;
     }
     .age-badge {
       display: inline-block;
@@ -230,7 +209,7 @@
       border-radius: 30px;
       font-weight: 700;
       font-size: 1.1em;
-      margin: 20px 0;
+      margin: 10px 0;
       box-shadow: 0 4px 15px rgba(255, 193, 7, 0.4);
     }
 
@@ -241,7 +220,7 @@
 
     .video-section {
       max-width: 1200px;
-      margin: -50px auto 0;
+      margin: -20px auto 0;
       padding: 0 5%;
       position: relative;
       z-index: 3;
@@ -291,13 +270,13 @@
 
     .instant-session-container {
       max-width: 1200px;
-      margin: 30px auto;
+      margin: 20px auto;
       padding: 0 5%;
     }
     .advisor-banner {
       background: linear-gradient(135deg, #00d9ff 0%, #00b8d4 100%);
       border-radius: 20px;
-      padding: 40px;
+      padding: 30px;
       text-align: center;
       box-shadow: 0 10px 40px rgba(0, 217, 255, 0.3);
       position: relative;
@@ -328,7 +307,7 @@
       background: rgba(255, 255, 255, 0.2);
       padding: 10px 25px;
       border-radius: 30px;
-      margin-bottom: 20px;
+      margin-bottom: 15px;
       backdrop-filter: blur(10px);
     }
     .live-dot {
@@ -344,37 +323,36 @@
       50% { transform: scale(1.2); opacity: 0.7; }
     }
     .advisor-banner h3 {
-      font-size: 2em;
+      font-size: 1.8em;
       color: white;
-      margin-bottom: 15px;
+      margin-bottom: 12px;
       font-weight: 700;
     }
     .advisor-banner p {
-      font-size: 1.2em;
+      font-size: 1.1em;
       color: rgba(255, 255, 255, 0.95);
-      margin-bottom: 25px;
+      margin-bottom: 20px;
     }
     .book-session-btn {
       display: inline-block;
-      padding: 18px 45px;
+      padding: 16px 40px;
       background: white;
       color: #00b8d4;
       text-decoration: none;
       border-radius: 30px;
       font-weight: 700;
-      font-size: 1.2em;
+      font-size: 1.1em;
       transition: all 0.3s;
       box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
     }
     .book-session-btn:hover {
       transform: translateY(-3px);
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-      background: #fff;
     }
 
     .scroll-indicator {
       text-align: center;
-      margin: 40px 0;
+      margin: 25px 0 15px;
     }
     .scroll-arrow {
       font-size: 3em;
@@ -387,135 +365,51 @@
       60% { transform: translateY(-10px); }
     }
     .scroll-text {
-      margin-top: 10px;
+      margin-top: 5px;
       font-size: 1.1em;
       color: var(--text-light);
       font-weight: 600;
     }
 
-    .speaking-spotlight {
-      padding: 100px 5%;
-      background: linear-gradient(135deg, #1e3c72 0%, #2a5298 50%, #7e22ce 100%);
-      color: white;
-      position: relative;
-      overflow: hidden;
-    }
-    .speaking-spotlight::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%23ffffff" fill-opacity="0.05" d="M0,160L48,144C96,128,192,96,288,106.7C384,117,480,171,576,165.3C672,160,768,96,864,80C960,64,1056,96,1152,122.7C1248,149,1344,171,1392,181.3L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>') no-repeat bottom;
-      background-size: cover;
-    }
-    .speaking-container {
-      max-width: 1400px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 60px;
-      align-items: center;
-      position: relative;
-      z-index: 2;
-    }
-    .speaking-image {
-      border-radius: 20px;
-      overflow: hidden;
-      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
-    }
-    .speaking-image img {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-    .speaking-badge {
-      display: inline-block;
-      background: var(--accent-orange);
-      color: white;
-      padding: 10px 25px;
-      border-radius: 30px;
-      font-weight: 700;
-      font-size: 0.9em;
-      margin-bottom: 20px;
-      box-shadow: 0 4px 15px rgba(255, 107, 53, 0.4);
-    }
-    .speaking-content h2 {
-      font-size: 2.8em;
-      margin-bottom: 25px;
-      line-height: 1.2;
-    }
-    .speaking-lead {
-      font-size: 1.3em;
-      margin-bottom: 30px;
-      opacity: 0.95;
-      line-height: 1.6;
-    }
-    .stat-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 25px;
-      margin: 35px 0;
-    }
-    .stat-box {
-      background: rgba(255, 255, 255, 0.1);
+    #reviews-container {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
       backdrop-filter: blur(10px);
-      padding: 25px;
-      border-radius: 15px;
-      border: 2px solid rgba(255, 255, 255, 0.2);
-    }
-    .stat-number {
-      font-size: 3em;
-      font-weight: 700;
-      color: var(--accent-yellow);
-      margin-bottom: 10px;
-    }
-    .stat-label {
-      font-size: 1.1em;
-      opacity: 0.9;
-    }
-    .speaking-points {
-      list-style: none;
-      margin: 30px 0;
-    }
-    .speaking-points li {
-      padding: 15px 0;
-      padding-left: 40px;
-      position: relative;
-      font-size: 1.15em;
-      line-height: 1.6;
-    }
-    .speaking-points li::before {
-      content: '✓';
-      position: absolute;
-      left: 0;
-      color: var(--success-green);
-      font-size: 1.5em;
-      font-weight: 700;
-    }
-    .speaking-cta {
-      display: inline-block;
-      padding: 18px 45px;
-      background: var(--accent-orange);
+      border-radius: 16px;
+      padding: 2rem;
+      margin: 2rem auto;
+      max-width: 900px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
       color: white;
-      text-decoration: none;
-      border-radius: 30px;
-      font-weight: 700;
-      font-size: 1.2em;
-      margin-top: 25px;
-      transition: all 0.3s;
-      box-shadow: 0 6px 20px rgba(255, 107, 53, 0.4);
     }
-    .speaking-cta:hover {
-      background: white;
-      color: var(--accent-orange);
-      transform: translateY(-3px);
-      box-shadow: 0 10px 30px rgba(255, 107, 53, 0.5);
+
+    #reviews-container h3 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: #FFD700;
+    }
+
+    #reviews-container button {
+      background: none;
+      border: none;
+      color: #ffffff !important;
+      cursor: pointer;
+      font-size: 0.95em;
+      text-decoration: underline;
+    }
+
+    #reviews-container button:hover {
+      color: #00c6ff !important;
+    }
+
+    #reviews-body {
+      background: rgba(0,0,0,0.4);
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin-top: 1rem;
     }
 
     .blog-section {
-      padding: 80px 5%;
+      padding: 50px 5%;
       max-width: 1400px;
       margin: 0 auto;
     }
@@ -524,7 +418,7 @@
     }
     .blog-header {
       text-align: center;
-      margin-bottom: 50px;
+      margin-bottom: 35px;
     }
     .blog-header h2 {
       font-size: 2.5em;
@@ -598,11 +492,11 @@
     .section {
       max-width: 1400px;
       margin: 0 auto;
-      padding: 80px 5%;
+      padding: 60px 5%;
     }
     .section-header {
       text-align: center;
-      margin-bottom: 60px;
+      margin-bottom: 50px;
     }
     .section-header h2 {
       font-size: 2.8em;
@@ -705,552 +599,1083 @@
       box-shadow: 0 8px 25px rgba(74, 144, 226, 0.4);
     }
 
+    .download-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2rem;
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+
+    .ebook-card {
+      background: rgba(255,255,255,0.05);
+      backdrop-filter: blur(10px);
+      border: 2px solid rgba(255,255,255,0.1);
+      border-radius: 16px;
+      padding: 2rem;
+      text-align: center;
+      transition: all 0.3s;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .ebook-card:hover {
+      transform: translateY(-10px);
+      border-color: #00c6ff;
+      box-shadow: 0 20px 40px rgba(0,198,255,0.4);
+    }
+
+    .ebook-card img {
+      width: 100%;
+      max-width: 200px;
+      height: auto;
+      margin: 0 auto 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    }
+
+    .ebook-card h3 {
+      color: #FFD700;
+      font-size: 1.5rem;
+      margin: 1rem 0;
+      font-weight: 700;
+    }
+
+    .ebook-card p {
+      color: rgba(255,255,255,0.8);
+      font-size: 1rem;
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+    }
+
+    .ebook-card .ebook-button {
+      display: inline-block;
+      background: linear-gradient(135deg, #00c853, #00e676);
+      color: #fff;
+      padding: 0.75rem 2rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1.1rem;
+      transition: all 0.3s;
+      box-shadow: 0 4px 12px rgba(0,200,83,0.4);
+    }
+
+    .ebook-card .ebook-button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(0,200,83,0.6);
+    }
+
+    .free-badge {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      background: #ff0000;
+      color: #fff;
+      padding: 0.5rem 1rem;
+      font-weight: 700;
+      font-size: 1rem;
+      border-radius: 50px;
+      box-shadow: 0 4px 12px rgba(255,0,0,0.5);
+      animation: pulse 2s infinite;
+    }
+
+    footer {
+      background: #1a1a1a;
+      color: #fff;
+      padding: 3rem 5% 2rem;
+      font-family: 'Segoe UI', sans-serif;
+    }
+    
+    footer .footer-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    
+    footer .footer-content img {
+      width: 60px;
+      height: 60px;
+      margin-bottom: 1rem;
+      border-radius: 12px;
+    }
+    
+    footer h3 {
+      font-size: 1.8em;
+      margin-bottom: 0.5rem;
+      background: linear-gradient(to right, #4A90E2, #9B59B6);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    
+    footer p {
+      color: rgba(255,255,255,0.7);
+      font-size: 1.1em;
+      margin-bottom: 2rem;
+    }
+    
+    footer .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.1);
+      padding-top: 2rem;
+      text-align: center;
+    }
+    
+    footer .footer-bottom p {
+      color: rgba(255,255,255,0.6);
+      font-size: 0.95em;
+      margin-bottom: 1rem;
+    }
+    
+    footer .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      font-size: 0.9em;
+    }
+    
+    footer .footer-links a {
+      color: rgba(255,255,255,0.6);
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    
+    footer .footer-links a:hover {
+      color: #fff;
+    }
+
     @media (max-width: 768px) {
       .hero h2 { font-size: 2em; }
-      .hero p { font-size: 1.1em; }
-      .speaking-container, .blog-grid { grid-template-columns: 1fr; }
+      .blog-grid { grid-template-columns: 1fr; }
       .blog-grid.reverse { direction: ltr; }
-      .auth-floater { top: 10px; right: 10px; padding: 8px 15px; }
-      #google_translate_element { position: static; margin: 10px auto; width: fit-content; }
+      #fallback-translator { position: static; margin: 10px auto; width: fit-content; }
+      .login-link { top: 60px; font-size: 0.85em; padding: 8px 15px; }
     }
   </style>
 </head>
 <body>
-  <div class="auth-floater">
-    <a href="https://learn.stemsphere.academy/login.html" class="login-btn">Login</a>
-    <a href="https://learn.stemsphere.academy/signup.html" class="signup-btn">Sign Up</a>
-  </div>
 
-  <div id="google_translate_element"></div>
-
-  <header>
-    <div class="header-content">
-      <div class="logo-section">
-        <img src="https://learn.stemsphere.academy/assets/favconsp1.2.png" alt="STEMSphere Kids Academy">
-        <div class="brand-text">
-          <h1>STEMSphere Kids</h1>
-          <p>🚀 Where Future Leaders Begin</p>
-        </div>
-      </div>
-      <div class="header-cta">
-        <a href="#programs" class="header-btn btn-secondary-header">View Programs</a>
-        <a href="#pricing" class="header-btn btn-primary-header">Get Started</a>
-      </div>
-    </div>
-  </header>
-
-  <section class="hero">
-    <div class="hero-content">
-      <h2>🌟 Elite Education for Tomorrow's Innovators</h2>
-      <p>Small Group Learning That Transforms Kids Into Future Leaders</p>
-      <div class="age-badge">👦 Ages 6-10 | 👧 Perfect for Young Minds</div>
-    </div>
-  </section>
-
-  <section class="video-section">
-    <div class="video-container">
-      <div class="video-placeholder">
-        <div class="play-icon"></div>
-        <h3>See Our Young Geniuses in Action!</h3>
-        <p>Watch how we're shaping the next generation of leaders</p>
-      </div>
-    </div>
-  </section>
-
-  <div class="instant-session-container" id="advisorContainer" style="display:none;">
-    <div class="advisor-banner">
-      <div class="advisor-content">
-        <div class="live-indicator">
-          <span class="live-dot"></span>
-          <span style="color: white; font-weight: 700; font-size: 1.1em;">ENROLLMENT ADVISOR ONLINE</span>
-        </div>
-        <h3>🎓 Book Your FREE Enrollment Session Now!</h3>
-        <p>An enrollment advisor is available right now to answer your questions and help you get started</p>
-        <a href="https://learn.stemsphere.academy/instant-session.html" class="book-session-btn">
-          📞 Book Free Enrollment Session →
-        </a>
-      </div>
-    </div>
-  </div>
-
-  <div class="scroll-indicator">
-    <div class="scroll-arrow">↓</div>
-    <p class="scroll-text">Discover How We Transform Young Minds</p>
-  </div>
-
-  <section class="blog-section">
-    <div class="blog-header">
-      <h2>🔬 The Science Gap That's Holding Kids Back</h2>
-      <p>Why traditional education fails to ignite curiosity—and what we do differently</p>
-    </div>
-    <div class="blog-grid">
-      <div class="blog-image">
-        <img src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=800&q=80" alt="Kids doing science experiments">
-      </div>
-      <div class="blog-content">
-        <h3>Most Kids Are Being Left Behind in STEM</h3>
-        <p>By age 10, <strong>67% of children have already decided they're "not good at science."</strong> Not because they can't do it—but because nobody showed them it could be fun, hands-on, and exciting.</p>
-        <p>Traditional classrooms focus on memorization. We focus on <strong>discovery, experimentation, and real-world applications</strong> that make kids say "WOW!" instead of "Why do I need to know this?"</p>
-        <ul class="blog-list">
-          <li>Live virtual experiments kids can recreate at home</li>
-          <li>Engineering challenges that teach problem-solving</li>
-          <li>Biology, chemistry, and physics made tangible and exciting</li>
-          <li>Small groups mean every question gets answered—curiosity never gets ignored</li>
-        </ul>
-        <p><strong>The result?</strong> Kids who can't wait for their next science class. Kids who start asking "how does that work?" about everything around them. Kids who see themselves as future scientists, engineers, and innovators.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="speaking-spotlight">
-    <div class="speaking-container">
-      <div class="speaking-image">
-        <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=1200&q=80" alt="Child presenting confidently">
-      </div>
-      <div class="speaking-content">
-        <span class="speaking-badge">🎤 THE SKILL THAT CHANGES EVERYTHING</span>
-        <h2>Why Your Child's Future Depends on Public Speaking</h2>
-        <p class="speaking-lead">Here's what most parents don't realize: <strong>Public speaking isn't natural.</strong> It's a learned skill—and the earlier you start, the more confident they become.</p>
-        
-        <div class="stat-grid">
-          <div class="stat-box">
-            <div class="stat-number">75%</div>
-            <div class="stat-label">of adults fear public speaking more than death</div>
-          </div>
-          <div class="stat-box">
-            <div class="stat-number">3x</div>
-            <div class="stat-label">more likely to be hired with strong communication skills</div>
-          </div>
-        </div>
-
-        <ul class="speaking-points">
-          <li>Studies show kids who learn public speaking early develop unshakeable confidence</li>
-          <li>Strong communicators become natural leaders in school, sports, and life</li>
-          <li>The ability to articulate ideas clearly = better grades, better relationships, better opportunities</li>
-          <li>Your child's biggest competitor already knows how to speak with confidence</li>
-        </ul>
-
-        <a href="#programs" class="speaking-cta">Give Your Child This Advantage →</a>
-      </div>
-    </div>
-  </section>
-  <section class="blog-section alt-bg">
-    <div class="blog-header">
-      <h2>🧮 The Math Confidence Crisis (And How to Fix It)</h2>
-      <p>Why "I'm just not a math person" is the most dangerous thing a child can believe</p>
-    </div>
-    <div class="blog-grid reverse">
-      <div class="blog-image">
-        <img src="https://images.unsplash.com/photo-1596496050827-8299e0220de1?w=800&q=80" alt="Kids solving math problems together">
-      </div>
-      <div class="blog-content">
-        <h3>Math Anxiety Starts Young—But It Doesn't Have To</h3>
-        <p>Here's the truth: <strong>There's no such thing as a "math person" or "not a math person."</strong> Math is a skill. And like any skill, it improves with the right approach, encouragement, and practice.</p>
-        <p>But somewhere around 2nd or 3rd grade, many kids decide they're "bad at math." One bad test. One moment of confusion. One time nobody explained it in a way that clicked. And suddenly, they've internalized a belief that will limit them for life.</p>
-        <ul class="blog-list">
-          <li>We use games, puzzles, and real-world scenarios to make math engaging</li>
-          <li>Small groups mean no child falls behind or feels "dumb" for asking questions</li>
-          <li>We celebrate mistakes as learning opportunities, not failures</li>
-          <li>Mental math strategies that make kids feel like mathematical wizards</li>
-        </ul>
-        <p><strong>Within weeks, parents tell us:</strong> "My child who hated math now asks for extra practice problems." That's not magic. That's what happens when learning is fun, supportive, and paced perfectly for each child.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="blog-section">
-    <div class="blog-header">
-      <h2>👥 Why Small Group Learning Beats Private Tutoring</h2>
-      <p>The surprising research on why kids learn better with peers</p>
-    </div>
-    <div class="blog-grid">
-      <div class="blog-image">
-        <img src="https://images.unsplash.com/photo-1503676382389-4809596d5290?w=800&q=80" alt="Kids learning together in small group">
-      </div>
-      <div class="blog-content">
-        <h3>The Secret Ingredient: Peer Learning</h3>
-        <p>Private 1-on-1 tutoring sounds like the gold standard. But research shows something surprising: <strong>Kids learn faster and retain more in small groups of 2-8 students.</strong></p>
-        <p>Why? Because learning isn't just about absorbing information—it's about discussion, collaboration, explaining concepts to peers, and seeing problems solved different ways.</p>
-        <ul class="blog-list">
-          <li>Hearing another child explain a concept often clicks better than hearing an adult</li>
-          <li>Healthy competition motivates kids to push themselves further</li>
-          <li>Collaboration teaches teamwork—a skill they'll need their entire life</li>
-          <li>Kids build friendships with peers who share their interests</li>
-        </ul>
-        <p><strong>Our approach:</strong> Small enough for personalized attention (2 or 8 students max), large enough for dynamic peer learning. The perfect balance that traditional schools and private tutoring both miss.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="blog-section alt-bg">
-    <div class="blog-header">
-      <h2>🎯 The Leadership Skills Schools Don't Teach</h2>
-      <p>Why academic excellence isn't enough for tomorrow's world</p>
-    </div>
-    <div class="blog-grid reverse">
-      <div class="blog-image">
-        <img src="https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?w=800&q=80" alt="Child leader presenting to group">
-      </div>
-      <div class="blog-content">
-        <h3>Your Child Needs More Than Good Grades</h3>
-        <p>Straight A's are great. But the world doesn't need more people who can memorize and regurgitate. <strong>The world needs leaders, communicators, critical thinkers, and innovators.</strong></p>
-        <p>Traditional schools focus almost entirely on academic content. But the skills that will actually determine your child's success—confidence, communication, collaboration, creative problem-solving—are barely taught at all.</p>
-        <ul class="blog-list">
-          <li>Public speaking teaches confidence and articulation</li>
-          <li>Group projects teach collaboration and conflict resolution</li>
-          <li>STEM challenges teach critical thinking and resilience</li>
-          <li>Presentations teach how to command a room and persuade others</li>
-        </ul>
-        <p><strong>We're not just teaching subjects.</strong> We're building the complete skillset your child needs to lead, inspire, and succeed in whatever path they choose. These are the skills that separate the good from the great.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="programs">
-    <div class="section-header">
-      <h2>🎓 Our Signature Programs for Young Leaders</h2>
-      <p>Each program is a 12-week journey designed to transform your child's future</p>
-    </div>
-    <div class="programs-grid">
-      <div class="program-card">
-        <img class="program-image" src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=800" alt="Kids Science Program">
-        <div class="program-content">
-          <h3>🔬 Early Junior Scientist Program</h3>
-          <p>Ignite curiosity with hands-on STEM exploration. Physics, chemistry, biology—preparing the next generation of innovators.</p>
-          <ul class="program-features">
-            <li>Live virtual experiments</li>
-            <li>Scientific method mastery</li>
-            <li>Engineering challenges</li>
-            <li>Nature & biology exploration</li>
-            <li>Future scientist mindset</li>
-          </ul>
-          <a href="#pricing" class="program-cta">Enroll Now →</a>
-        </div>
-      </div>
-
-      <div class="program-card featured">
-        <span class="program-badge">🔥 MOST POPULAR</span>
-        <img class="program-image" src="https://images.unsplash.com/photo-1596496050827-8299e0220de1?w=800" alt="Kids Math Program">
-        <div class="program-content">
-          <h3>🧮 Math Wizards Academy</h3>
-          <p>Make math FUN! Problem-solving, logic puzzles, and real-world applications that build genuine mathematical confidence.</p>
-          <ul class="program-features">
-            <li>Game-based learning approach</li>
-            <li>Critical thinking development</li>
-            <li>Competition-ready skills</li>
-            <li>Mental math mastery</li>
-            <li>Advanced problem-solving</li>
-          </ul>
-          <a href="#pricing" class="program-cta">Enroll Now →</a>
-        </div>
-      </div>
-
-      <div class="program-card">
-        <img class="program-image" src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=800" alt="Kids Public Speaking">
-        <div class="program-content">
-          <h3>🎤 Kids Public Speaking Mastery</h3>
-          <p>Transform shy kids into confident communicators. Master presentation skills, storytelling, and leadership presence.</p>
-          <ul class="program-features">
-            <li>Confidence-building techniques</li>
-            <li>Storytelling & persuasion skills</li>
-            <li>Stage presence mastery</li>
-            <li>Peer presentation practice</li>
-            <li>Leadership communication</li>
-          </ul>
-          <a href="#pricing" class="program-cta">Enroll Now →</a>
-        </div>
-      </div>
-
-      <div class="program-card">
-        <span class="program-badge">⭐ ALL-IN-ONE</span>
-        <img class="program-image" src="https://images.unsplash.com/photo-1503676382389-4809596d5290?w=800" alt="Mixed Learning Program">
-        <div class="program-content">
-          <h3>🌈 Ultimate Skills Rotation</h3>
-          <p>The COMPLETE package! Weekly rotation through Public Speaking, Math, Science, and Coding. Maximum variety, maximum growth.</p>
-          <ul class="program-features">
-            <li>Week 1: Public Speaking mastery</li>
-            <li>Week 2: Math problem-solving</li>
-            <li>Week 3: Science experiments</li>
-            <li>Week 4: Coding fundamentals</li>
-            <li>Continuous skill development</li>
-          </ul>
-          <a href="#pricing" class="program-cta">Enroll Now →</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" style="background: var(--bg-light);" id="pricing">
-    <div class="section-header">
-      <h2>💎 Investment in Your Child's Future</h2>
-      <p>12 weeks of transformation | Once per week | Mix & match with other subjects</p>
-    </div>
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 40px; max-width: 900px; margin: 0 auto;">
-      <div style="background: white; border-radius: 25px; padding: 40px; box-shadow: 0 10px 40px rgba(0,0,0,0.1); transition: all 0.4s; border: 3px solid transparent; position: relative;">
-        <div style="text-align: center; margin-bottom: 30px; padding-bottom: 25px; border-bottom: 2px solid #eee;">
-          <h3 style="font-size: 1.8em; margin-bottom: 10px; color: var(--primary-blue);">Small Trio Interactive</h3>
-          <p style="color: var(--text-light); font-size: 0.95em;">Exclusive 2-Student Experience</p>
-        </div>
-        <div style="text-align: center; margin: 25px 0;">
-          <div style="font-size: 3em; font-weight: 700; color: var(--primary-purple);">
-            <span style="font-size: 0.5em; vertical-align: super;">$</span>995
-          </div>
-          <span style="display: block; color: var(--text-light); font-size: 0.9em; margin-top: 5px;">12 Classes (3 Months)</span>
-        </div>
-        <ul style="list-style: none; margin: 30px 0;">
-          <li style="padding: 12px 0; display: flex; align-items: center; gap: 12px; color: var(--text-dark);">
-            <span style="color: var(--success-green); font-weight: 700; font-size: 1.3em; flex-shrink: 0;">✓</span>
-            <span>Just 3 students per class</span>
-          </li>
-          <li style="padding: 12px 0; display: flex; align-items: center; gap: 12px; color: var(--text-dark);">
-            <span style="color: var(--success-green); font-weight: 700; font-size: 1.3em; flex-shrink: 0;">✓</span>
-            <span>Maximum personalized attention</span>
-          </li>
-          <li style="padding: 12px 0; display: flex; align-items: center; gap: 12px; color: var(--text-dark);">
-            <span style="color: var(--success-green); font-weight: 700; font-size: 1.3em; flex-shrink: 0;">✓</span>
-            <span>Deep peer collaboration</span>
-          </li>
-          <li style="padding: 12px 0; display: flex; align-items: center; gap: 12px; color: var(--text-dark);">
-            <span style="color: var(--success-green); font-weight: 700; font-size: 1.3em; flex-shrink: 0;">✓</span>
-            <span>Flexible scheduling priority</span>
-          </li>
-          <li style="padding: 12px 0; display: flex; align-items: center; gap: 12px; color: var(--text-dark);">
-            <span style="color: var(--success-green); font-weight: 700; font-size: 1.3em; flex-shrink: 0;">✓</span>
-            <span>Custom learning pace</span>
-          </li>
-          <li style="padding: 12px 0; display: flex; align-items: center; gap: 12px; color: var(--text-dark);">
-            <span style="color: var(--success-green); font-weight: 700; font-size: 1.3em; flex-shrink: 0;">✓</span>
-            <span>Weekly progress reports</span>
-          </li>
-          <li style="padding: 12px 0; display: flex; align-items: center; gap: 12px; color: var(--text-dark);">
-            <span style="color: var(--success-green); font-weight: 700; font-size: 1.3em; flex-shrink: 0;">✓</span>
-            <span>Direct parent communication</span>
-          </li>
-        </ul>
-        <a href="https://learn.stemsphere.academy/login.html" style="display: block; text-align: center; padding: 18px; background: linear-gradient(135deg, var(--primary-blue), var(--primary-purple)); color: white; text-decoration: none; border-radius: 15px; font-weight: 700; font-size: 1.2em; transition: all 0.3s; margin-top: 25px;">Book Free Enrollment Session →</a>
-      </div>
-
-      <div style="background: white; border-radius: 25px; padding: 40px; box-shadow: 0 10px 40px rgba(0,0,0,0.1); transition: all 0.4s; border: 3px solid var(--accent-orange); position: relative; transform: scale(1.05);">
-        <span style="position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background: var(--accent-orange); color: white; padding: 8px 25px; border-radius: 20px; font-weight: 700; font-size: 0.9em; box-shadow: 0 4px 15px rgba(255,107,53,0.4);">🏆 BEST VALUE</span>
-        <div style="text-align: center; margin-bottom: 30px; padding-bottom: 25px; border-bottom: 2px solid #eee;">
-          <h3 style="font-size: 1.8em; margin-bottom: 10px; color: var(--primary-blue);">Mid Group Interactive</h3>
-          <p style="color: var(--text-light); font-size: 0.95em;">Optimal Learning Community</p>
-        </div>
-        <div style="text-align: center; margin: 25px 0;">
-          <div style="font-size: 3em; font-weight: 700; color: var(--primary-purple);">
-            <span style="font-size: 0.5em; vertical-align: super;">$</span>799
-          </div>
-          <span style="display: block; color: var(--text-light); font-size: 0.9em; margin-top: 5px;">12 Classes (3 Months)</span>
-        </div>
-        <ul style="list-style: none; margin: 30px 0;">
-          <li style="padding: 12px 0; display: flex; align-items: center; gap: 12px; color: var(--text-dark);">
-            <span style="color: var(--success-green); font-weight: 700; font-size: 1.3em; flex-shrink: 0;">✓</span>
-            <span>6 students per class</span>
-          </li>
-          <li style="padding: 12px 0; display: flex; align-items: center; gap: 12px; color: var(--text-dark);">
-            <span style="color: var(--success-green); font-weight: 700; font-size: 1.3em; flex-shrink: 0;">✓</span>
-            <span>Perfect balance of attention & community</span>
-          </li>
-          <li style="padding: 12px 0; display: flex; align-items: center; gap: 12px; color: var(--text-dark);">
-            <span style="color: var(--success-green); font-weight: 700; font-size: 1.3em; flex-shrink: 0;">✓</span>
-            <span>Rich peer learning experiences</span>
-          </li>
-          <li style="padding: 12px 0; display: flex; align-items: center; gap: 12px; color: var(--text-dark);">
-            <span style="color: var(--success-green); font-weight: 700; font-size: 1.3em; flex-shrink: 0;">✓</span>
-            <span>Team projects & collaboration</span>
-          </li>
-          <li style="padding: 12px 0; display: flex; align-items: center; gap: 12px; color: var(--text-dark);">
-            <span style="color: var(--success-green); font-weight: 700; font-size: 1.3em; flex-shrink: 0;">✓</span>
-            <span>Social skills development</span>
-          </li>
-          <li style="padding: 12px 0; display: flex; align-items: center; gap: 12px; color: var(--text-dark);">
-            <span style="color: var(--success-green); font-weight: 700; font-size: 1.3em; flex-shrink: 0;">✓</span>
-            <span>Monthly parent updates</span>
-          </li>
-          <li style="padding: 12px 0; display: flex; align-items: center; gap: 12px; color: var(--text-dark);">
-            <span style="color: var(--success-green); font-weight: 700; font-size: 1.3em; flex-shrink: 0;">✓</span>
-            <span>Certificate of completion</span>
-          </li>
-        </ul>
-        <a href="https://learn.stemsphere.academy/login.html" style="display: block; text-align: center; padding: 18px; background: linear-gradient(135deg, var(--primary-blue), var(--primary-purple)); color: white; text-decoration: none; border-radius: 15px; font-weight: 700; font-size: 1.2em; transition: all 0.3s; margin-top: 25px;">Book Free Enrollment Session →</a>
-      </div>
-    </div>
+<div id="cookieConsentBanner" style="display: none; position: fixed; bottom: 0; left: 0; right: 0; background: linear-gradient(135deg, rgba(102,126,234,0.98), rgba(118,75,162,0.98)); backdrop-filter: blur(10px); color: #fff; padding: 0.75rem; z-index: 99999; box-shadow: 0 -2px 10px rgba(0,0,0,0.3); border-top: 2px solid #00ff88;">
+  <div style="max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 0.75rem; flex-wrap: wrap;">
     
-    <div style="text-align: center; margin-top: 40px; color: var(--text-light);">
-      <p style="font-size: 1.1em;">💡 <strong>Pro Tip:</strong> Mix and match classes for a complete learning experience!<br>
-      One class per week in multiple subjects = Well-rounded genius in the making</p>
-    </div>
-  </section>
-
-  <section style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 80px 5%;">
-    <div class="section-header">
-      <h2 style="color: white;">❤️ What Parents Are Saying</h2>
-      <p style="color: rgba(255,255,255,0.9);">Real families, real transformations</p>
-    </div>
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; max-width: 1200px; margin: 0 auto;">
-      <div style="background: rgba(255,255,255,0.15); backdrop-filter: blur(10px); padding: 30px; border-radius: 20px; border: 2px solid rgba(255,255,255,0.2); transition: all 0.3s;">
-        <div style="color: var(--accent-yellow); font-size: 1.3em; margin-bottom: 15px;">⭐⭐⭐⭐⭐</div>
-        <p style="font-style: italic; line-height: 1.7; margin-bottom: 20px; opacity: 0.95;">"My daughter went from struggling with math to asking for extra practice problems! The small group setting gave her the confidence she needed. Absolutely worth every penny."</p>
-        <div style="font-weight: 700; font-size: 1.1em;">Sarah Chen</div>
-        <div style="font-size: 0.9em; opacity: 0.8;">Parent of 8-year-old</div>
-      </div>
-      <div style="background: rgba(255,255,255,0.15); backdrop-filter: blur(10px); padding: 30px; border-radius: 20px; border: 2px solid rgba(255,255,255,0.2); transition: all 0.3s;">
-        <div style="color: var(--accent-yellow); font-size: 1.3em; margin-bottom: 15px;">⭐⭐⭐⭐⭐</div>
-        <p style="font-style: italic; line-height: 1.7; margin-bottom: 20px; opacity: 0.95;">"The public speaking program transformed my shy son into someone who volunteers to present in class. His teacher couldn't believe the change. Thank you STEMSphere!"</p>
-        <div style="font-weight: 700; font-size: 1.1em;">Michael Rodriguez</div>
-        <div style="font-size: 0.9em; opacity: 0.8;">Parent of 9-year-old</div>
-      </div>
-      <div style="background: rgba(255,255,255,0.15); backdrop-filter: blur(10px); padding: 30px; border-radius: 20px; border: 2px solid rgba(255,255,255,0.2); transition: all 0.3s;">
-        <div style="color: var(--accent-yellow); font-size: 1.3em; margin-bottom: 15px;">⭐⭐⭐⭐⭐</div>
-        <p style="font-style: italic; line-height: 1.7; margin-bottom: 20px; opacity: 0.95;">"Best investment we've made in our child's education. The instructors are phenomenal, and the curriculum is perfectly designed for young learners. He's already planning his science fair project!"</p>
-        <div style="font-weight: 700; font-size: 1.1em;">Emily Thompson</div>
-        <div style="font-size: 0.9em; opacity: 0.8;">Parent of 7-year-old</div>
-      </div>
-      <div style="background: rgba(255,255,255,0.15); backdrop-filter: blur(10px); padding: 30px; border-radius: 20px; border: 2px solid rgba(255,255,255,0.2); transition: all 0.3s;">
-        <div style="color: var(--accent-yellow); font-size: 1.3em; margin-bottom: 15px;">⭐⭐⭐⭐⭐</div>
-        <p style="font-style: italic; line-height: 1.7; margin-bottom: 20px; opacity: 0.95;">"The small group format is perfect. My daughter isn't lost in a big class, but she also gets to learn with friends. She actually looks forward to her sessions every week!"</p>
-        <div style="font-weight: 700; font-size: 1.1em;">David Kim</div>
-        <div style="font-size: 0.9em; opacity: 0.8;">Parent of 10-year-old</div>
-      </div>
-      <div style="background: rgba(255,255,255,0.15); backdrop-filter: blur(10px); padding: 30px; border-radius: 20px; border: 2px solid rgba(255,255,255,0.2); transition: all 0.3s;">
-        <div style="color: var(--accent-yellow); font-size: 1.3em; margin-bottom: 15px;">⭐⭐⭐⭐⭐</div>
-        <p style="font-style: italic; line-height: 1.7; margin-bottom: 20px; opacity: 0.95;">"We tried other online programs but nothing compares to STEMSphere. The quality of instruction and the genuine care for each child's progress is unmatched."</p>
-        <div style="font-weight: 700; font-size: 1.1em;">Jessica Martinez</div>
-        <div style="font-size: 0.9em; opacity: 0.8;">Parent of 6-year-old</div>
-      </div>
-      <div style="background: rgba(255,255,255,0.15); backdrop-filter: blur(10px); padding: 30px; border-radius: 20px; border: 2px solid rgba(255,255,255,0.2); transition: all 0.3s;">
-        <div style="color: var(--accent-yellow); font-size: 1.3em; margin-bottom: 15px;">⭐⭐⭐⭐⭐</div>
-        <p style="font-style: italic; line-height: 1.7; margin-bottom: 20px; opacity: 0.95;">"My son's critical thinking skills have skyrocketed. He's solving problems I didn't think were possible at his age. The mixed rotation class keeps him engaged and excited."</p>
-        <div style="font-weight: 700; font-size: 1.1em;">Robert Johnson</div>
-        <div style="font-size: 0.9em; opacity: 0.8;">Parent of 9-year-old</div>
-      </div>
-    </div>
-  </section>
-
-  <section style="padding: 80px 5%; background: var(--bg-light);">
-    <div style="max-width: 1200px; margin: 0 auto; text-align: center;">
-      <h2 style="font-size: 2.5em; margin-bottom: 20px; background: linear-gradient(135deg, var(--primary-blue), var(--primary-purple)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">🎁 Free Parent Resources</h2>
-      <p style="font-size: 1.2em; color: var(--text-light); margin-bottom: 50px;">Download our expert guides created by education specialists</p>
-      
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px;">
-        <div style="background: white; padding: 35px; border-radius: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.1); transition: all 0.3s; text-align: center;">
-          <div style="font-size: 4em; margin-bottom: 20px;">📘</div>
-          <h4 style="font-size: 1.5em; margin-bottom: 15px; color: var(--text-dark);">Ultimate Parent's Guide to STEM Learning</h4>
-          <p style="color: var(--text-light); margin-bottom: 25px; line-height: 1.6;">Everything you need to know about supporting your child's STEM education journey. Activities, tips, and expert advice.</p>
-          <a href="#" onclick="downloadResource('stem-guide'); return false;" style="display: inline-block; padding: 15px 35px; background: linear-gradient(135deg, var(--primary-blue), var(--primary-purple)); color: white; text-decoration: none; border-radius: 25px; font-weight: 700; transition: all 0.3s;">Download Free PDF →</a>
-        </div>
-        
-        <div style="background: white; padding: 35px; border-radius: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.1); transition: all 0.3s; text-align: center;">
-          <div style="font-size: 4em; margin-bottom: 20px;">🧠</div>
-          <h4 style="font-size: 1.5em; margin-bottom: 15px; color: var(--text-dark);">The Confidence Blueprint for Kids</h4>
-          <p style="color: var(--text-light); margin-bottom: 25px; line-height: 1.6;">Proven strategies to help shy children build unshakeable confidence through public speaking and leadership skills.</p>
-          <a href="#" onclick="downloadResource('confidence-guide'); return false;" style="display: inline-block; padding: 15px 35px; background: linear-gradient(135deg, var(--primary-blue), var(--primary-purple)); color: white; text-decoration: none; border-radius: 25px; font-weight: 700; transition: all 0.3s;">Download Free PDF →</a>
-        </div>
-        
-        <div style="background: white; padding: 35px; border-radius: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.1); transition: all 0.3s; text-align: center;">
-          <div style="font-size: 4em; margin-bottom: 20px;">🎯</div>
-          <h4 style="font-size: 1.5em; margin-bottom: 15px; color: var(--text-dark);">Math Mastery at Home: 20 Fun Games</h4>
-          <p style="color: var(--text-light); margin-bottom: 25px; line-height: 1.6;">Turn screen time into learning time with games that actually build mathematical thinking and problem-solving skills.</p>
-          <a href="#" onclick="downloadResource('math-games'); return false;" style="display: inline-block; padding: 15px 35px; background: linear-gradient(135deg, var(--primary-blue), var(--primary-purple)); color: white; text-decoration: none; border-radius: 25px; font-weight: 700; transition: all 0.3s;">Download Free PDF →</a>
+    <div style="flex: 1; min-width: 250px;" id="cookieFullText">
+      <div style="display: flex; align-items: center; gap: 0.5rem;">
+        <div style="font-size: 1.5rem;">🍪</div>
+        <div>
+          <p style="margin: 0 0 0.25rem 0; font-weight: 700; font-size: 0.85em;">
+            We Value Your Privacy
+          </p>
+          <p style="margin: 0; font-size: 0.75em; line-height: 1.4; opacity: 0.95;">
+            We use cookies to improve your experience. By clicking "Accept", you consent to our use of cookies.
+            <a href="/privacy.html" style="color: #00ff88; text-decoration: underline; font-weight: 600;">Learn more</a>
+          </p>
         </div>
       </div>
     </div>
-  </section>
 
-  <div style="background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%); padding: 40px; border-radius: 20px; text-align: center; margin: 60px auto; max-width: 900px; box-shadow: 0 10px 40px rgba(255,165,0,0.3);">
-    <h3 style="font-size: 2em; margin-bottom: 15px; color: var(--text-dark);">🎓 Looking for Something Different?</h3>
-    <p style="font-size: 1.1em; margin-bottom: 25px; color: var(--text-dark);"><strong>Is your child older than 10?</strong> Or interested in <strong>1-on-1 personalized tutoring?</strong><br>
-    We have comprehensive programs for teens and adults with private instruction options!</p>
-    <a href="https://www.stemsphere.academy" style="display: inline-block; padding: 15px 40px; background: var(--text-dark); color: white; text-decoration: none; border-radius: 25px; font-weight: 700; font-size: 1.1em; transition: all 0.3s;">
-      Explore Our Full Programs →
-    </a>
+    <div style="flex: 1; display: none;" id="cookieMobileText">
+      <div style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.85em;">
+        <span>🍪</span>
+        <span style="font-weight: 600;">We use cookies</span>
+      </div>
+    </div>
+
+    <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;" id="cookieButtons">
+      <button onclick="acceptAllCookies()" style="background: linear-gradient(135deg, #00ff88, #00c853); color: #000; padding: 0.5rem 1.25rem; border: none; border-radius: 6px; font-weight: 700; font-size: 0.8em; cursor: pointer; box-shadow: 0 2px 8px rgba(0,255,136,0.4); transition: all 0.3s; white-space: nowrap;">
+        ✓ Accept
+      </button>
+      <button onclick="rejectCookies()" style="background: rgba(255,255,255,0.2); color: #fff; padding: 0.5rem 1.25rem; border: 1px solid rgba(255,255,255,0.5); border-radius: 6px; font-weight: 700; font-size: 0.8em; cursor: pointer; transition: all 0.3s; white-space: nowrap;">
+        ✗ Reject
+      </button>
+      <button onclick="openCookieSettings()" style="background: none; color: #fff; padding: 0.5rem 1rem; border: 1px solid rgba(255,255,255,0.5); border-radius: 6px; font-weight: 600; font-size: 0.8em; cursor: pointer; transition: all 0.3s; white-space: nowrap;">
+        ⚙️ More
+      </button>
+    </div>
   </div>
+</div>
 
-  <section style="background: linear-gradient(135deg, var(--accent-orange) 0%, #ff8b56 100%); color: white; padding: 80px 5%; text-align: center;">
-    <div style="max-width: 800px; margin: 0 auto;">
-      <h2 style="font-size: 2.5em; margin-bottom: 20px;">🚀 Ready to Transform Your Child's Future?</h2>
-      <p style="font-size: 1.2em; margin-bottom: 35px; opacity: 0.95;">Join hundreds of families who've discovered the STEMSphere difference.<br>
-      Limited spots available - classes fill up fast!</p>
-      <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
-        <a href="https://learn.stemsphere.academy/login.html" style="padding: 18px 40px; border-radius: 30px; text-decoration: none; font-weight: 700; font-size: 1.1em; transition: all 0.3s; display: inline-block; background: white; color: var(--accent-orange);">
-          Book Free Enrollment Session
-        </a>
-      </div>
+<div id="cookieSettingsModal" style="display: none; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(0,0,0,0.85); z-index: 100000; align-items: center; justify-content: center; padding: 1rem; overflow-y: auto;">
+  <div style="background: linear-gradient(135deg, #1a1a2e, #16213e); border: 3px solid #667eea; border-radius: 16px; max-width: 700px; width: 100%; max-height: 90vh; overflow-y: auto; box-shadow: 0 20px 60px rgba(0,0,0,0.5);">
+    
+    <div style="background: linear-gradient(135deg, #667eea, #764ba2); padding: 2rem; border-radius: 13px 13px 0 0; position: relative;">
+      <button onclick="closeCookieSettings()" style="position: absolute; top: 1rem; right: 1rem; background: rgba(255,255,255,0.2); color: #fff; border: none; width: 40px; height: 40px; border-radius: 50%; cursor: pointer; font-size: 1.5em; font-weight: 700; transition: all 0.3s;">×</button>
+      <h2 style="margin: 0 0 0.5rem 0; color: #fff; font-size: 1.8em;">🍪 Cookie Settings</h2>
+      <p style="margin: 0; color: rgba(255,255,255,0.9); font-size: 0.95em;">Manage your cookie preferences</p>
     </div>
-  </section>
 
-  <footer style="background: #1a1a1a; color: #fff; padding: 3rem 5% 2rem; font-family: 'Segoe UI', sans-serif;">
-    <div style="max-width: 1200px; margin: 0 auto;">
-      <div style="text-align: center; margin-bottom: 2rem;">
-        <img src="https://learn.stemsphere.academy/assets/favconsp1.2.png" alt="STEMSphere" style="width: 60px; height: 60px; margin-bottom: 1rem; border-radius: 12px;">
-        <h3 style="font-size: 1.8em; margin-bottom: 0.5rem; background: linear-gradient(to right, #4A90E2, #9B59B6); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">STEMSphere Kids Academy</h3>
-        <p style="color: rgba(255,255,255,0.7); font-size: 1.1em;">Where Future Leaders Begin 🚀</p>
-      </div>
+    <div style="padding: 2rem;">
       
-      <div style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 2rem; text-align: center;">
-        <p style="color: rgba(255,255,255,0.6); font-size: 0.95em; margin-bottom: 1rem;">
-          © 2025 STEMSphere Academy. All rights reserved. | Empowering young minds worldwide 🌍
+      <div style="background: rgba(255,255,255,0.05); border: 2px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 1.5rem; margin-bottom: 1.5rem;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+          <h3 style="margin: 0; color: #00ff88; font-size: 1.3em;">✓ Essential Cookies</h3>
+          <span style="background: rgba(0,255,136,0.2); color: #00ff88; padding: 0.4rem 1rem; border-radius: 20px; font-size: 0.85em; font-weight: 700;">Always Active</span>
+        </div>
+        <p style="margin: 0; color: rgba(255,255,255,0.8); line-height: 1.6;">
+          Required for the website to function properly. These cannot be disabled.
         </p>
-        <div style="display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap; font-size: 0.9em;">
-          <a href="#" style="color: rgba(255,255,255,0.6); text-decoration: none; transition: color 0.3s;">Privacy Policy</a>
-          <a href="#" style="color: rgba(255,255,255,0.6); text-decoration: none; transition: color 0.3s;">Terms of Service</a>
-          <a href="mailto:support@stemsphere.academy" style="color: rgba(255,255,255,0.6); text-decoration: none; transition: color 0.3s;">Contact Support</a>
+      </div>
+
+      <div style="background: rgba(255,255,255,0.05); border: 2px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 1.5rem; margin-bottom: 1.5rem;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+          <h3 style="margin: 0; color: #fff; font-size: 1.3em;">📊 Analytics Cookies</h3>
+          <label style="position: relative; display: inline-block; width: 60px; height: 30px; cursor: pointer;">
+            <input type="checkbox" id="analyticsCookies" checked style="opacity: 0; width: 0; height: 0;">
+            <span style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: #667eea; border-radius: 30px; transition: 0.3s;" id="analyticsToggle"></span>
+            <span style="position: absolute; content: ''; height: 22px; width: 22px; left: 4px; bottom: 4px; background: white; border-radius: 50%; transition: 0.3s;" id="analyticsSlider"></span>
+          </label>
         </div>
+        <p style="margin: 0; color: rgba(255,255,255,0.8); line-height: 1.6;">
+          Help us understand how visitors interact with our website.
+        </p>
+      </div>
+
+      <div style="background: rgba(255,255,255,0.05); border: 2px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 1.5rem; margin-bottom: 1.5rem;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+          <h3 style="margin: 0; color: #fff; font-size: 1.3em;">🎯 Marketing Cookies</h3>
+          <label style="position: relative; display: inline-block; width: 60px; height: 30px; cursor: pointer;">
+            <input type="checkbox" id="marketingCookies" checked style="opacity: 0; width: 0; height: 0;">
+            <span style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: #667eea; border-radius: 30px; transition: 0.3s;" id="marketingToggle"></span>
+            <span style="position: absolute; content: ''; height: 22px; width: 22px; left: 4px; bottom: 4px; background: white; border-radius: 50%; transition: 0.3s;" id="marketingSlider"></span>
+          </label>
+        </div>
+        <p style="margin: 0; color: rgba(255,255,255,0.8); line-height: 1.6;">
+          Used to show you relevant ads on Facebook, Google, and other platforms.
+        </p>
+      </div>
+
+    </div>
+
+    <div style="padding: 0 2rem 2rem; display: flex; gap: 1rem; flex-wrap: wrap;">
+      <button onclick="saveCustomCookieSettings()" style="flex: 1; background: linear-gradient(135deg, #00ff88, #00c853); color: #000; padding: 1rem 2rem; border: none; border-radius: 8px; font-weight: 700; font-size: 1em; cursor: pointer; box-shadow: 0 4px 12px rgba(0,255,136,0.4);">
+        💾 Save My Choices
+      </button>
+      <button onclick="acceptAllFromSettings()" style="flex: 1; background: rgba(255,255,255,0.1); color: #fff; padding: 1rem 2rem; border: 2px solid rgba(255,255,255,0.3); border-radius: 8px; font-weight: 700; font-size: 1em; cursor: pointer;">
+        Accept All
+      </button>
+    </div>
+
+  </div>
+</div>
+
+<div id="fallback-translator">
+  <select onchange="translatePage(this.value)">
+    <option value="en" selected>🌐 English</option>
+    <option value="es">Español</option>
+    <option value="fr">Français</option>
+    <option value="de">Deutsch</option>
+    <option value="zh-CN">简体中文</option>
+    <option value="zh-TW">繁體中文</option>
+    <option value="ja">日本語</option>
+    <option value="ko">한국어</option>
+    <option value="ar">العربية</option>
+    <option value="hi">हिन्दी</option>
+    <option value="pt">Português</option>
+    <option value="ru">Русский</option>
+    <option value="it">Italiano</option>
+    <option value="nl">Nederlands</option>
+    <option value="pl">Polski</option>
+    <option value="tr">Türkçe</option>
+    <option value="vi">Tiếng Việt</option>
+    <option value="th">ไทย</option>
+    <option value="id">Bahasa Indonesia</option>
+    <option value="ms">Bahasa Melayu</option>
+  </select>
+</div>
+
+<script>
+  function translatePage(lang) {
+    if (!lang || lang === 'en') return;
+    const loc = encodeURIComponent(window.location.href);
+    window.location.href = 'https://translate.google.com/translate?sl=en&tl=' + lang + '&u=' + loc;
+  }
+</script>
+
+<a href="https://learn.stemsphere.academy/login.html" class="login-link">
+  🔓 Student Login/Signup
+</a>
+
+<header>
+  <div class="header-content">
+    <div class="logo-section">
+      <img src="https://learn.stemsphere.academy/assets/favconsp1.2.png" alt="STEMSphere Kids Academy">
+      <div class="brand-text">
+        <h1>STEMSphere Kids</h1>
+        <p>🚀 Where Future Leaders Begin</p>
       </div>
     </div>
-  </footer>
+    <div class="header-cta">
+      <a href="#programs" class="header-btn btn-secondary-header">View Programs</a>
+      <a href="#pricing" class="header-btn btn-primary-header">Get Started</a>
+    </div>
+  </div>
+</header>
 
-  <script>
-    const SUPABASE_URL = 'https://horqtcwnhwgodwlyqhli.supabase.co';
-    const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImhvcnF0Y3duaHdnb2R3bHlxaGxpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTk3NjAyNzEsImV4cCI6MjA3NTMzNjI3MX0.4rYzW6MFEkVVqLor55RuFGLwE6WBJrYLxvYbgeXXRGU';
+<section class="hero">
+  <div class="hero-content">
+    <h2>🌟 Elite Education for Tomorrow's Innovators</h2>
+    <div class="age-badge">👦 Ages 6-10 | 👧 Perfect for Young Minds</div>
+  </div>
+</section>
+
+<section class="video-section">
+  <div class="video-container">
+    <div class="video-placeholder">
+      <div class="play-icon"></div>
+      <h3>See Our Young Geniuses in Action!</h3>
+      <p>Watch how we're shaping the next generation of leaders</p>
+    </div>
+  </div>
+</section>
+
+<div class="instant-session-container" id="advisorContainer" style="display:none;">
+  <div class="advisor-banner">
+    <div class="advisor-content">
+      <div class="live-indicator">
+        <span class="live-dot"></span>
+        <span style="color: white; font-weight: 700; font-size: 1.1em;">ENROLLMENT ADVISOR ONLINE</span>
+      </div>
+      <h3>💬 Chat with Advisor NOW - Free!</h3>
+      <p>An enrollment advisor is available right now to answer your questions and help you get started</p>
+      <a href="https://learn.stemsphere.academy/instant-session.html" class="book-session-btn">
+        🚀 Book Your Enrollment Session Now
+      </a>
+    </div>
+  </div>
+</div>
+
+<div class="scroll-indicator">
+  <div class="scroll-arrow">↓</div>
+  <p class="scroll-text">Discover How We Transform Young Minds</p>
+</div>
+
+<div id="reviews-container"></div>
+
+<section class="blog-section">
+  <div class="blog-header">
+    <h2>🔬 The Science Gap That's Holding Kids Back</h2>
+    <p>Why traditional education fails to ignite curiosity and what we do differently</p>
+  </div>
+  <div class="blog-grid">
+    <div class="blog-image">
+      <img src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=800&q=80" alt="Kids doing science experiments">
+    </div>
+    <div class="blog-content">
+      <h3>Most Kids Are Being Left Behind in STEM</h3>
+      <p>By age 10, <strong>67% of children have already decided they're "not good at science."</strong> Not because they can't do it but because nobody showed them it could be fun, hands-on, and exciting.</p>
+      <p>Traditional classrooms focus on memorization. We focus on <strong>discovery, experimentation, and real world applications</strong> that make kids say "WOW!" instead of "Why do I need to know this?"</p>
+      <ul class="blog-list">
+        <li>Live virtual experiments kids can recreate at home</li>
+        <li>Engineering challenges that teach problem solving</li>
+        <li>Biology, chemistry, and physics made tangible and exciting</li>
+        <li>Small groups mean every question gets answered. Curiosity never gets ignored.</li>
+      </ul>
+      <p><strong>The result?</strong> Kids who can't wait for their next science class. Kids who start asking "how does that work?" about everything around them. Kids who see themselves as future scientists, engineers, and innovators.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="programs">
+  <div class="section-header">
+    <h2>📚 Subjects We Offer</h2>
+    <p>Each program is a 12 week journey designed to transform your child's future</p>
+  </div>
+  <div class="programs-grid">
+    <div class="program-card">
+      <img class="program-image" src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=800" alt="Kids Science Program">
+      <div class="program-content">
+        <h3>🔬 Early Junior Scientist Program</h3>
+        <p>Ignite curiosity with hands on STEM exploration. Physics, chemistry, biology. Preparing the next generation of innovators.</p>
+        <ul class="program-features">
+          <li>Live virtual experiments</li>
+          <li>Scientific method mastery</li>
+          <li>Engineering challenges</li>
+          <li>Nature and biology exploration</li>
+          <li>Future scientist mindset</li>
+        </ul>
+        <a href="#pricing" class="program-cta">Enroll Now →</a>
+      </div>
+    </div>
+
+    <div class="program-card featured">
+      <span class="program-badge">🔥 MOST POPULAR</span>
+      <img class="program-image" src="https://images.unsplash.com/photo-1596496050827-8299e0220de1?w=800" alt="Kids Math Program">
+      <div class="program-content">
+        <h3>🧮 Math Wizards Academy</h3>
+        <p>Make math FUN! Problem solving, logic puzzles, and real world applications that build genuine mathematical confidence.</p>
+        <ul class="program-features">
+          <li>Game based learning approach</li>
+          <li>Critical thinking development</li>
+          <li>Competition ready skills</li>
+          <li>Mental math mastery</li>
+          <li>Advanced problem solving</li>
+        </ul>
+        <a href="#pricing" class="program-cta">Enroll Now →</a>
+      </div>
+    </div>
+
+    <div class="program-card">
+      <img class="program-image" src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=800" alt="Kids Public Speaking">
+      <div class="program-content">
+        <h3>🎤 Kids Public Speaking Mastery</h3>
+        <p>Transform shy kids into confident communicators. Master presentation skills, storytelling, and leadership presence.</p>
+        <ul class="program-features">
+          <li>Confidence building techniques</li>
+          <li>Storytelling and persuasion skills</li>
+          <li>Stage presence mastery</li>
+          <li>Peer presentation practice</li>
+          <li>Leadership communication</li>
+        </ul>
+        <a href="#pricing" class="program-cta">Enroll Now →</a>
+      </div>
+    </div>
+
+    <div class="program-card">
+      <span class="program-badge">⭐ ALL IN ONE</span>
+      <img class="program-image" src="https://images.unsplash.com/photo-1503676382389-4809596d5290?w=800" alt="Mixed Learning Program">
+      <div class="program-content">
+        <h3>🎯 Ultimate Skills Rotation</h3>
+        <p>The COMPLETE package! Weekly rotation through Public Speaking, Math, Science, and Coding. Maximum variety, maximum growth.</p>
+        <ul class="program-features">
+          <li>Week 1: Public Speaking mastery</li>
+          <li>Week 2: Math problem solving</li>
+          <li>Week 3: Science experiments</li>
+          <li>Week 4: Coding fundamentals</li>
+          <li>Continuous skill development</li>
+        </ul>
+        <a href="#pricing" class="program-cta">Enroll Now →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="background: var(--bg-light);" id="pricing">
+  <div class="section-header">
+    <h2>💰 Our Costs</h2>
+    <p>12 weeks of transformation | Once per week | Mix and match with other subjects</p>
+  </div>
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 40px; max-width: 900px; margin: 0 auto;">
+    <div style="background: white; border-radius: 25px; padding: 40px; box-shadow: 0 10px 40px rgba(0,0,0,0.1); transition: all 0.4s; border: 3px solid transparent; position: relative;">
+      <div style="text-align: center; margin-bottom: 30px; padding-bottom: 25px; border-bottom: 2px solid #eee;">
+        <h3 style="font-size: 1.8em; margin-bottom: 10px; color: var(--primary-blue);">Small Trio Interactive</h3>
+        <p style="color: var(--text-light); font-size: 0.95em;">Exclusive 3 Student Experience</p>
+      </div>
+      <div style="text-align: center; margin: 25px 0;">
+        <div style="font-size: 3em; font-weight: 700; color: var(--primary-purple);">
+          <span style="font-size: 0.5em; vertical-align: super;">$</span>995
+        </div>
+        <span style="display: block; color: var(--text-light); font-size: 0.9em; margin-top: 5px;">12 Classes (3 Months)</span>
+      </div>
+      <ul style="list-style: none; margin: 30px 0;">
+        <li style="padding: 12px 0; display: flex; align-items: center; gap: 12px; color: var(--text-dark);">
+          <span style="color: var(--success-green); font-weight: 700; font-size: 1.3em; flex-shrink: 0;">✓</span>
+          <span>Just 3 students per class</span>
+        </li>
+        <li style="padding: 12px 0; display: flex; align-items: center; gap: 12px; color: var(--text-dark);">
+          <span style="color: var(--success-green); font-weight: 700; font-size: 1.3em; flex-shrink: 0;">✓</span>
+          <span>Maximum personalized attention</span>
+        </li>
+        <li style="padding: 12px 0; display: flex; align-items: center; gap: 12px; color: var(--text-dark);">
+          <span style="color: var(--success-green); font-weight: 700; font-size: 1.3em; flex-shrink: 0;">✓</span>
+          <span>Deep peer collaboration</span>
+        </li>
+        <li style="padding: 12px 0; display: flex; align-items: center; gap: 12px; color: var(--text-dark);">
+          <span style="color: var(--success-green); font-weight: 700; font-size: 1.3em; flex-shrink: 0;">✓</span>
+          <span>Flexible scheduling priority</span>
+        </li>
+        <li style="padding: 12px 0; display: flex; align-items: center; gap: 12px; color: var(--text-dark);">
+          <span style="color: var(--success-green); font-weight: 700; font-size: 1.3em; flex-shrink: 0;">✓</span>
+          <span>Custom learning pace</span>
+        </li>
+        <li style="padding: 12px 0; display: flex; align-items: center; gap: 12px; color: var(--text-dark);">
+          <span style="color: var(--success-green); font-weight: 700; font-size: 1.3em; flex-shrink: 0;">✓</span>
+          <span>Weekly progress reports</span>
+        </li>
+        <li style="padding: 12px 0; display: flex; align-items: center; gap: 12px; color: var(--text-dark);">
+          <span style="color: var(--success-green); font-weight: 700; font-size: 1.3em; flex-shrink: 0;">✓</span>
+          <span>Direct parent communication</span>
+        </li>
+      </ul>
+      <a href="https://learn.stemsphere.academy/login.html" style="display: block; text-align: center; padding: 18px; background: linear-gradient(135deg, var(--primary-blue), var(--primary-purple)); color: white; text-decoration: none; border-radius: 15px; font-weight: 700; font-size: 1.2em; transition: all 0.3s; margin-top: 25px;">Book Free Enrollment Session →</a>
+    </div>
+
+    <div style="background: white; border-radius: 25px; padding: 40px; box-shadow: 0 10px 40px rgba(0,0,0,0.1); transition: all 0.4s; border: 3px solid var(--accent-orange); position: relative; transform: scale(1.05);">
+      <span style="position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background: var(--accent-orange); color: white; padding: 8px 25px; border-radius: 20px; font-weight: 700; font-size: 0.9em; box-shadow: 0 4px 15px rgba(255,107,53,0.4);">🏆 BEST VALUE</span>
+      <div style="text-align: center; margin-bottom: 30px; padding-bottom: 25px; border-bottom: 2px solid #eee;">
+        <h3 style="font-size: 1.8em; margin-bottom: 10px; color: var(--primary-blue);">Small Group Interactive</h3>
+        <p style="color: var(--text-light); font-size: 0.95em;">Optimal Learning Community</p>
+      </div>
+      <div style="text-align: center; margin: 25px 0;">
+        <div style="font-size: 3em; font-weight: 700; color: var(--primary-purple);">
+          <span style="font-size: 0.5em; vertical-align: super;">$</span>799
+        </div>
+        <span style="display: block; color: var(--text-light); font-size: 0.9em; margin-top: 5px;">12 Classes (3 Months)</span>
+      </div>
+      <ul style="list-style: none; margin: 30px 0;">
+        <li style="padding: 12px 0; display: flex; align-items: center; gap: 12px; color: var(--text-dark);">
+          <span style="color: var(--success-green); font-weight: 700; font-size: 1.3em; flex-shrink: 0;">✓</span>
+          <span>6 students per class</span>
+        </li>
+        <li style="padding: 12px 0; display: flex; align-items: center; gap: 12px; color: var(--text-dark);">
+          <span style="color: var(--success-green); font-weight: 700; font-size: 1.3em; flex-shrink: 0;">✓</span>
+          <span>Perfect balance of attention and community</span>
+        </li>
+        <li style="padding: 12px 0; display: flex; align-items: center; gap: 12px; color: var(--text-dark);">
+          <span style="color: var(--success-green); font-weight: 700; font-size: 1.3em; flex-shrink: 0;">✓</span>
+          <span>Rich peer learning experiences</span>
+        </li>
+        <li style="padding: 12px 0; display: flex; align-items: center; gap: 12px; color: var(--text-dark);">
+          <span style="color: var(--success-green); font-weight: 700; font-size: 1.3em; flex-shrink: 0;">✓</span>
+          <span>Team projects and collaboration</span>
+        </li>
+        <li style="padding: 12px 0; display: flex; align-items: center; gap: 12px; color: var(--text-dark);">
+          <span style="color: var(--success-green); font-weight: 700; font-size: 1.3em; flex-shrink: 0;">✓</span>
+          <span>Social skills development</span>
+        </li>
+        <li style="padding: 12px 0; display: flex; align-items: center; gap: 12px; color: var(--text-dark);">
+          <span style="color: var(--success-green); font-weight: 700; font-size: 1.3em; flex-shrink: 0;">✓</span>
+          <span>Monthly parent updates</span>
+        </li>
+        <li style="padding: 12px 0; display: flex; align-items: center; gap: 12px; color: var(--text-dark);">
+          <span style="color: var(--success-green); font-weight: 700; font-size: 1.3em; flex-shrink: 0;">✓</span>
+          <span>Certificate of completion</span>
+        </li>
+      </ul>
+      <a href="https://learn.stemsphere.academy/login.html" style="display: block; text-align: center; padding: 18px; background: linear-gradient(135deg, var(--primary-blue), var(--primary-purple)); color: white; text-decoration: none; border-radius: 15px; font-weight: 700; font-size: 1.2em; transition: all 0.3s; margin-top: 25px;">Book Free Enrollment Session →</a>
+    </div>
+  </div>
+  
+  <div style="text-align: center; margin-top: 40px; color: var(--text-light);">
+    <p style="font-size: 1.1em;">💡 <strong>Pro Tip:</strong> Mix and match classes for a complete learning experience!<br>
+    One class per week in multiple subjects equals a well rounded genius in the making</p>
+  </div>
+</section>
+
+<section style="padding: 80px 5%; background: linear-gradient(135deg, #1a1a2e, #16213e); color: white;">
+  <div style="max-width: 1200px; margin: 0 auto; text-align: center;">
+    <h2 style="font-size: 2.5em; margin-bottom: 20px; background: linear-gradient(135deg, #FFD700, #FFA500); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">📚 Free Learning Resources</h2>
+    <p style="font-size: 1.2em; color: rgba(255,255,255,0.9); margin-bottom: 50px; line-height: 1.8;">Download our expertly crafted eBooks designed to help you excel in STEM subjects and prepare for college success. These guides contain proven strategies used by top students worldwide.</p>
     
-    const { createClient } = supabase;
-    const supabaseClient = createClient(SUPABASE_URL, SUPABASE_KEY);
+    <div class="download-grid">
+      <div class="ebook-card">
+        <div class="free-badge">FREE!</div>
+        <img src="https://i.postimg.cc/s24NgxkN/gemini-2-5-flash-image-preview-nano-banana-i-need-an-ebook-cove-2.png" alt="STEM Study System eBook" loading="lazy">
+        <h3>The STEM Student's Secret Study System</h3>
+        <p>Master math and science with proven techniques from top students. Learn the 3 step formula for acing exams.</p>
+        <a href="https://books.stemsphere.academy" class="ebook-button">Download Free</a>
+      </div>
 
-    async function checkAdvisorAvailability() {
+      <div class="ebook-card">
+        <div class="free-badge">FREE!</div>
+        <img src="https://i.postimg.cc/N03SnR7V/ergh.png" alt="College Prep Secrets eBook" loading="lazy">
+        <h3>College Prep Secrets for Parents</h3>
+        <p>The insider's guide to preparing your teen for college. Learn what schools don't tell you about admissions and scholarships.</p>
+        <a href="https://books.stemsphere.academy" class="ebook-button">Download Free</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="blog-section alt-bg">
+  <div class="blog-header">
+    <h2>🧮 The Math Confidence Crisis (And How to Fix It)</h2>
+    <p>Why "I'm just not a math person" is the most dangerous thing a child can believe</p>
+  </div>
+  <div class="blog-grid reverse">
+    <div class="blog-image">
+      <img src="https://images.unsplash.com/photo-1596496050827-8299e0220de1?w=800&q=80" alt="Kids solving math problems together">
+    </div>
+    <div class="blog-content">
+      <h3>Math Anxiety Starts Young But It Doesn't Have To</h3>
+      <p>Here's the truth: <strong>There's no such thing as a "math person" or "not a math person."</strong> Math is a skill. And like any skill, it improves with the right approach, encouragement, and practice.</p>
+      <p>But somewhere around 2nd or 3rd grade, many kids decide they're "bad at math." One bad test. One moment of confusion. One time nobody explained it in a way that clicked. And suddenly, they've internalized a belief that will limit them for life.</p>
+      <ul class="blog-list">
+        <li>We use games, puzzles, and real world scenarios to make math engaging</li>
+        <li>Small groups mean no child falls behind or feels "dumb" for asking questions</li>
+        <li>We celebrate mistakes as learning opportunities, not failures</li>
+        <li>Mental math strategies that make kids feel like mathematical wizards</li>
+      </ul>
+      <p><strong>Within weeks, parents tell us:</strong> "My child who hated math now asks for extra practice problems." That's not magic. That's what happens when learning is fun, supportive, and paced perfectly for each child.</p>
+    </div>
+  </div>
+</section>
+
+<section style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 80px 5%;">
+  <div style="text-align: center; margin-bottom: 50px;">
+    <h2 style="color: white; font-size: 2.5em; margin-bottom: 15px;">❤️ What Parents Are Saying</h2>
+    <p style="color: rgba(255,255,255,0.9); font-size: 1.2em;">Real families, real transformations</p>
+  </div>
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; max-width: 1200px; margin: 0 auto;">
+    <div style="background: rgba(255,255,255,0.15); backdrop-filter: blur(10px); padding: 30px; border-radius: 20px; border: 2px solid rgba(255,255,255,0.2); transition: all 0.3s;">
+      <div style="color: var(--accent-yellow); font-size: 1.3em; margin-bottom: 15px;">⭐⭐⭐⭐⭐</div>
+      <p style="font-style: italic; line-height: 1.7; margin-bottom: 20px; opacity: 0.95;">"My daughter went from struggling with math to asking for extra practice problems! The small group setting gave her the confidence she needed. Absolutely worth every penny."</p>
+      <div style="font-weight: 700; font-size: 1.1em;">Sarah Chen</div>
+      <div style="font-size: 0.9em; opacity: 0.8;">Parent of 8 year old</div>
+    </div>
+    <div style="background: rgba(255,255,255,0.15); backdrop-filter: blur(10px); padding: 30px; border-radius: 20px; border: 2px solid rgba(255,255,255,0.2); transition: all 0.3s;">
+      <div style="color: var(--accent-yellow); font-size: 1.3em; margin-bottom: 15px;">⭐⭐⭐⭐⭐</div>
+      <p style="font-style: italic; line-height: 1.7; margin-bottom: 20px; opacity: 0.95;">"The public speaking program transformed my shy son into someone who volunteers to present in class. His teacher couldn't believe the change. Thank you STEMSphere!"</p>
+      <div style="font-weight: 700; font-size: 1.1em;">Michael Rodriguez</div>
+      <div style="font-size: 0.9em; opacity: 0.8;">Parent of 9 year old</div>
+    </div>
+    <div style="background: rgba(255,255,255,0.15); backdrop-filter: blur(10px); padding: 30px; border-radius: 20px; border: 2px solid rgba(255,255,255,0.2); transition: all 0.3s;">
+      <div style="color: var(--accent-yellow); font-size: 1.3em; margin-bottom: 15px;">⭐⭐⭐⭐⭐</div>
+      <p style="font-style: italic; line-height: 1.7; margin-bottom: 20px; opacity: 0.95;">"Best investment we've made in our child's education. The instructors are phenomenal, and the curriculum is perfectly designed for young learners. He's already planning his science fair project!"</p>
+      <div style="font-weight: 700; font-size: 1.1em;">Emily Thompson</div>
+      <div style="font-size: 0.9em; opacity: 0.8;">Parent of 7 year old</div>
+    </div>
+    <div style="background: rgba(255,255,255,0.15); backdrop-filter: blur(10px); padding: 30px; border-radius: 20px; border: 2px solid rgba(255,255,255,0.2); transition: all 0.3s;">
+      <div style="color: var(--accent-yellow); font-size: 1.3em; margin-bottom: 15px;">⭐⭐⭐⭐⭐</div>
+      <p style="font-style: italic; line-height: 1.7; margin-bottom: 20px; opacity: 0.95;">"The small group format is perfect. My daughter isn't lost in a big class, but she also gets to learn with friends. She actually looks forward to her sessions every week!"</p>
+      <div style="font-weight: 700; font-size: 1.1em;">David Kim</div>
+      <div style="font-size: 0.9em; opacity: 0.8;">Parent of 10 year old</div>
+    </div>
+    <div style="background: rgba(255,255,255,0.15); backdrop-filter: blur(10px); padding: 30px; border-radius: 20px; border: 2px solid rgba(255,255,255,0.2); transition: all 0.3s;">
+      <div style="color: var(--accent-yellow); font-size: 1.3em; margin-bottom: 15px;">⭐⭐⭐⭐⭐</div>
+      <p style="font-style: italic; line-height: 1.7; margin-bottom: 20px; opacity: 0.95;">"We tried other online programs but nothing compares to STEMSphere. The quality of instruction and the genuine care for each child's progress is unmatched."</p>
+      <div style="font-weight: 700; font-size: 1.1em;">Jessica Martinez</div>
+      <div style="font-size: 0.9em; opacity: 0.8;">Parent of 6 year old</div>
+    </div>
+    <div style="background: rgba(255,255,255,0.15); backdrop-filter: blur(10px); padding: 30px; border-radius: 20px; border: 2px solid rgba(255,255,255,0.2); transition: all 0.3s;">
+      <div style="color: var(--accent-yellow); font-size: 1.3em; margin-bottom: 15px;">⭐⭐⭐⭐⭐</div>
+      <p style="font-style: italic; line-height: 1.7; margin-bottom: 20px; opacity: 0.95;">"My son's critical thinking skills have skyrocketed. He's solving problems I didn't think were possible at his age. The mixed rotation class keeps him engaged and excited."</p>
+      <div style="font-weight: 700; font-size: 1.1em;">Robert Johnson</div>
+      <div style="font-size: 0.9em; opacity: 0.8;">Parent of 9 year old</div>
+    </div>
+  </div>
+</section>
+
+<div style="background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%); padding: 40px; border-radius: 20px; text-align: center; margin: 60px auto; max-width: 900px; box-shadow: 0 10px 40px rgba(255,165,0,0.3);">
+  <h3 style="font-size: 2em; margin-bottom: 15px; color: var(--text-dark);">🎓 Looking for Something Different?</h3>
+  <p style="font-size: 1.1em; margin-bottom: 25px; color: var(--text-dark);"><strong>Is your child older than 10?</strong> Or interested in <strong>1 on 1 personalized tutoring?</strong><br>
+  We have comprehensive programs for teens and adults with private instruction options!</p>
+  <a href="https://www.stemsphere.academy" style="display: inline-block; padding: 15px 40px; background: var(--text-dark); color: white; text-decoration: none; border-radius: 25px; font-weight: 700; font-size: 1.1em; transition: all 0.3s;">
+    Explore Our Full Programs →
+  </a>
+</div>
+
+<section style="background: linear-gradient(135deg, var(--accent-orange) 0%, #ff8b56 100%); color: white; padding: 80px 5%; text-align: center;">
+  <div style="max-width: 800px; margin: 0 auto;">
+    <h2 style="font-size: 2.5em; margin-bottom: 20px;">🚀 Ready to Transform Your Child's Future?</h2>
+    <p style="font-size: 1.2em; margin-bottom: 35px; opacity: 0.95;">Join hundreds of families who've discovered the STEMSphere difference.<br>
+    Limited spots available. Classes fill up fast!</p>
+    <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+      <a href="https://learn.stemsphere.academy/login.html" style="padding: 18px 40px; border-radius: 30px; text-decoration: none; font-weight: 700; font-size: 1.1em; transition: all 0.3s; display: inline-block; background: white; color: var(--accent-orange);">
+        Book Free Enrollment Session
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-content">
+    <img src="https://learn.stemsphere.academy/assets/favconsp1.2.png" alt="STEMSphere">
+    <h3>STEMSphere Kids Academy</h3>
+    <p>Where Future Leaders Begin 🚀</p>
+  </div>
+  
+  <div class="footer-bottom">
+    <p>© 2025 STEMSphere Academy. All rights reserved. | Empowering young minds worldwide 🌍</p>
+    <div class="footer-links">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Service</a>
+      <a href="mailto:support@stemsphere.academy">Contact Support</a>
+    </div>
+  </div>
+</footer>
+
+<script defer src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+window.addEventListener('load', function() {
+
+const SUPABASE_URL = 'https://horqtcwnhwgodwlyqhli.supabase.co';
+const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImhvcnF0Y3duaHdnb2R3bHlxaGxpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTk3NjAyNzEsImV4cCI6MjA3NTMzNjI3MX0.4rYzW6MFEkVVqLor55RuFGLwE6WBJrYLxvYbgeXXRGU';
+
+const { createClient } = supabase;
+const supabaseClient = createClient(SUPABASE_URL, SUPABASE_KEY);
+
+async function checkAdvisorAvailability() {
+  try {
+    const { data: advisors, error } = await supabaseClient
+      .from('profiles')
+      .select('id, full_name, advisor_available')
+      .eq('role', 'teacher')
+      .eq('is_advisor', true)
+      .eq('advisor_available', true);
+
+    const container = document.getElementById('advisorContainer');
+
+    if (advisors && advisors.length > 0) {
+      container.style.display = 'block';
+    } else {
+      container.style.display = 'none';
+    }
+  } catch (error) {
+    console.error('Error checking advisors:', error);
+  }
+}
+
+checkAdvisorAvailability();
+setInterval(checkAdvisorAvailability, 30000);
+
+(async () => {
+  const CACHE_KEY = 'stemsphere_reviews_cache';
+  const CACHE_DURATION = 24 * 60 * 60 * 1000;
+  
+  const cachedData = localStorage.getItem(CACHE_KEY);
+  let reviews = [];
+  
+  if (cachedData) {
+    try {
+      const parsed = JSON.parse(cachedData);
+      const now = new Date().getTime();
+      
+      if (now - parsed.timestamp < CACHE_DURATION) {
+        reviews = parsed.reviews;
+        console.log('Using cached reviews');
+      }
+    } catch (e) {
+      console.log('Cache parse error');
+    }
+  }
+  
+  if (reviews.length === 0) {
+    try {
+      const csvUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRSWqhCcu_XZW7SW5uZ3UZdKzvLm2zNw8DvMZV2TD_gcts6K-DBrLwd88pnXVn0xl0fxRRfGW0Y4iyN/pub?output=csv';
+      const res = await fetch(csvUrl);
+      const text = await res.text();
+      const rows = text.trim().split('\n').slice(1).map(r =>
+        r.split(/,(?=(?:(?:[^"]*"){2})*[^"]*$)/).map(c => c.replace(/^"|"$/g, ''))
+      );
+
+      reviews = rows
+        .filter(r => {
+          const name = (r[0] || "").toLowerCase();
+          const textVal = (r[1] || "").toLowerCase();
+          return (
+            r[2] &&
+            !name.includes("facebook") &&
+            !textVal.includes("facebook")
+          );
+        })
+        .sort((a, b) => new Date(b[3]) - new Date(a[3]));
+      
+      localStorage.setItem(CACHE_KEY, JSON.stringify({
+        timestamp: new Date().getTime(),
+        reviews: reviews
+      }));
+      
+      console.log('Fetched fresh reviews');
+    } catch (error) {
+      console.error('Error fetching reviews:', error);
+      return;
+    }
+  }
+
+  if (!reviews.length) return;
+
+  const formUrl = 'https://docs.google.com/forms/d/e/1FAIpQLSd0lD5dU8nsUbBzfqqRkLflTkJVrAQyvZXI81uXXyOPXpoUdA/viewform?usp=header';
+  const avg = (reviews.reduce((sum, r) => sum + (parseFloat(r[2])||0), 0) / reviews.length).toFixed(1);
+  const count = reviews.length;
+
+  const wrapper = document.createElement('div');
+  wrapper.innerHTML = `
+    <div style="margin-bottom:0.8em;">
+      <span style="background:#007bff; color:#fff; padding:0.4em 1em; border-radius:20px; font-size:0.95em; font-weight:bold; display:inline-block;">
+        4/5 students improve in only 3 weeks!
+      </span>
+    </div>
+    <h3 style="font-weight:600; margin:0.6em 0; color:#fff;">
+      <span style="color:#FFD700; font-size:1.2em;">★</span>
+      ${avg} (${count} review${count>1?'s':''})
+    </h3>
+    <div style="margin:1em 0; display:flex; justify-content:center; gap:1.5em;">
+      <button id="toggle-reviews" style="background:none; border:none; color:#ffffff; cursor:pointer; font-size:0.95em; text-decoration:underline;">
+        See all reviews
+      </button>
+      <button id="submit-review" style="background:none; border:none; color:#ffffff; cursor:pointer; font-size:0.95em; text-decoration:underline;">
+        Submit a review
+      </button>
+    </div>
+    <div id="reviews-body" style="margin-top:1.2em; display:none; text-align:left;"></div>
+  `;
+  document.getElementById('reviews-container').appendChild(wrapper);
+
+  const reviewsBody = wrapper.querySelector('#reviews-body');
+  let currentIndex = 0;
+  const batchSize = 20;
+
+  const seeMoreBtn = document.createElement('button');
+  seeMoreBtn.textContent = 'See more reviews';
+  seeMoreBtn.style.cssText = "background:none; border:none; color:#ffffff; cursor:pointer; font-size:0.95em; margin-top:1em; display:block; text-decoration:underline;";
+  seeMoreBtn.addEventListener('click', renderNextBatch);
+
+  function renderNextBatch() {
+    const slice = reviews.slice(currentIndex, currentIndex + batchSize);
+    slice.forEach(r => {
+      const reply = (r[5] || "").trim();
+      const div = document.createElement('div');
+      div.style.marginBottom = '1.5em';
+      div.innerHTML = `
+        <strong style="color:#eee;">${r[0]||'Anonymous'}</strong>
+        ${'★'.repeat(+r[2]).padEnd(5,'☆')
+          .replace(/★/g, '<span style="color:#FFD700;">★</span>')
+          .replace(/☆/g, '<span style="color:#555;">★</span>')}<br>
+        <small style="color:#aaa;">${new Date(r[3]).toLocaleDateString()}</small>
+        <p style="margin:0.4em 0 0; color:#ccc; line-height:1.4;">${r[1]}</p>
+        ${reply ? `
+          <div style="margin-left:1em; margin-top:0.3em;">
+            <div style="font-size:0.85em; color:#89c4ff; margin-bottom:0.2em; font-weight:600;">Instructor Reply:</div>
+            <div style="font-size:0.85em; color:#7fbfff; font-style:italic;">${reply}</div>
+          </div>` : ''}
+      `;
+      reviewsBody.appendChild(div);
+    });
+    currentIndex += batchSize;
+
+    if (currentIndex < reviews.length) {
+      if (reviewsBody.contains(seeMoreBtn)) {
+        reviewsBody.removeChild(seeMoreBtn);
+      }
+      reviewsBody.appendChild(seeMoreBtn);
+    } else {
+      seeMoreBtn.remove();
+    }
+  }
+
+  wrapper.querySelector('#toggle-reviews').addEventListener('click', e => {
+    const show = reviewsBody.style.display === 'block';
+    reviewsBody.style.display = show ? 'none' : 'block';
+    e.target.textContent = show ? 'See all reviews' : 'Hide reviews';
+    if (!show && currentIndex === 0) {
+      renderNextBatch();
+    }
+  });
+
+  wrapper.querySelector('#submit-review').addEventListener('click', ()=> window.open(formUrl, '_blank'));
+})();
+
+function adjustCookieBannerForMobile() {
+  const isMobile = window.innerWidth <= 768;
+  const banner = document.getElementById('cookieConsentBanner');
+  const fullText = document.getElementById('cookieFullText');
+  const mobileText = document.getElementById('cookieMobileText');
+  const buttons = document.getElementById('cookieButtons');
+  
+  if (isMobile) {
+    banner.style.padding = '0.5rem 0.75rem';
+    fullText.style.display = 'none';
+    mobileText.style.display = 'block';
+    buttons.querySelectorAll('button').forEach(btn => {
+      btn.style.padding = '0.4rem 0.8rem';
+      btn.style.fontSize = '0.75em';
+    });
+  } else {
+    banner.style.padding = '0.75rem';
+    fullText.style.display = 'block';
+    mobileText.style.display = 'none';
+    buttons.querySelectorAll('button').forEach((btn, idx) => {
+      if (idx === 0 || idx === 1) {
+        btn.style.padding = '0.5rem 1.25rem';
+      } else {
+        btn.style.padding = '0.5rem 1rem';
+      }
+      btn.style.fontSize = '0.8em';
+    });
+  }
+}
+
+document.getElementById('analyticsCookies').addEventListener('change', function() {
+  const toggle = document.getElementById('analyticsToggle');
+  const slider = document.getElementById('analyticsSlider');
+  if (this.checked) {
+    toggle.style.background = '#667eea';
+    slider.style.transform = 'translateX(30px)';
+  } else {
+    toggle.style.background = '#ccc';
+    slider.style.transform = 'translateX(0)';
+  }
+});
+
+document.getElementById('marketingCookies').addEventListener('change', function() {
+  const toggle = document.getElementById('marketingToggle');
+  const slider = document.getElementById('marketingSlider');
+  if (this.checked) {
+    toggle.style.background = '#667eea';
+    slider.style.transform = 'translateX(30px)';
+  } else {
+    toggle.style.background = '#ccc';
+    slider.style.transform = 'translateX(0)';
+  }
+});
+
+const analyticsSlider = document.getElementById('analyticsSlider');
+const marketingSlider = document.getElementById('marketingSlider');
+if (analyticsSlider) analyticsSlider.style.transform = 'translateX(30px)';
+if (marketingSlider) marketingSlider.style.transform = 'translateX(30px)';
+
+function checkCookieConsent() {
+  const consent = localStorage.getItem('cookieConsent');
+  if (!consent) {
+    const isMobile = window.innerWidth <= 768;
+    const delay = isMobile ? 10000 : 1000;
+    setTimeout(() => {
+      adjustCookieBannerForMobile();
+      document.getElementById('cookieConsentBanner').style.display = 'block';
+    }, delay);
+  } else {
+    const consentData = JSON.parse(consent);
+    if (consentData.analytics) enableAnalytics();
+    if (consentData.marketing) enableMarketing();
+  }
+}
+
+window.addEventListener('resize', () => {
+  const banner = document.getElementById('cookieConsentBanner');
+  if (banner.style.display === 'block') {
+    adjustCookieBannerForMobile();
+  }
+});
+
+window.acceptAllCookies = function() {
+  const consent = {
+    essential: true,
+    analytics: true,
+    marketing: true,
+    timestamp: new Date().toISOString()
+  };
+  localStorage.setItem('cookieConsent', JSON.stringify(consent));
+  document.getElementById('cookieConsentBanner').style.display = 'none';
+  enableAnalytics();
+  enableMarketing();
+  console.log('All cookies accepted');
+}
+
+window.rejectCookies = function() {
+  const consent = {
+    essential: true,
+    analytics: false,
+    marketing: false,
+    timestamp: new Date().toISOString()
+  };
+  localStorage.setItem('cookieConsent', JSON.stringify(consent));
+  document.getElementById('cookieConsentBanner').style.display = 'none';
+  console.log('Optional cookies rejected');
+}
+
+window.openCookieSettings = function() {
+  document.getElementById('cookieConsentBanner').style.display = 'none';
+  document.getElementById('cookieSettingsModal').style.display = 'flex';
+}
+
+window.closeCookieSettings = function() {
+  document.getElementById('cookieSettingsModal').style.display = 'none';
+  if (!localStorage.getItem('cookieConsent')) {
+    adjustCookieBannerForMobile();
+    document.getElementById('cookieConsentBanner').style.display = 'block';
+  }
+}
+
+window.saveCustomCookieSettings = function() {
+  const analytics = document.getElementById('analyticsCookies').checked;
+  const marketing = document.getElementById('marketingCookies').checked;
+  
+  const consent = {
+    essential: true,
+    analytics: analytics,
+    marketing: marketing,
+    timestamp: new Date().toISOString()
+  };
+  
+  localStorage.setItem('cookieConsent', JSON.stringify(consent));
+  document.getElementById('cookieSettingsModal').style.display = 'none';
+  
+  if (analytics) enableAnalytics();
+  if (marketing) enableMarketing();
+  
+  console.log('Custom cookie preferences saved:', consent);
+}
+
+window.acceptAllFromSettings = function() {
+  document.getElementById('analyticsCookies').checked = true;
+  document.getElementById('marketingCookies').checked = true;
+  
+  document.getElementById('analyticsToggle').style.background = '#667eea';
+  document.getElementById('analyticsSlider').style.transform = 'translateX(30px)';
+  document.getElementById('marketingToggle').style.background = '#667eea';
+  document.getElementById('marketingSlider').style.transform = 'translateX(30px)';
+  
+  saveCustomCookieSettings();
+}
+
+function enableAnalytics() {
+  console.log('Analytics tracking enabled');
+}
+
+function enableMarketing() {
+  console.log('Marketing tracking enabled');
+}
+
+setTimeout(function() {
+  (async function() {
+    let visitorId = localStorage.getItem('visitor_id');
+    if (!visitorId) {
+      visitorId = 'visitor_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
+      localStorage.setItem('visitor_id', visitorId);
+    }
+
+    async function trackVisitor() {
       try {
-        const { data: advisors, error } = await supabaseClient
-          .from('profiles')
-          .select('id, full_name, advisor_available')
-          .eq('role', 'teacher')
-          .eq('is_advisor', true)
-          .eq('advisor_available', true);
-
-        const container = document.getElementById('advisorContainer');
-
-        if (advisors && advisors.length > 0) {
-          container.style.display = 'block';
-        } else {
-          container.style.display = 'none';
+        let locationData = { country: 'Unknown', city: 'Unknown', ip: 'Unknown' };
+        try {
+          const response = await fetch('https://ipapi.co/json/');
+          if (response.ok) {
+            locationData = await response.json();
+          }
+        } catch (e) {
+          console.log('Location lookup failed');
         }
-      } catch (error) {
-        console.error('Error checking advisors:', error);
+
+        const visitorData = {
+          visitor_id: visitorId,
+          page_url: window.location.href,
+          ip_address: locationData.ip || 'Unknown',
+          city: locationData.city || null,
+          country: locationData.country_name || locationData.country || null,
+          last_seen: new Date().toISOString()
+        };
+
+        const { error } = await supabaseClient
+          .from('live_visitors')
+          .upsert(visitorData, { 
+            onConflict: 'visitor_id',
+            ignoreDuplicates: false 
+          });
+
+        if (error) {
+          console.error('Visitor tracking error:', error);
+        }
+      } catch (err) {
+        console.error('Tracking failed:', err);
       }
     }
 
-    function downloadResource(resourceName) {
-      fbq('track', 'Lead');
-      alert(`📥 Thank you for your interest!\n\nYour "${resourceName}" will be sent to your email shortly.\n\nCheck your inbox in the next few minutes!`);
-    }
+    await trackVisitor();
+    setInterval(trackVisitor, 30000);
 
-    checkAdvisorAvailability();
-    setInterval(checkAdvisorAvailability, 30000);
-
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
-      });
+    window.addEventListener('beforeunload', () => {
+      navigator.sendBeacon(
+        `${SUPABASE_URL}/rest/v1/live_visitors?visitor_id=eq.${visitorId}`,
+        JSON.stringify({ last_seen: new Date().toISOString() })
+      );
     });
+  })();
+}, 30000);
 
-    document.querySelectorAll('a[href*="login"]').forEach(btn => {
-      btn.addEventListener('click', function() {
-        fbq('track', 'InitiateCheckout');
-      });
-    });
-  </script>
+checkCookieConsent();
+
+});
+</script>
+
 </body>
 </html>
