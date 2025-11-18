@@ -138,39 +138,6 @@
       margin: 0;
       opacity: 0.95;
     }
-    .header-cta {
-      display: flex;
-      gap: 15px;
-      align-items: center;
-    }
-    .header-btn {
-      padding: 12px 25px;
-      border-radius: 25px;
-      text-decoration: none;
-      font-weight: 700;
-      transition: all 0.3s;
-      font-size: 0.95em;
-    }
-    .btn-primary-header {
-      background: var(--accent-orange);
-      color: white;
-      border: 2px solid var(--accent-orange);
-    }
-    .btn-primary-header:hover {
-      background: white;
-      color: var(--accent-orange);
-      transform: translateY(-3px);
-      box-shadow: 0 6px 20px rgba(255, 107, 53, 0.4);
-    }
-    .btn-secondary-header {
-      background: transparent;
-      color: white;
-      border: 2px solid white;
-    }
-    .btn-secondary-header:hover {
-      background: white;
-      color: var(--primary-blue);
-    }
 
     .hero {
       background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
@@ -236,36 +203,10 @@
       justify-content: center;
       position: relative;
     }
-    .video-placeholder {
+    .video-container video {
       width: 100%;
       height: 100%;
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      color: white;
-    }
-    .play-icon {
-      width: 80px;
-      height: 80px;
-      background: rgba(255, 255, 255, 0.3);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 20px;
-      cursor: pointer;
-      transition: all 0.3s;
-    }
-    .play-icon:hover {
-      background: rgba(255, 255, 255, 0.5);
-      transform: scale(1.1);
-    }
-    .play-icon::after {
-      content: '▶';
-      font-size: 30px;
-      margin-left: 5px;
+      object-fit: cover;
     }
 
     #highIntentCTA {
@@ -1012,12 +953,8 @@
       <img src="https://learn.stemsphere.academy/assets/favconsp1.2.png" alt="STEMSphere Kids Academy">
       <div class="brand-text">
         <h1>STEMSphere Kids</h1>
-        <p>🚀 Where Future Leaders Begin</p>
+        <p>Elite Learning for Ages 6-10</p>
       </div>
-    </div>
-    <div class="header-cta">
-      <a href="#programs" class="header-btn btn-secondary-header">View Programs</a>
-      <a href="#pricing" class="header-btn btn-primary-header">Get Started</a>
     </div>
   </div>
 </header>
@@ -1031,11 +968,10 @@
 
 <section class="video-section">
   <div class="video-container">
-    <div class="video-placeholder">
-      <div class="play-icon"></div>
-      <h3>See Our Young Geniuses in Action!</h3>
-      <p>Watch how we're shaping the next generation of leaders</p>
-    </div>
+    <video controls autoplay muted loop playsinline>
+      <source src="https://raw.githubusercontent.com/STEMSphere/kids/main/assets/STEMSPhereAcademyKids.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
   </div>
 </section>
 
@@ -1087,7 +1023,7 @@
 <section class="speaking-spotlight">
   <div class="speaking-container">
     <div class="speaking-image">
-      <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=1200&q=80" alt="Child presenting confidently">
+      <img src="https://images.unsplash.com/photo-1523580494863-6f3031224c94?w=1200&q=80" alt="Child presenting confidently">
     </div>
     <div class="speaking-content">
       <span class="speaking-badge">🎤 THE SKILL THAT CHANGES EVERYTHING</span>
@@ -1117,75 +1053,29 @@
   </div>
 </section>
 
-<section class="blog-section alt-bg">
-  <div class="blog-header">
-    <h2>👥 Why Small Group Learning Beats Private Tutoring</h2>
-    <p>The surprising research on why kids learn better with peers</p>
-  </div>
-  <div class="blog-grid">
-    <div class="blog-image">
-      <img src="https://images.unsplash.com/photo-1503676382389-4809596d5290?w=800&q=80" alt="Kids learning together in small group">
-    </div>
-    <div class="blog-content">
-      <h3>The Secret Ingredient: Peer Learning</h3>
-      <p>Private 1 on 1 tutoring sounds like the gold standard. But research shows something surprising: <strong>Kids learn faster and retain more in small groups of 2 to 8 students.</strong></p>
-      <p>Why? Because learning isn't just about absorbing information. It's about discussion, collaboration, explaining concepts to peers, and seeing problems solved different ways.</p>
-      <ul class="blog-list">
-        <li>Hearing another child explain a concept often clicks better than hearing an adult</li>
-        <li>Healthy competition motivates kids to push themselves further</li>
-        <li>Collaboration teaches teamwork. A skill they'll need their entire life</li>
-        <li>Kids build friendships with peers who share their interests</li>
-      </ul>
-      <p><strong>Our approach:</strong> Small enough for personalized attention (3 or 6 students max), large enough for dynamic peer learning. The perfect balance that traditional schools and private tutoring both miss.</p>
-    </div>
-  </div>
-</section>
-
-<section class="why-us">
-  <div class="section-header">
-    <h2 style="color: white;">Why Parents Choose STEMSphere Kids</h2>
-    <p style="color: rgba(255,255,255,0.9);">We're not just another online learning platform. We're building the future</p>
-  </div>
-  <div class="features-grid">
-    <div class="feature-card">
-      <div class="feature-icon">🏆</div>
-      <h3>Award Winning Curriculum</h3>
-      <p>Designed by education experts and proven to accelerate learning by 3x</p>
-    </div>
-    <div class="feature-card">
-      <div class="feature-icon">👥</div>
-      <h3>Perfect Group Sizes</h3>
-      <p>Small groups of 3 to 6 students for personalized attention with peer learning benefits</p>
-    </div>
-    <div class="feature-card">
-      <div class="feature-icon">🎯</div>
-      <h3>Future Ready Skills</h3>
-      <p>Public speaking, critical thinking, STEM mastery. Everything your child needs to lead</p>
-    </div>
-    <div class="feature-card">
-      <div class="feature-icon">⚡</div>
-      <h3>Results That Matter</h3>
-      <p>95% of parents report dramatic confidence improvements in just 12 weeks</p>
-    </div>
-    <div class="feature-card">
-      <div class="feature-icon">🌍</div>
-      <h3>Global Community</h3>
-      <p>Learn with peers from around the world. Building friendships and cultural awareness</p>
-    </div>
-    <div class="feature-card">
-      <div class="feature-icon">🔥</div>
-      <h3>Elite Instructors</h3>
-      <p>Top 1% of educators. Passionate, certified, and specialized in young learner success</p>
-    </div>
-  </div>
-</section>
-
 <section class="section" id="programs">
   <div class="section-header">
     <h2>📚 Subjects We Offer</h2>
     <p>Each program is a 12 week journey designed to transform your child's future</p>
   </div>
   <div class="programs-grid">
+    <div class="program-card featured">
+      <span class="program-badge">⭐ ALL IN ONE</span>
+      <img class="program-image" src="https://images.unsplash.com/photo-1503676382389-4809596d5290?w=800" alt="Mixed Learning Program">
+      <div class="program-content">
+        <h3>🎯 Ultimate Skills Rotation</h3>
+        <p>The COMPLETE package! Weekly rotation through Public Speaking, Math, Science, and Coding. Maximum variety, maximum growth.</p>
+        <ul class="program-features">
+          <li>Week 1: Public Speaking mastery</li>
+          <li>Week 2: Math problem solving</li>
+          <li>Week 3: Science experiments</li>
+          <li>Week 4: Coding fundamentals</li>
+          <li>Continuous skill development</li>
+        </ul>
+        <a href="#pricing" class="program-cta">Enroll Now →</a>
+      </div>
+    </div>
+
     <div class="program-card">
       <img class="program-image" src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=800" alt="Kids Science Program">
       <div class="program-content">
@@ -1202,8 +1092,7 @@
       </div>
     </div>
 
-    <div class="program-card featured">
-      <span class="program-badge">🔥 MOST POPULAR</span>
+    <div class="program-card">
       <img class="program-image" src="https://images.unsplash.com/photo-1596496050827-8299e0220de1?w=800" alt="Kids Math Program">
       <div class="program-content">
         <h3>🧮 Math Wizards Academy</h3>
@@ -1220,7 +1109,7 @@
     </div>
 
     <div class="program-card">
-      <img class="program-image" src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=800" alt="Kids Public Speaking">
+      <img class="program-image" src="https://images.unsplash.com/photo-1475721027785-f74eccf877e2?w=800" alt="Kids Public Speaking">
       <div class="program-content">
         <h3>🎤 Kids Public Speaking Mastery</h3>
         <p>Transform shy kids into confident communicators. Master presentation skills, storytelling, and leadership presence.</p>
@@ -1230,23 +1119,6 @@
           <li>Stage presence mastery</li>
           <li>Peer presentation practice</li>
           <li>Leadership communication</li>
-        </ul>
-        <a href="#pricing" class="program-cta">Enroll Now →</a>
-      </div>
-    </div>
-
-    <div class="program-card">
-      <span class="program-badge">⭐ ALL IN ONE</span>
-      <img class="program-image" src="https://images.unsplash.com/photo-1503676382389-4809596d5290?w=800" alt="Mixed Learning Program">
-      <div class="program-content">
-        <h3>🎯 Ultimate Skills Rotation</h3>
-        <p>The COMPLETE package! Weekly rotation through Public Speaking, Math, Science, and Coding. Maximum variety, maximum growth.</p>
-        <ul class="program-features">
-          <li>Week 1: Public Speaking mastery</li>
-          <li>Week 2: Math problem solving</li>
-          <li>Week 3: Science experiments</li>
-          <li>Week 4: Coding fundamentals</li>
-          <li>Continuous skill development</li>
         </ul>
         <a href="#pricing" class="program-cta">Enroll Now →</a>
       </div>
@@ -1356,6 +1228,69 @@
   </div>
 </section>
 
+<section class="blog-section alt-bg">
+  <div class="blog-header">
+    <h2>👥 Why Small Group Learning Works Better</h2>
+    <p>The research backed reason we choose small groups over one on one tutoring</p>
+  </div>
+  <div class="blog-grid">
+    <div class="blog-image">
+      <img src="https://images.unsplash.com/photo-1503676382389-4809596d5290?w=800&q=80" alt="Kids learning together in small group">
+    </div>
+    <div class="blog-content">
+      <h3>Private Tutoring Isn't Always the Answer</h3>
+      <p>You'd think one on one tutoring would be the gold standard. More attention, personalized pacing, no distractions. But research tells a different story.</p>
+      <p><strong>Kids learn better in small groups.</strong> Not large classrooms where they're invisible. Not isolated one on one sessions. <strong>The sweet spot is 3 to 6 students.</strong></p>
+      <p>Why? Three reasons:</p>
+      <ul class="blog-list">
+        <li><strong>Peer explanation is powerful.</strong> When a classmate explains a concept, it often clicks better than when an adult does. They use kid language. They remember what confused them five minutes ago.</li>
+        <li><strong>Healthy competition drives growth.</strong> Seeing a peer solve a problem motivates kids to try harder. It's not about being "better than" others. It's about rising together.</li>
+        <li><strong>Collaboration is a life skill.</strong> One on one tutoring doesn't teach teamwork. Small groups do. Kids learn to share ideas, debate solutions, and build on each other's thinking.</li>
+      </ul>
+      <p><strong>Our approach:</strong> Small enough that every child gets individualized attention and feedback. Large enough that they experience the magic of learning with peers. It's the balance that traditional schools and private tutoring both miss.</p>
+    </div>
+  </div>
+</section>
+
+<section class="why-us">
+  <div class="section-header">
+    <h2 style="color: white;">Why Parents Choose STEMSphere Kids</h2>
+    <p style="color: rgba(255,255,255,0.9);">We're not just another online learning platform. We're building the future</p>
+  </div>
+  <div class="features-grid">
+    <div class="feature-card">
+      <div class="feature-icon">🏆</div>
+      <h3>Award Winning Curriculum</h3>
+      <p>Designed by education experts and proven to accelerate learning by 3x</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">👥</div>
+      <h3>Perfect Group Sizes</h3>
+      <p>Small groups of 3 to 6 students for personalized attention with peer learning benefits</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">🎯</div>
+      <h3>Future Ready Skills</h3>
+      <p>Public speaking, critical thinking, STEM mastery. Everything your child needs to lead</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">⚡</div>
+      <h3>Results That Matter</h3>
+      <p>95% of parents report dramatic confidence improvements in just 12 weeks</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">🌍</div>
+      <h3>Global Community</h3>
+      <p>Learn with peers from around the world. Building friendships and cultural awareness</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">🔥</div>
+      <h3>Elite Instructors</h3>
+      <p>Top 1% of educators. Passionate, certified, and specialized in young learner success</p>
+    </div>
+  </div>
+</section>
+
 <section style="padding: 80px 5%; background: linear-gradient(135deg, #1a1a2e, #16213e); color: white;">
   <div style="max-width: 1200px; margin: 0 auto; text-align: center;">
     <h2 style="font-size: 2.5em; margin-bottom: 20px; background: linear-gradient(135deg, #FFD700, #FFA500); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">📚 Free Learning Resources</h2>
@@ -1380,7 +1315,6 @@
     </div>
   </div>
 </section>
-
 <section class="blog-section alt-bg">
   <div class="blog-header">
     <h2>🧮 The Math Confidence Crisis (And How to Fix It)</h2>
