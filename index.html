@@ -188,9 +188,31 @@
     }
 
     #highIntentCTA {
+      position: relative;
       text-align: center;
       margin: 2rem auto;
       padding: 0 1rem;
+    }
+
+    #highIntentCTA::before {
+      content: "⬇⬇⬇";
+      position: absolute;
+      top: -50px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 2rem;
+      color: #fff;
+      text-shadow: 0 0 10px #00c6ff;
+      animation: bounce 1.5s infinite;
+    }
+
+    @keyframes bounce {
+      0%, 100% {
+        transform: translate(-50%, 0);
+      }
+      50% {
+        transform: translate(-50%, 10px);
+      }
     }
 
     #highIntentCTA button, #highIntentCTA a {
@@ -538,6 +560,11 @@
       .brand-text p {
         font-size: 0.8em;
       }
+
+      #highIntentCTA::before {
+        top: -40px;
+        font-size: 1.5rem;
+      }
     }
 
     @media (max-width: 480px) {
@@ -884,7 +911,7 @@
           <p>Exclusive 3 Student Experience</p>
         </div>
         <div class="pricing-price">
-          <span class="currency">$</span>995
+          <div class="price-main">$995</div>
           <span class="period">12 Classes (3 Months)</span>
           <span class="weekly-price">Only $83/week</span>
         </div>
@@ -907,7 +934,7 @@
           <p>Optimal Learning Community</p>
         </div>
         <div class="pricing-price">
-          <span class="currency">$</span>799
+          <div class="price-main">$799</div>
           <span class="period">12 Classes (3 Months)</span>
           <span class="weekly-price">Only $66/week</span>
         </div>
@@ -1256,31 +1283,30 @@
 .pricing-price {
   text-align: center;
   margin: 1.5rem 0;
-  font-size: 2.8em;
-  font-weight: 700;
-  color: #FFD700;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
 }
 
-.pricing-price .currency {
-  font-size: 0.5em;
-  vertical-align: super;
+.price-main {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #FFD700;
+  line-height: 1;
 }
 
 .pricing-price .period {
   display: block;
   color: rgba(255,255,255,0.7);
-  font-size: 0.28em;
-  margin-top: 0.3rem;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
 }
 
 .pricing-price .weekly-price {
   display: block;
   color: #00ff88;
-  font-size: 0.35em;
+  font-size: 1.1rem;
   margin-top: 0.5rem;
   font-weight: 800;
 }
@@ -1469,6 +1495,91 @@
   animation: pulse 2s infinite;
 }
 
+.blog-section {
+  background: linear-gradient(135deg, #1a1a2e, #16213e);
+  padding: 3rem 1rem;
+}
+
+.blog-section h2 {
+  font-size: 2.2rem;
+  text-align: center;
+  margin-bottom: 0.8rem;
+  background: linear-gradient(135deg, #fff, #00c6ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.blog-section p.intro {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 2rem;
+  font-size: 1.1rem;
+  color: rgba(255,255,255,0.8);
+}
+
+.blog-content-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: center;
+  padding: 0 1rem;
+}
+
+.blog-image {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
+
+.blog-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.5s;
+}
+
+.blog-image:hover img {
+  transform: scale(1.05);
+}
+
+.blog-text h3 {
+  font-size: 1.8rem;
+  margin-bottom: 0.8rem;
+  color: #00c6ff;
+}
+
+.blog-text p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: rgba(255,255,255,0.9);
+  margin-bottom: 0.8rem;
+}
+
+.blog-list {
+  list-style: none;
+  margin: 1rem 0;
+}
+
+.blog-list li {
+  padding: 0.5rem 0;
+  padding-left: 1.8em;
+  position: relative;
+  font-size: 1rem;
+  color: rgba(255,255,255,0.9);
+}
+
+.blog-list li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: #00ff88;
+  font-weight: 700;
+  font-size: 1.2em;
+}
+
 .cta-banner {
   background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
   padding: 2.5rem 1rem;
@@ -1606,16 +1717,17 @@ footer {
     grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
   }
+
+  .blog-content-wrapper {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
 }
 
 @media (max-width: 480px) {
   .programs-grid,
   .pricing-grid,
   .features-grid,
-  .ebook-grid {
-    grid-template-columns: 1fr;
-  }
-  
   .ebook-grid {
     grid-template-columns: 1fr;
   }
