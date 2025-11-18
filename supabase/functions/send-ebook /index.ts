@@ -6,7 +6,7 @@ interface EbookRequest {
   email: string
   name: string
   ebookType: string
-}
+} 
 
 serve(async (req) => {
   try {
