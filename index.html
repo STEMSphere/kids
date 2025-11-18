@@ -268,117 +268,106 @@
       margin-left: 5px;
     }
 
-    .instant-session-container {
-      max-width: 1200px;
-      margin: 20px auto;
-      padding: 0 5%;
-    }
-    .advisor-banner {
-      background: linear-gradient(135deg, #00d9ff 0%, #00b8d4 100%);
-      border-radius: 20px;
-      padding: 30px;
+    #highIntentCTA {
+      position: relative;
       text-align: center;
-      box-shadow: 0 10px 40px rgba(0, 217, 255, 0.3);
-      position: relative;
-      overflow: hidden;
-    }
-    .advisor-banner::before {
-      content: '';
-      position: absolute;
-      top: -50%;
-      right: -50%;
-      width: 200%;
-      height: 200%;
-      background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
-      animation: pulse-glow 3s ease-in-out infinite;
-    }
-    @keyframes pulse-glow {
-      0%, 100% { transform: scale(1); opacity: 0.5; }
-      50% { transform: scale(1.1); opacity: 0.8; }
-    }
-    .advisor-content {
-      position: relative;
-      z-index: 2;
-    }
-    .live-indicator {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      background: rgba(255, 255, 255, 0.2);
-      padding: 10px 25px;
-      border-radius: 30px;
-      margin-bottom: 15px;
-      backdrop-filter: blur(10px);
-    }
-    .live-dot {
-      width: 12px;
-      height: 12px;
-      background: #00ff88;
-      border-radius: 50%;
-      animation: pulse-dot 1.5s ease-in-out infinite;
-      box-shadow: 0 0 10px #00ff88;
-    }
-    @keyframes pulse-dot {
-      0%, 100% { transform: scale(1); opacity: 1; }
-      50% { transform: scale(1.2); opacity: 0.7; }
-    }
-    .advisor-banner h3 {
-      font-size: 1.8em;
-      color: white;
-      margin-bottom: 12px;
-      font-weight: 700;
-    }
-    .advisor-banner p {
-      font-size: 1.1em;
-      color: rgba(255, 255, 255, 0.95);
-      margin-bottom: 20px;
-    }
-    .book-session-btn {
-      display: inline-block;
-      padding: 16px 40px;
-      background: white;
-      color: #00b8d4;
-      text-decoration: none;
-      border-radius: 30px;
-      font-weight: 700;
-      font-size: 1.1em;
-      transition: all 0.3s;
-      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
-    }
-    .book-session-btn:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      margin: 3rem auto;
+      padding: 0 1rem;
     }
 
-    .scroll-indicator {
-      text-align: center;
-      margin: 25px 0 15px;
+    #highIntentCTA button, #highIntentCTA a {
+      display: inline-block;
+      background: linear-gradient(135deg, #ff0000, #ff6b6b);
+      color: #fff;
+      font-size: clamp(1.1rem, 3vw, 1.5rem);
+      font-weight: 800;
+      padding: 1.2rem 2.5rem;
+      border-radius: 12px;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 10px 30px rgba(255,0,0,0.5);
+      transition: all 0.3s;
+      position: relative;
+      z-index: 1;
+      margin: 0.5rem;
     }
-    .scroll-arrow {
-      font-size: 3em;
-      color: var(--primary-blue);
-      animation: bounce 2s infinite;
+
+    #highIntentCTA button:hover, #highIntentCTA a:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 40px rgba(255,0,0,0.7);
     }
+
+    #liveChatBtn {
+      background: linear-gradient(135deg, #00ff88, #00c853) !important;
+      color: #000 !important;
+      box-shadow: 0 10px 30px rgba(0,255,136,0.5) !important;
+    }
+
+    #liveChatBtn:hover {
+      box-shadow: 0 15px 40px rgba(0,255,136,0.7) !important;
+    }
+
+    #highIntentCTA::before {
+      content: "⬇⬇⬇";
+      position: absolute;
+      top: -50px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 2rem;
+      color: #fff;
+      text-shadow: 0 0 10px #00c6ff;
+      animation: bounce 1.5s infinite;
+    }
+
     @keyframes bounce {
-      0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
-      40% { transform: translateY(-20px); }
-      60% { transform: translateY(-10px); }
+      0%, 100% {
+        transform: translate(-50%, 0);
+      }
+      50% {
+        transform: translate(-50%, 10px);
+      }
     }
-    .scroll-text {
-      margin-top: 5px;
-      font-size: 1.1em;
-      color: var(--text-light);
+
+    #advisorStatusIndicator {
+      margin: 1rem auto;
+      text-align: center;
+    }
+
+    #advisorStatusIndicator span {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.75rem 1.5rem;
+      background: rgba(0,255,136,0.2);
+      border: 2px solid #00ff88;
+      border-radius: 8px;
+      color: #333;
       font-weight: 600;
     }
 
+    #advisorStatusIndicator .status-dot {
+      width: 10px;
+      height: 10px;
+      background: #00ff88;
+      border-radius: 50%;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.5; transform: scale(1.2); }
+    }
+
     #reviews-container {
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      background: rgba(255,255,255,0.1);
       backdrop-filter: blur(10px);
       border-radius: 16px;
       padding: 2rem;
       margin: 2rem auto;
       max-width: 900px;
       box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
       color: white;
     }
 
@@ -406,6 +395,127 @@
       border-radius: 12px;
       padding: 1.5rem;
       margin-top: 1rem;
+    }
+
+    .speaking-spotlight {
+      padding: 100px 5%;
+      background: linear-gradient(135deg, #1e3c72 0%, #2a5298 50%, #7e22ce 100%);
+      color: white;
+      position: relative;
+      overflow: hidden;
+    }
+    .speaking-spotlight::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%23ffffff" fill-opacity="0.05" d="M0,160L48,144C96,128,192,96,288,106.7C384,117,480,171,576,165.3C672,160,768,96,864,80C960,64,1056,96,1152,122.7C1248,149,1344,171,1392,181.3L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>') no-repeat bottom;
+      background-size: cover;
+    }
+    .speaking-container {
+      max-width: 1400px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+      position: relative;
+      z-index: 2;
+    }
+    .speaking-image {
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+    }
+    .speaking-image img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .speaking-badge {
+      display: inline-block;
+      background: var(--accent-orange);
+      color: white;
+      padding: 10px 25px;
+      border-radius: 30px;
+      font-weight: 700;
+      font-size: 0.9em;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 15px rgba(255, 107, 53, 0.4);
+    }
+    .speaking-content h2 {
+      font-size: 2.8em;
+      margin-bottom: 25px;
+      line-height: 1.2;
+    }
+    .speaking-lead {
+      font-size: 1.3em;
+      margin-bottom: 30px;
+      opacity: 0.95;
+      line-height: 1.6;
+    }
+    .stat-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 25px;
+      margin: 35px 0;
+    }
+    .stat-box {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      padding: 25px;
+      border-radius: 15px;
+      border: 2px solid rgba(255, 255, 255, 0.2);
+    }
+    .stat-number {
+      font-size: 3em;
+      font-weight: 700;
+      color: var(--accent-yellow);
+      margin-bottom: 10px;
+    }
+    .stat-label {
+      font-size: 1.1em;
+      opacity: 0.9;
+    }
+    .speaking-points {
+      list-style: none;
+      margin: 30px 0;
+    }
+    .speaking-points li {
+      padding: 15px 0;
+      padding-left: 40px;
+      position: relative;
+      font-size: 1.15em;
+      line-height: 1.6;
+    }
+    .speaking-points li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: var(--success-green);
+      font-size: 1.5em;
+      font-weight: 700;
+    }
+    .speaking-cta {
+      display: inline-block;
+      padding: 18px 45px;
+      background: var(--accent-orange);
+      color: white;
+      text-decoration: none;
+      border-radius: 30px;
+      font-weight: 700;
+      font-size: 1.2em;
+      margin-top: 25px;
+      transition: all 0.3s;
+      box-shadow: 0 6px 20px rgba(255, 107, 53, 0.4);
+    }
+    .speaking-cta:hover {
+      background: white;
+      color: var(--accent-orange);
+      transform: translateY(-3px);
+      box-shadow: 0 10px 30px rgba(255, 107, 53, 0.5);
     }
 
     .blog-section {
@@ -487,6 +597,45 @@
       color: var(--primary-blue);
       font-weight: 700;
       font-size: 1.3em;
+    }
+
+    .why-us {
+      background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+      color: white;
+      padding: 80px 5%;
+    }
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .feature-card {
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(10px);
+      padding: 30px;
+      border-radius: 20px;
+      text-align: center;
+      transition: all 0.3s;
+      border: 2px solid rgba(255, 255, 255, 0.2);
+    }
+    .feature-card:hover {
+      background: rgba(255, 255, 255, 0.25);
+      transform: translateY(-10px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    }
+    .feature-icon {
+      font-size: 3em;
+      margin-bottom: 15px;
+    }
+    .feature-card h3 {
+      font-size: 1.4em;
+      margin-bottom: 10px;
+    }
+    .feature-card p {
+      opacity: 0.9;
+      line-height: 1.6;
     }
 
     .section {
@@ -682,72 +831,34 @@
     }
 
     footer {
-      background: #1a1a1a;
-      color: #fff;
-      padding: 3rem 5% 2rem;
-      font-family: 'Segoe UI', sans-serif;
-    }
-    
-    footer .footer-content {
-      max-width: 1200px;
-      margin: 0 auto;
-      text-align: center;
-    }
-    
-    footer .footer-content img {
-      width: 60px;
-      height: 60px;
-      margin-bottom: 1rem;
-      border-radius: 12px;
-    }
-    
-    footer h3 {
-      font-size: 1.8em;
-      margin-bottom: 0.5rem;
-      background: linear-gradient(to right, #4A90E2, #9B59B6);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-    
-    footer p {
+      background: #000;
       color: rgba(255,255,255,0.7);
-      font-size: 1.1em;
-      margin-bottom: 2rem;
-    }
-    
-    footer .footer-bottom {
-      border-top: 1px solid rgba(255,255,255,0.1);
-      padding-top: 2rem;
       text-align: center;
-    }
-    
-    footer .footer-bottom p {
-      color: rgba(255,255,255,0.6);
+      padding: 2rem 1rem;
       font-size: 0.95em;
-      margin-bottom: 1rem;
     }
-    
-    footer .footer-links {
-      display: flex;
-      justify-content: center;
-      gap: 1.5rem;
-      flex-wrap: wrap;
-      font-size: 0.9em;
+
+    .footer-links {
+      margin: 1rem 0;
     }
-    
-    footer .footer-links a {
-      color: rgba(255,255,255,0.6);
+
+    .footer-links a,
+    .footer-contact a {
+      color: #00dffc;
       text-decoration: none;
+      margin: 0 1rem;
       transition: color 0.3s;
     }
-    
-    footer .footer-links a:hover {
+
+    .footer-links a:hover,
+    .footer-contact a:hover {
       color: #fff;
+      text-decoration: underline;
     }
 
     @media (max-width: 768px) {
       .hero h2 { font-size: 2em; }
-      .blog-grid { grid-template-columns: 1fr; }
+      .blog-grid, .speaking-container { grid-template-columns: 1fr; }
       .blog-grid.reverse { direction: ltr; }
       #fallback-translator { position: static; margin: 10px auto; width: fit-content; }
       .login-link { top: 60px; font-size: 0.85em; padding: 8px 15px; }
@@ -928,25 +1039,23 @@
   </div>
 </section>
 
-<div class="instant-session-container" id="advisorContainer" style="display:none;">
-  <div class="advisor-banner">
-    <div class="advisor-content">
-      <div class="live-indicator">
-        <span class="live-dot"></span>
-        <span style="color: white; font-weight: 700; font-size: 1.1em;">ENROLLMENT ADVISOR ONLINE</span>
-      </div>
-      <h3>💬 Chat with Advisor NOW - Free!</h3>
-      <p>An enrollment advisor is available right now to answer your questions and help you get started</p>
-      <a href="https://learn.stemsphere.academy/instant-session.html" class="book-session-btn">
-        🚀 Book Your Enrollment Session Now
-      </a>
-    </div>
+<div id="highIntentCTA">
+  <div id="liveChatWrapper" style="display:none; margin-bottom: 1rem;">
+    <button onclick="openAnonymousAdvisorChat()" id="liveChatBtn">
+      💬 Chat with Advisor NOW - Free!
+    </button>
   </div>
-</div>
-
-<div class="scroll-indicator">
-  <div class="scroll-arrow">↓</div>
-  <p class="scroll-text">Discover How We Transform Young Minds</p>
+  
+  <div id="advisorStatusIndicator" style="display: none;">
+    <span>
+      <span class="status-dot"></span>
+      Advisor Online Now
+    </span>
+  </div>
+  
+  <a href="https://learn.stemsphere.academy/login.html">
+    🚀 Book Your Enrollment Session Now
+  </a>
 </div>
 
 <div id="reviews-container"></div>
@@ -962,7 +1071,7 @@
     </div>
     <div class="blog-content">
       <h3>Most Kids Are Being Left Behind in STEM</h3>
-      <p>By age 10, <strong>67% of children have already decided they're "not good at science."</strong> Not because they can't do it but because nobody showed them it could be fun, hands-on, and exciting.</p>
+      <p>By age 10, <strong>67% of children have already decided they're "not good at science."</strong> Not because they can't do it but because nobody showed them it could be fun, hands on, and exciting.</p>
       <p>Traditional classrooms focus on memorization. We focus on <strong>discovery, experimentation, and real world applications</strong> that make kids say "WOW!" instead of "Why do I need to know this?"</p>
       <ul class="blog-list">
         <li>Live virtual experiments kids can recreate at home</li>
@@ -971,6 +1080,102 @@
         <li>Small groups mean every question gets answered. Curiosity never gets ignored.</li>
       </ul>
       <p><strong>The result?</strong> Kids who can't wait for their next science class. Kids who start asking "how does that work?" about everything around them. Kids who see themselves as future scientists, engineers, and innovators.</p>
+    </div>
+  </div>
+</section>
+
+<section class="speaking-spotlight">
+  <div class="speaking-container">
+    <div class="speaking-image">
+      <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=1200&q=80" alt="Child presenting confidently">
+    </div>
+    <div class="speaking-content">
+      <span class="speaking-badge">🎤 THE SKILL THAT CHANGES EVERYTHING</span>
+      <h2>Why Your Child's Future Depends on Public Speaking</h2>
+      <p class="speaking-lead">Here's what most parents don't realize: <strong>Public speaking isn't natural.</strong> It's a learned skill and the earlier you start, the more confident they become.</p>
+      
+      <div class="stat-grid">
+        <div class="stat-box">
+          <div class="stat-number">75%</div>
+          <div class="stat-label">of adults fear public speaking more than death</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-number">3x</div>
+          <div class="stat-label">more likely to be hired with strong communication skills</div>
+        </div>
+      </div>
+
+      <ul class="speaking-points">
+        <li>Studies show kids who learn public speaking early develop unshakeable confidence</li>
+        <li>Strong communicators become natural leaders in school, sports, and life</li>
+        <li>The ability to articulate ideas clearly equals better grades, better relationships, better opportunities</li>
+        <li>Your child's biggest competitor already knows how to speak with confidence</li>
+      </ul>
+
+      <a href="#programs" class="speaking-cta">Give Your Child This Advantage →</a>
+    </div>
+  </div>
+</section>
+
+<section class="blog-section alt-bg">
+  <div class="blog-header">
+    <h2>👥 Why Small Group Learning Beats Private Tutoring</h2>
+    <p>The surprising research on why kids learn better with peers</p>
+  </div>
+  <div class="blog-grid">
+    <div class="blog-image">
+      <img src="https://images.unsplash.com/photo-1503676382389-4809596d5290?w=800&q=80" alt="Kids learning together in small group">
+    </div>
+    <div class="blog-content">
+      <h3>The Secret Ingredient: Peer Learning</h3>
+      <p>Private 1 on 1 tutoring sounds like the gold standard. But research shows something surprising: <strong>Kids learn faster and retain more in small groups of 2 to 8 students.</strong></p>
+      <p>Why? Because learning isn't just about absorbing information. It's about discussion, collaboration, explaining concepts to peers, and seeing problems solved different ways.</p>
+      <ul class="blog-list">
+        <li>Hearing another child explain a concept often clicks better than hearing an adult</li>
+        <li>Healthy competition motivates kids to push themselves further</li>
+        <li>Collaboration teaches teamwork. A skill they'll need their entire life</li>
+        <li>Kids build friendships with peers who share their interests</li>
+      </ul>
+      <p><strong>Our approach:</strong> Small enough for personalized attention (3 or 6 students max), large enough for dynamic peer learning. The perfect balance that traditional schools and private tutoring both miss.</p>
+    </div>
+  </div>
+</section>
+
+<section class="why-us">
+  <div class="section-header">
+    <h2 style="color: white;">Why Parents Choose STEMSphere Kids</h2>
+    <p style="color: rgba(255,255,255,0.9);">We're not just another online learning platform. We're building the future</p>
+  </div>
+  <div class="features-grid">
+    <div class="feature-card">
+      <div class="feature-icon">🏆</div>
+      <h3>Award Winning Curriculum</h3>
+      <p>Designed by education experts and proven to accelerate learning by 3x</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">👥</div>
+      <h3>Perfect Group Sizes</h3>
+      <p>Small groups of 3 to 6 students for personalized attention with peer learning benefits</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">🎯</div>
+      <h3>Future Ready Skills</h3>
+      <p>Public speaking, critical thinking, STEM mastery. Everything your child needs to lead</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">⚡</div>
+      <h3>Results That Matter</h3>
+      <p>95% of parents report dramatic confidence improvements in just 12 weeks</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">🌍</div>
+      <h3>Global Community</h3>
+      <p>Learn with peers from around the world. Building friendships and cultural awareness</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">🔥</div>
+      <h3>Elite Instructors</h3>
+      <p>Top 1% of educators. Passionate, certified, and specialized in young learner success</p>
     </div>
   </div>
 </section>
@@ -1268,20 +1473,19 @@
 </section>
 
 <footer>
-  <div class="footer-content">
-    <img src="https://learn.stemsphere.academy/assets/favconsp1.2.png" alt="STEMSphere">
-    <h3>STEMSphere Kids Academy</h3>
-    <p>Where Future Leaders Begin 🚀</p>
-  </div>
-  
-  <div class="footer-bottom">
-    <p>© 2025 STEMSphere Academy. All rights reserved. | Empowering young minds worldwide 🌍</p>
-    <div class="footer-links">
-      <a href="#">Privacy Policy</a>
-      <a href="#">Terms of Service</a>
-      <a href="mailto:support@stemsphere.academy">Contact Support</a>
-    </div>
-  </div>
+  <p>© 2025 STEMSphere Academy. All rights reserved.</p>
+  <nav class="footer-links">
+    <a href="#faq-contact">FAQs</a> |
+    <a href="/privacy.html">Privacy Policy</a> |
+    <a href="https://www.facebook.com/STEMxSphere" target="_blank">Facebook</a>
+  </nav>
+  <p class="footer-contact">
+    Need help? Contact us at 
+    <a href="mailto:support@stemsphere.academy">support@stemsphere.academy</a>
+  </p>
+  <p style="margin-top: 1rem; font-size: 0.85em; opacity: 0.6;">
+    312 W 2nd Street #A8380, Casper, WY 82601, USA
+  </p>
 </footer>
 
 <script defer src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
@@ -1303,16 +1507,23 @@ async function checkAdvisorAvailability() {
       .eq('is_advisor', true)
       .eq('advisor_available', true);
 
-    const container = document.getElementById('advisorContainer');
-
+    const chatWrapper = document.getElementById('liveChatWrapper');
+    const statusIndicator = document.getElementById('advisorStatusIndicator');
+    
     if (advisors && advisors.length > 0) {
-      container.style.display = 'block';
+      if (chatWrapper) chatWrapper.style.display = 'block';
+      if (statusIndicator) statusIndicator.style.display = 'block';
     } else {
-      container.style.display = 'none';
+      if (chatWrapper) chatWrapper.style.display = 'none';
+      if (statusIndicator) statusIndicator.style.display = 'none';
     }
   } catch (error) {
     console.error('Error checking advisors:', error);
   }
+}
+
+window.openAnonymousAdvisorChat = function() {
+  window.location.href = 'https://learn.stemsphere.academy/instant-session.html';
 }
 
 checkAdvisorAvailability();
@@ -1332,10 +1543,9 @@ setInterval(checkAdvisorAvailability, 30000);
       
       if (now - parsed.timestamp < CACHE_DURATION) {
         reviews = parsed.reviews;
-        console.log('Using cached reviews');
       }
     } catch (e) {
-      console.log('Cache parse error');
+      console.log('Cache error');
     }
   }
   
@@ -1364,8 +1574,6 @@ setInterval(checkAdvisorAvailability, 30000);
         timestamp: new Date().getTime(),
         reviews: reviews
       }));
-      
-      console.log('Fetched fresh reviews');
     } catch (error) {
       console.error('Error fetching reviews:', error);
       return;
@@ -1548,7 +1756,6 @@ window.acceptAllCookies = function() {
   document.getElementById('cookieConsentBanner').style.display = 'none';
   enableAnalytics();
   enableMarketing();
-  console.log('All cookies accepted');
 }
 
 window.rejectCookies = function() {
@@ -1560,7 +1767,6 @@ window.rejectCookies = function() {
   };
   localStorage.setItem('cookieConsent', JSON.stringify(consent));
   document.getElementById('cookieConsentBanner').style.display = 'none';
-  console.log('Optional cookies rejected');
 }
 
 window.openCookieSettings = function() {
@@ -1592,8 +1798,6 @@ window.saveCustomCookieSettings = function() {
   
   if (analytics) enableAnalytics();
   if (marketing) enableMarketing();
-  
-  console.log('Custom cookie preferences saved:', consent);
 }
 
 window.acceptAllFromSettings = function() {
@@ -1609,11 +1813,11 @@ window.acceptAllFromSettings = function() {
 }
 
 function enableAnalytics() {
-  console.log('Analytics tracking enabled');
+  console.log('Analytics enabled');
 }
 
 function enableMarketing() {
-  console.log('Marketing tracking enabled');
+  console.log('Marketing enabled');
 }
 
 setTimeout(function() {
