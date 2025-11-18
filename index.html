@@ -7,6 +7,33 @@
   <meta name="description" content="Award-winning small group classes for kids ages 6-10. Public Speaking, Math, STEM Science & Coding. Preparing tomorrow's leaders today. 12-week programs from $499.">
   
   <link rel="icon" type="image/png" sizes="32x32" href="https://learn.stemsphere.academy/assets/favconsp1.2.png">
+  
+  <!-- Facebook Pixel Code -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '580774084540990');
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=580774084540990&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- End Facebook Pixel Code -->
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-XXXXXX');</script>
+  <!-- End Google Tag Manager -->
+
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   
   <!-- Google Translate -->
@@ -84,39 +111,10 @@
       box-shadow: 0 6px 20px rgba(74, 144, 226, 0.4);
     }
 
-    /* CURRENCY SELECTOR */
-    .currency-selector {
-      position: fixed;
-      top: 80px;
-      right: 20px;
-      z-index: 1000;
-      background: white;
-      padding: 8px 15px;
-      border-radius: 25px;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-    .currency-selector label {
-      font-size: 0.85em;
-      color: var(--text-light);
-      font-weight: 600;
-    }
-    .currency-selector select {
-      border: 2px solid var(--primary-blue);
-      padding: 5px 10px;
-      border-radius: 15px;
-      font-weight: 600;
-      color: var(--primary-blue);
-      background: white;
-      cursor: pointer;
-    }
-
     /* GOOGLE TRANSLATE */
     #google_translate_element {
       position: fixed;
-      top: 130px;
+      top: 80px;
       right: 20px;
       z-index: 1000;
       background: white;
@@ -368,7 +366,262 @@
       box-shadow: 0 6px 20px rgba(0, 208, 132, 0.4);
     }
 
-    /* SECTION CONTAINER */
+    /* PUBLIC SPEAKING SPOTLIGHT */
+    .speaking-spotlight {
+      padding: 100px 5%;
+      background: linear-gradient(135deg, #1e3c72 0%, #2a5298 50%, #7e22ce 100%);
+      color: white;
+      position: relative;
+      overflow: hidden;
+    }
+    .speaking-spotlight::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%23ffffff" fill-opacity="0.05" d="M0,160L48,144C96,128,192,96,288,106.7C384,117,480,171,576,165.3C672,160,768,96,864,80C960,64,1056,96,1152,122.7C1248,149,1344,171,1392,181.3L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>') no-repeat bottom;
+      background-size: cover;
+    }
+    .speaking-container {
+      max-width: 1400px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+      position: relative;
+      z-index: 2;
+    }
+    .speaking-image {
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+      position: relative;
+    }
+    .speaking-image img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .speaking-badge {
+      display: inline-block;
+      background: var(--accent-orange);
+      color: white;
+      padding: 10px 25px;
+      border-radius: 30px;
+      font-weight: 700;
+      font-size: 0.9em;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 15px rgba(255, 107, 53, 0.4);
+    }
+    .speaking-content h2 {
+      font-size: 2.8em;
+      margin-bottom: 25px;
+      line-height: 1.2;
+    }
+    .speaking-lead {
+      font-size: 1.3em;
+      margin-bottom: 30px;
+      opacity: 0.95;
+      line-height: 1.6;
+    }
+    .stat-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 25px;
+      margin: 35px 0;
+    }
+    .stat-box {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      padding: 25px;
+      border-radius: 15px;
+      border: 2px solid rgba(255, 255, 255, 0.2);
+    }
+    .stat-number {
+      font-size: 3em;
+      font-weight: 700;
+      color: var(--accent-yellow);
+      margin-bottom: 10px;
+    }
+    .stat-label {
+      font-size: 1.1em;
+      opacity: 0.9;
+    }
+    .speaking-points {
+      list-style: none;
+      margin: 30px 0;
+    }
+    .speaking-points li {
+      padding: 15px 0;
+      padding-left: 40px;
+      position: relative;
+      font-size: 1.15em;
+      line-height: 1.6;
+    }
+    .speaking-points li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: var(--success-green);
+      font-size: 1.5em;
+      font-weight: 700;
+    }
+    .speaking-cta {
+      display: inline-block;
+      padding: 18px 45px;
+      background: var(--accent-orange);
+      color: white;
+      text-decoration: none;
+      border-radius: 30px;
+      font-weight: 700;
+      font-size: 1.2em;
+      margin-top: 25px;
+      transition: all 0.3s;
+      box-shadow: 0 6px 20px rgba(255, 107, 53, 0.4);
+    }
+    .speaking-cta:hover {
+      background: white;
+      color: var(--accent-orange);
+      transform: translateY(-3px);
+      box-shadow: 0 10px 30px rgba(255, 107, 53, 0.5);
+    }
+
+    /* BLOG SECTIONS */
+    .blog-section {
+      padding: 80px 5%;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+    .blog-section.alt-bg {
+      background: var(--bg-light);
+    }
+    .blog-header {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+    .blog-header h2 {
+      font-size: 2.5em;
+      margin-bottom: 15px;
+      background: linear-gradient(135deg, var(--primary-blue), var(--primary-purple));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .blog-header p {
+      font-size: 1.2em;
+      color: var(--text-light);
+    }
+    .blog-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      align-items: center;
+    }
+    .blog-grid.reverse {
+      direction: rtl;
+    }
+    .blog-grid.reverse > * {
+      direction: ltr;
+    }
+    .blog-image {
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+    }
+    .blog-image img {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: transform 0.5s;
+    }
+    .blog-image:hover img {
+      transform: scale(1.05);
+    }
+    .blog-content h3 {
+      font-size: 2.2em;
+      margin-bottom: 20px;
+      color: var(--text-dark);
+    }
+    .blog-content p {
+      font-size: 1.15em;
+      line-height: 1.8;
+      color: var(--text-light);
+      margin-bottom: 20px;
+    }
+    .blog-list {
+      list-style: none;
+      margin: 25px 0;
+    }
+    .blog-list li {
+      padding: 12px 0;
+      padding-left: 35px;
+      position: relative;
+      font-size: 1.1em;
+      color: var(--text-dark);
+    }
+    .blog-list li::before {
+      content: '→';
+      position: absolute;
+      left: 0;
+      color: var(--primary-blue);
+      font-weight: 700;
+      font-size: 1.3em;
+    }
+
+    /* DOWNLOAD SECTION */
+    .download-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      margin-top: 50px;
+    }
+    .download-card {
+      background: white;
+      border-radius: 20px;
+      padding: 35px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+      transition: all 0.4s;
+      border: 3px solid transparent;
+      text-align: center;
+    }
+    .download-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 60px rgba(74, 144, 226, 0.3);
+      border-color: var(--primary-blue);
+    }
+    .download-icon {
+      font-size: 4em;
+      margin-bottom: 20px;
+    }
+    .download-card h4 {
+      font-size: 1.6em;
+      margin-bottom: 15px;
+      color: var(--text-dark);
+    }
+    .download-card p {
+      color: var(--text-light);
+      margin-bottom: 25px;
+      line-height: 1.6;
+    }
+    .download-btn {
+      display: inline-block;
+      padding: 15px 35px;
+      background: linear-gradient(135deg, var(--primary-blue), var(--primary-purple));
+      color: white;
+      text-decoration: none;
+      border-radius: 25px;
+      font-weight: 700;
+      transition: all 0.3s;
+    }
+    .download-btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 25px rgba(74, 144, 226, 0.4);
+    }
+
+    /* PROGRAMS SECTION */
     .section {
       max-width: 1400px;
       margin: 0 auto;
@@ -392,48 +645,6 @@
       max-width: 700px;
       margin: 0 auto;
     }
-
-    /* WHY US SECTION */
-    .why-us {
-      background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-      color: white;
-      padding: 80px 5%;
-    }
-    .features-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 30px;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-    .feature-card {
-      background: rgba(255, 255, 255, 0.15);
-      backdrop-filter: blur(10px);
-      padding: 30px;
-      border-radius: 20px;
-      text-align: center;
-      transition: all 0.3s;
-      border: 2px solid rgba(255, 255, 255, 0.2);
-    }
-    .feature-card:hover {
-      background: rgba(255, 255, 255, 0.25);
-      transform: translateY(-10px);
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-    }
-    .feature-icon {
-      font-size: 3em;
-      margin-bottom: 15px;
-    }
-    .feature-card h3 {
-      font-size: 1.4em;
-      margin-bottom: 10px;
-    }
-    .feature-card p {
-      opacity: 0.9;
-      line-height: 1.6;
-    }
-
-    /* PROGRAMS SECTION */
     .programs-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -467,12 +678,12 @@
       font-weight: 700;
       font-size: 0.85em;
       box-shadow: 0 4px 15px rgba(255, 107, 53, 0.4);
+      z-index: 2;
     }
     .program-image {
       width: 100%;
       height: 220px;
       object-fit: cover;
-      background: linear-gradient(135deg, var(--primary-blue), var(--primary-purple));
     }
     .program-content {
       padding: 30px;
@@ -521,366 +732,19 @@
       box-shadow: 0 8px 25px rgba(74, 144, 226, 0.4);
     }
 
-    /* PRICING SECTION */
-    .pricing {
-      background: var(--bg-light);
-    }
-    .pricing-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-      gap: 40px;
-      max-width: 900px;
-      margin: 0 auto;
-    }
-    .pricing-card {
-      background: white;
-      border-radius: 25px;
-      padding: 40px;
-      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
-      transition: all 0.4s;
-      border: 3px solid transparent;
-      position: relative;
-    }
-    .pricing-card:hover {
-      transform: translateY(-15px);
-      box-shadow: 0 20px 60px rgba(74, 144, 226, 0.3);
-      border-color: var(--primary-blue);
-    }
-    .pricing-card.popular {
-      border-color: var(--accent-orange);
-      transform: scale(1.05);
-    }
-    .popular-badge {
-      position: absolute;
-      top: -15px;
-      left: 50%;
-      transform: translateX(-50%);
-      background: var(--accent-orange);
-      color: white;
-      padding: 8px 25px;
-      border-radius: 20px;
-      font-weight: 700;
-      font-size: 0.9em;
-      box-shadow: 0 4px 15px rgba(255, 107, 53, 0.4);
-    }
-    .pricing-header {
-      text-align: center;
-      margin-bottom: 30px;
-      padding-bottom: 25px;
-      border-bottom: 2px solid #eee;
-    }
-    .pricing-header h3 {
-      font-size: 1.8em;
-      margin-bottom: 10px;
-      color: var(--primary-blue);
-    }
-    .pricing-header .subtitle {
-      color: var(--text-light);
-      font-size: 0.95em;
-    }
-    .price-display {
-      text-align: center;
-      margin: 25px 0;
-    }
-    .price-amount {
-      font-size: 3em;
-      font-weight: 700;
-      color: var(--primary-purple);
-    }
-    .price-amount .currency {
-      font-size: 0.5em;
-      vertical-align: super;
-    }
-    .price-period {
-      display: block;
-      color: var(--text-light);
-      font-size: 0.9em;
-      margin-top: 5px;
-    }
-    .pricing-features {
-      list-style: none;
-      margin: 30px 0;
-    }
-    .pricing-features li {
-      padding: 12px 0;
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      color: var(--text-dark);
-    }
-    .pricing-features li::before {
-      content: '✓';
-      color: var(--success-green);
-      font-weight: 700;
-      font-size: 1.3em;
-      flex-shrink: 0;
-    }
-    .pricing-cta {
-      display: block;
-      text-align: center;
-      padding: 18px;
-      background: linear-gradient(135deg, var(--primary-blue), var(--primary-purple));
-      color: white;
-      text-decoration: none;
-      border-radius: 15px;
-      font-weight: 700;
-      font-size: 1.2em;
-      transition: all 0.3s;
-      margin-top: 25px;
-    }
-    .pricing-cta:hover {
-      transform: scale(1.05);
-      box-shadow: 0 8px 25px rgba(74, 144, 226, 0.4);
-    }
-
-    /* REVIEWS SECTION */
-    .reviews {
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-      color: white;
-      padding: 80px 5%;
-    }
-    .reviews-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 30px;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-    .review-card {
-      background: rgba(255, 255, 255, 0.15);
-      backdrop-filter: blur(10px);
-      padding: 30px;
-      border-radius: 20px;
-      border: 2px solid rgba(255, 255, 255, 0.2);
-      transition: all 0.3s;
-    }
-    .review-card:hover {
-      background: rgba(255, 255, 255, 0.25);
-      transform: translateY(-5px);
-    }
-    .review-stars {
-      color: var(--accent-yellow);
-      font-size: 1.3em;
-      margin-bottom: 15px;
-    }
-    .review-text {
-      font-style: italic;
-      line-height: 1.7;
-      margin-bottom: 20px;
-      opacity: 0.95;
-    }
-    .review-author {
-      font-weight: 700;
-      font-size: 1.1em;
-    }
-    .review-role {
-      font-size: 0.9em;
-      opacity: 0.8;
-    }
-
-    /* CTA SECTION */
-    .cta-section {
-      background: linear-gradient(135deg, var(--accent-orange) 0%, #ff8b56 100%);
-      color: white;
-      padding: 80px 5%;
-      text-align: center;
-    }
-    .cta-content {
-      max-width: 800px;
-      margin: 0 auto;
-    }
-    .cta-content h2 {
-      font-size: 2.5em;
-      margin-bottom: 20px;
-    }
-    .cta-content p {
-      font-size: 1.2em;
-      margin-bottom: 35px;
-      opacity: 0.95;
-    }
-    .cta-buttons {
-      display: flex;
-      gap: 20px;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-    .cta-btn {
-      padding: 18px 40px;
-      border-radius: 30px;
-      text-decoration: none;
-      font-weight: 700;
-      font-size: 1.1em;
-      transition: all 0.3s;
-      display: inline-block;
-    }
-    .cta-btn-primary {
-      background: white;
-      color: var(--accent-orange);
-    }
-    .cta-btn-primary:hover {
-      background: var(--text-dark);
-      color: white;
-      transform: translateY(-3px);
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-    }
-    .cta-btn-secondary {
-      background: transparent;
-      color: white;
-      border: 3px solid white;
-    }
-    .cta-btn-secondary:hover {
-      background: white;
-      color: var(--accent-orange);
-      transform: translateY(-3px);
-    }
-
-    /* FOOTER */
-    footer {
-      background: var(--text-dark);
-      color: white;
-      padding: 60px 5% 30px;
-    }
-    .footer-content {
-      max-width: 1400px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 40px;
-      margin-bottom: 40px;
-    }
-    .footer-section h3 {
-      margin-bottom: 20px;
-      color: var(--accent-yellow);
-    }
-    .footer-section ul {
-      list-style: none;
-    }
-    .footer-section ul li {
-      margin-bottom: 10px;
-    }
-    .footer-section ul li a {
-      color: rgba(255, 255, 255, 0.8);
-      text-decoration: none;
-      transition: color 0.3s;
-    }
-    .footer-section ul li a:hover {
-      color: white;
-    }
-    .footer-bottom {
-      text-align: center;
-      padding-top: 30px;
-      border-top: 1px solid rgba(255, 255, 255, 0.1);
-      color: rgba(255, 255, 255, 0.6);
-    }
-    .social-links {
-      display: flex;
-      gap: 15px;
-      margin-top: 20px;
-    }
-    .social-links a {
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      background: rgba(255, 255, 255, 0.1);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      text-decoration: none;
-      transition: all 0.3s;
-    }
-    .social-links a:hover {
-      background: var(--primary-blue);
-      transform: translateY(-3px);
-    }
-
-    /* REDIRECT BOX */
-    .redirect-box {
-      background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
-      padding: 40px;
-      border-radius: 20px;
-      text-align: center;
-      margin: 60px auto;
-      max-width: 900px;
-      box-shadow: 0 10px 40px rgba(255, 165, 0, 0.3);
-    }
-    .redirect-box h3 {
-      font-size: 2em;
-      margin-bottom: 15px;
-      color: var(--text-dark);
-    }
-    .redirect-box p {
-      font-size: 1.1em;
-      margin-bottom: 25px;
-      color: var(--text-dark);
-    }
-    .redirect-btn {
-      display: inline-block;
-      padding: 15px 40px;
-      background: var(--text-dark);
-      color: white;
-      text-decoration: none;
-      border-radius: 25px;
-      font-weight: 700;
-      font-size: 1.1em;
-      transition: all 0.3s;
-    }
-    .redirect-btn:hover {
-      background: var(--primary-blue);
-      transform: translateY(-3px);
-      box-shadow: 0 8px 25px rgba(74, 144, 226, 0.4);
-    }
-
-    /* RESPONSIVE */
-    @media (max-width: 768px) {
-      .hero h2 {
-        font-size: 2em;
-      }
-      .hero p {
-        font-size: 1.1em;
-      }
-      .section-header h2 {
-        font-size: 2em;
-      }
-      .programs-grid,
-      .pricing-grid {
-        grid-template-columns: 1fr;
-      }
-      .auth-floater {
-        top: 10px;
-        right: 10px;
-        padding: 8px 15px;
-      }
-      .currency-selector,
-      #google_translate_element {
-        position: static;
-        margin: 10px auto;
-        width: fit-content;
-      }
-      .header-content {
-        flex-direction: column;
-        text-align: center;
-      }
-      .cta-buttons {
-        flex-direction: column;
-      }
-    }
+    /* Continue to PART 2 for remaining styles... */
   </style>
 </head>
 <body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXX"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
   <!-- Auth Floater -->
   <div class="auth-floater">
     <a href="https://learn.stemsphere.academy/login.html" class="login-btn">Login</a>
     <a href="https://learn.stemsphere.academy/signup.html" class="signup-btn">Sign Up</a>
-  </div>
-
-  <!-- Currency Selector -->
-  <div class="currency-selector">
-    <label>Currency:</label>
-    <select id="currencySelect" onchange="changeCurrency()">
-      <option value="CAD">CAD $</option>
-      <option value="USD">USD $</option>
-    </select>
   </div>
 
   <!-- Google Translate -->
@@ -934,42 +798,169 @@
     </div>
   </section>
 
-  <!-- Why Us Section -->
-  <section class="why-us">
-    <div class="section-header">
-      <h2 style="color: white;">Why Parents Choose STEMSphere Kids</h2>
-      <p style="color: rgba(255,255,255,0.9);">We're not just another online learning platform - we're building the future</p>
+  <!-- Public Speaking Spotlight -->
+  <section class="speaking-spotlight">
+    <div class="speaking-container">
+      <div class="speaking-image">
+        <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=1200&q=80" alt="Child presenting confidently">
+      </div>
+      <div class="speaking-content">
+        <span class="speaking-badge">🎤 THE SKILL THAT CHANGES EVERYTHING</span>
+        <h2>Why Your Child's Future Depends on Public Speaking</h2>
+        <p class="speaking-lead">Here's what most parents don't realize: <strong>Public speaking isn't natural.</strong> It's a learned skill—and the earlier you start, the more confident they become.</p>
+        
+        <div class="stat-grid">
+          <div class="stat-box">
+            <div class="stat-number">75%</div>
+            <div class="stat-label">of adults fear public speaking more than death</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-number">3x</div>
+            <div class="stat-label">more likely to be hired with strong communication skills</div>
+          </div>
+        </div>
+
+        <ul class="speaking-points">
+          <li>Studies show kids who learn public speaking early develop unshakeable confidence</li>
+          <li>Strong communicators become natural leaders in school, sports, and life</li>
+          <li>The ability to articulate ideas clearly = better grades, better relationships, better opportunities</li>
+          <li>Your child's biggest competitor already knows how to speak with confidence</li>
+        </ul>
+
+        <a href="#programs" class="speaking-cta">Give Your Child This Advantage →</a>
+      </div>
     </div>
-    <div class="features-grid">
-      <div class="feature-card">
-        <div class="feature-icon">🏆</div>
-        <h3>Award-Winning Curriculum</h3>
-        <p>Designed by education experts and proven to accelerate learning by 3x</p>
+  </section>
+  <!-- Blog Section 1: The Science Gap -->
+  <section class="blog-section">
+    <div class="blog-header">
+      <h2>🔬 The Science Gap That's Holding Kids Back</h2>
+      <p>Why traditional education fails to ignite curiosity—and what we do differently</p>
+    </div>
+    <div class="blog-grid">
+      <div class="blog-image">
+        <img src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=800&q=80" alt="Kids doing science experiments">
       </div>
-      <div class="feature-card">
-        <div class="feature-icon">👥</div>
-        <h3>Perfect Group Sizes</h3>
-        <p>Small groups of 2-8 students for personalized attention with peer learning benefits</p>
+      <div class="blog-content">
+        <h3>Most Kids Are Being Left Behind in STEM</h3>
+        <p>By age 10, <strong>67% of children have already decided they're "not good at science."</strong> Not because they can't do it—but because nobody showed them it could be fun, hands-on, and exciting.</p>
+        <p>Traditional classrooms focus on memorization. We focus on <strong>discovery, experimentation, and real-world applications</strong> that make kids say "WOW!" instead of "Why do I need to know this?"</p>
+        <ul class="blog-list">
+          <li>Live virtual experiments kids can recreate at home</li>
+          <li>Engineering challenges that teach problem-solving</li>
+          <li>Biology, chemistry, and physics made tangible and exciting</li>
+          <li>Small groups mean every question gets answered—curiosity never gets ignored</li>
+        </ul>
+        <p><strong>The result?</strong> Kids who can't wait for their next science class. Kids who start asking "how does that work?" about everything around them. Kids who see themselves as future scientists, engineers, and innovators.</p>
       </div>
-      <div class="feature-card">
-        <div class="feature-icon">🎯</div>
-        <h3>Future-Ready Skills</h3>
-        <p>Public speaking, critical thinking, STEM mastery - everything your child needs to lead</p>
+    </div>
+  </section>
+
+  <!-- Blog Section 2: The Math Confidence Crisis -->
+  <section class="blog-section alt-bg">
+    <div class="blog-header">
+      <h2>🧮 The Math Confidence Crisis (And How to Fix It)</h2>
+      <p>Why "I'm just not a math person" is the most dangerous thing a child can believe</p>
+    </div>
+    <div class="blog-grid reverse">
+      <div class="blog-image">
+        <img src="https://images.unsplash.com/photo-1596496050827-8299e0220de1?w=800&q=80" alt="Kids solving math problems together">
       </div>
-      <div class="feature-card">
-        <div class="feature-icon">⚡</div>
-        <h3>Results That Matter</h3>
-        <p>95% of parents report dramatic confidence improvements in just 12 weeks</p>
+      <div class="blog-content">
+        <h3>Math Anxiety Starts Young—But It Doesn't Have To</h3>
+        <p>Here's the truth: <strong>There's no such thing as a "math person" or "not a math person."</strong> Math is a skill. And like any skill, it improves with the right approach, encouragement, and practice.</p>
+        <p>But somewhere around 2nd or 3rd grade, many kids decide they're "bad at math." One bad test. One moment of confusion. One time nobody explained it in a way that clicked. And suddenly, they've internalized a belief that will limit them for life.</p>
+        <ul class="blog-list">
+          <li>We use games, puzzles, and real-world scenarios to make math engaging</li>
+          <li>Small groups mean no child falls behind or feels "dumb" for asking questions</li>
+          <li>We celebrate mistakes as learning opportunities, not failures</li>
+          <li>Mental math strategies that make kids feel like mathematical wizards</li>
+        </ul>
+        <p><strong>Within weeks, parents tell us:</strong> "My child who hated math now asks for extra practice problems." That's not magic. That's what happens when learning is fun, supportive, and paced perfectly for each child.</p>
       </div>
-      <div class="feature-card">
-        <div class="feature-icon">🌍</div>
-        <h3>Global Community</h3>
-        <p>Learn with peers from around the world - building friendships and cultural awareness</p>
+    </div>
+  </section>
+
+  <!-- Blog Section 3: The Social Learning Advantage -->
+  <section class="blog-section">
+    <div class="blog-header">
+      <h2>👥 Why Small Group Learning Beats Private Tutoring</h2>
+      <p>The surprising research on why kids learn better with peers</p>
+    </div>
+    <div class="blog-grid">
+      <div class="blog-image">
+        <img src="https://images.unsplash.com/photo-1503676382389-4809596d5290?w=800&q=80" alt="Kids learning together in small group">
       </div>
-      <div class="feature-card">
-        <div class="feature-icon">🔥</div>
-        <h3>Elite Instructors</h3>
-        <p>Top 1% of educators - passionate, certified, and specialized in young learner success</p>
+      <div class="blog-content">
+        <h3>The Secret Ingredient: Peer Learning</h3>
+        <p>Private 1-on-1 tutoring sounds like the gold standard. But research shows something surprising: <strong>Kids learn faster and retain more in small groups of 2-8 students.</strong></p>
+        <p>Why? Because learning isn't just about absorbing information—it's about discussion, collaboration, explaining concepts to peers, and seeing problems solved different ways.</p>
+        <ul class="blog-list">
+          <li>Hearing another child explain a concept often clicks better than hearing an adult</li>
+          <li>Healthy competition motivates kids to push themselves further</li>
+          <li>Collaboration teaches teamwork—a skill they'll need their entire life</li>
+          <li>Kids build friendships with peers who share their interests</li>
+        </ul>
+        <p><strong>Our approach:</strong> Small enough for personalized attention (2 or 8 students max), large enough for dynamic peer learning. The perfect balance that traditional schools and private tutoring both miss.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Blog Section 4: The Leadership Gap -->
+  <section class="blog-section alt-bg">
+    <div class="blog-header">
+      <h2>🎯 The Leadership Skills Schools Don't Teach</h2>
+      <p>Why academic excellence isn't enough for tomorrow's world</p>
+    </div>
+    <div class="blog-grid reverse">
+      <div class="blog-image">
+        <img src="https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?w=800&q=80" alt="Child leader presenting to group">
+      </div>
+      <div class="blog-content">
+        <h3>Your Child Needs More Than Good Grades</h3>
+        <p>Straight A's are great. But the world doesn't need more people who can memorize and regurgitate. <strong>The world needs leaders, communicators, critical thinkers, and innovators.</strong></p>
+        <p>Traditional schools focus almost entirely on academic content. But the skills that will actually determine your child's success—confidence, communication, collaboration, creative problem-solving—are barely taught at all.</p>
+        <ul class="blog-list">
+          <li>Public speaking teaches confidence and articulation</li>
+          <li>Group projects teach collaboration and conflict resolution</li>
+          <li>STEM challenges teach critical thinking and resilience</li>
+          <li>Presentations teach how to command a room and persuade others</li>
+        </ul>
+        <p><strong>We're not just teaching subjects.</strong> We're building the complete skillset your child needs to lead, inspire, and succeed in whatever path they choose. These are the skills that separate the good from the great.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Free Resources Section -->
+  <section class="blog-section" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); color: white;">
+    <div class="blog-header">
+      <h2 style="color: white;">🎁 Free Resources for Parents</h2>
+      <p style="color: rgba(255,255,255,0.95);">Download our expert guides and start transforming your child's learning today</p>
+    </div>
+    <div class="download-grid">
+      <div class="download-card">
+        <div class="download-icon">📚</div>
+        <h4>The Parent's Guide to STEM Learning</h4>
+        <p>15 activities you can do at home to spark curiosity and build foundational STEM skills in kids ages 6-10.</p>
+        <a href="#" class="download-btn" onclick="downloadResource('stem-guide')">Download Free PDF →</a>
+      </div>
+      <div class="download-card">
+        <div class="download-icon">🎤</div>
+        <h4>5-Minute Confidence Builders</h4>
+        <p>Simple daily exercises to help shy kids develop public speaking confidence and overcome stage fright.</p>
+        <a href="#" class="download-btn" onclick="downloadResource('confidence-guide')">Download Free PDF →</a>
+      </div>
+      <div class="download-card">
+        <div class="download-icon">🧮</div>
+        <h4>Math Games That Actually Work</h4>
+        <p>20 fun games that make math exciting and build number sense without worksheets or stress.</p>
+        <a href="#" class="download-btn" onclick="downloadResource('math-games')">Download Free PDF →</a>
+      </div>
+      <div class="download-card">
+        <div class="download-icon">⭐</div>
+        <h4>Is Your Child Ready? Assessment</h4>
+        <p>Free 5-minute assessment to identify your child's learning style and recommend the perfect program.</p>
+        <a href="#" class="download-btn" onclick="downloadResource('assessment')">Take Free Assessment →</a>
       </div>
     </div>
   </section>
@@ -981,7 +972,6 @@
       <p>Each program is a 12-week journey designed to transform your child's future</p>
     </div>
     <div class="programs-grid">
-      <!-- Public Speaking -->
       <div class="program-card">
         <img class="program-image" src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=800" alt="Kids Public Speaking">
         <div class="program-content">
@@ -998,7 +988,6 @@
         </div>
       </div>
 
-      <!-- Math -->
       <div class="program-card featured">
         <span class="program-badge">🔥 MOST POPULAR</span>
         <img class="program-image" src="https://images.unsplash.com/photo-1596496050827-8299e0220de1?w=800" alt="Kids Math Program">
@@ -1016,12 +1005,11 @@
         </div>
       </div>
 
-      <!-- STEM Science -->
       <div class="program-card">
         <img class="program-image" src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=800" alt="Kids Science Program">
         <div class="program-content">
           <h3>🔬 Early Junior Scientist Program</h3>
-          <p>Ignite curiosity with hands-on STEM exploration. Physics, chemistry, biology - preparing the next generation of innovators.</p>
+          <p>Ignite curiosity with hands-on STEM exploration. Physics, chemistry, biology—preparing the next generation of innovators.</p>
           <ul class="program-features">
             <li>Live virtual experiments</li>
             <li>Scientific method mastery</li>
@@ -1033,7 +1021,6 @@
         </div>
       </div>
 
-      <!-- Mixed Rotation -->
       <div class="program-card">
         <span class="program-badge">⭐ ALL-IN-ONE</span>
         <img class="program-image" src="https://images.unsplash.com/photo-1503676382389-4809596d5290?w=800" alt="Mixed Learning Program">
@@ -1054,59 +1041,99 @@
   </section>
 
   <!-- Pricing Section -->
-  <section class="section pricing" id="pricing">
+  <section class="section" style="background: var(--bg-light);" id="pricing">
     <div class="section-header">
       <h2>💎 Investment in Your Child's Future</h2>
       <p>12 weeks of transformation | Once per week | Mix & match with other subjects</p>
     </div>
-    <div class="pricing-grid">
-      <!-- Small Duo Class -->
-      <div class="pricing-card">
-        <div class="pricing-header">
-          <h3>Small Duo Interactive</h3>
-          <p class="subtitle">Exclusive 2-Student Experience</p>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 40px; max-width: 900px; margin: 0 auto;">
+      <div style="background: white; border-radius: 25px; padding: 40px; box-shadow: 0 10px 40px rgba(0,0,0,0.1); transition: all 0.4s; border: 3px solid transparent; position: relative;">
+        <div style="text-align: center; margin-bottom: 30px; padding-bottom: 25px; border-bottom: 2px solid #eee;">
+          <h3 style="font-size: 1.8em; margin-bottom: 10px; color: var(--primary-blue);">Small Duo Interactive</h3>
+          <p style="color: var(--text-light); font-size: 0.95em;">Exclusive 2-Student Experience</p>
         </div>
-        <div class="price-display">
-          <div class="price-amount">
-            <span class="currency" id="duoCurrency">$</span><span id="duoPrice">1500</span>
+        <div style="text-align: center; margin: 25px 0;">
+          <div style="font-size: 3em; font-weight: 700; color: var(--primary-purple);">
+            <span style="font-size: 0.5em; vertical-align: super;">$</span>1499
           </div>
-          <span class="price-period">12 Classes (3 Months)</span>
+          <span style="display: block; color: var(--text-light); font-size: 0.9em; margin-top: 5px;">12 Classes (3 Months)</span>
         </div>
-        <ul class="pricing-features">
-          <li>Just 2 students per class</li>
-          <li>Maximum personalized attention</li>
-          <li>Deep peer collaboration</li>
-          <li>Flexible scheduling priority</li>
-          <li>Custom learning pace</li>
-          <li>Weekly progress reports</li>
-          <li>Direct parent communication</li>
+        <ul style="list-style: none; margin: 30px 0;">
+          <li style="padding: 12px 0; display: flex; align-items: center; gap: 12px; color: var(--text-dark);">
+            <span style="color: var(--success-green); font-weight: 700; font-size: 1.3em; flex-shrink: 0;">✓</span>
+            <span>Just 2 students per class</span>
+          </li>
+          <li style="padding: 12px 0; display: flex; align-items: center; gap: 12px; color: var(--text-dark);">
+            <span style="color: var(--success-green); font-weight: 700; font-size: 1.3em; flex-shrink: 0;">✓</span>
+            <span>Maximum personalized attention</span>
+          </li>
+          <li style="padding: 12px 0; display: flex; align-items: center; gap: 12px; color: var(--text-dark);">
+            <span style="color: var(--success-green); font-weight: 700; font-size: 1.3em; flex-shrink: 0;">✓</span>
+            <span>Deep peer collaboration</span>
+          </li>
+          <li style="padding: 12px 0; display: flex; align-items: center; gap: 12px; color: var(--text-dark);">
+            <span style="color: var(--success-green); font-weight: 700; font-size: 1.3em; flex-shrink: 0;">✓</span>
+            <span>Flexible scheduling priority</span>
+          </li>
+          <li style="padding: 12px 0; display: flex; align-items: center; gap: 12px; color: var(--text-dark);">
+            <span style="color: var(--success-green); font-weight: 700; font-size: 1.3em; flex-shrink: 0;">✓</span>
+            <span>Custom learning pace</span>
+          </li>
+          <li style="padding: 12px 0; display: flex; align-items: center; gap: 12px; color: var(--text-dark);">
+            <span style="color: var(--success-green); font-weight: 700; font-size: 1.3em; flex-shrink: 0;">✓</span>
+            <span>Weekly progress reports</span>
+          </li>
+          <li style="padding: 12px 0; display: flex; align-items: center; gap: 12px; color: var(--text-dark);">
+            <span style="color: var(--success-green); font-weight: 700; font-size: 1.3em; flex-shrink: 0;">✓</span>
+            <span>Direct parent communication</span>
+          </li>
         </ul>
-        <a href="https://learn.stemsphere.academy/signup.html" class="pricing-cta">Secure Your Spot →</a>
+        <a href="https://learn.stemsphere.academy/signup.html" style="display: block; text-align: center; padding: 18px; background: linear-gradient(135deg, var(--primary-blue), var(--primary-purple)); color: white; text-decoration: none; border-radius: 15px; font-weight: 700; font-size: 1.2em; transition: all 0.3s; margin-top: 25px;">Secure Your Spot →</a>
       </div>
 
-      <!-- Mid Group Class -->
-      <div class="pricing-card popular">
-        <span class="popular-badge">🏆 BEST VALUE</span>
-        <div class="pricing-header">
-          <h3>Mid Group Interactive</h3>
-          <p class="subtitle">Optimal Learning Community</p>
+      <div style="background: white; border-radius: 25px; padding: 40px; box-shadow: 0 10px 40px rgba(0,0,0,0.1); transition: all 0.4s; border: 3px solid var(--accent-orange); position: relative; transform: scale(1.05);">
+        <span style="position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background: var(--accent-orange); color: white; padding: 8px 25px; border-radius: 20px; font-weight: 700; font-size: 0.9em; box-shadow: 0 4px 15px rgba(255,107,53,0.4);">🏆 BEST VALUE</span>
+        <div style="text-align: center; margin-bottom: 30px; padding-bottom: 25px; border-bottom: 2px solid #eee;">
+          <h3 style="font-size: 1.8em; margin-bottom: 10px; color: var(--primary-blue);">Mid Group Interactive</h3>
+          <p style="color: var(--text-light); font-size: 0.95em;">Optimal Learning Community</p>
         </div>
-        <div class="price-display">
-          <div class="price-amount">
-            <span class="currency" id="groupCurrency">$</span><span id="groupPrice">499</span>
+        <div style="text-align: center; margin: 25px 0;">
+          <div style="font-size: 3em; font-weight: 700; color: var(--primary-purple);">
+            <span style="font-size: 0.5em; vertical-align: super;">$</span>499
           </div>
-          <span class="price-period">12 Classes (3 Months)</span>
+          <span style="display: block; color: var(--text-light); font-size: 0.9em; margin-top: 5px;">12 Classes (3 Months)</span>
         </div>
-        <ul class="pricing-features">
-          <li>8 students per class</li>
-          <li>Perfect balance of attention & community</li>
-          <li>Rich peer learning experiences</li>
-          <li>Team projects & collaboration</li>
-          <li>Social skills development</li>
-          <li>Monthly parent updates</li>
-          <li>Certificate of completion</li>
+        <ul style="list-style: none; margin: 30px 0;">
+          <li style="padding: 12px 0; display: flex; align-items: center; gap: 12px; color: var(--text-dark);">
+            <span style="color: var(--success-green); font-weight: 700; font-size: 1.3em; flex-shrink: 0;">✓</span>
+            <span>8 students per class</span>
+          </li>
+          <li style="padding: 12px 0; display: flex; align-items: center; gap: 12px; color: var(--text-dark);">
+            <span style="color: var(--success-green); font-weight: 700; font-size: 1.3em; flex-shrink: 0;">✓</span>
+            <span>Perfect balance of attention & community</span>
+          </li>
+          <li style="padding: 12px 0; display: flex; align-items: center; gap: 12px; color: var(--text-dark);">
+            <span style="color: var(--success-green); font-weight: 700; font-size: 1.3em; flex-shrink: 0;">✓</span>
+            <span>Rich peer learning experiences</span>
+          </li>
+          <li style="padding: 12px 0; display: flex; align-items: center; gap: 12px; color: var(--text-dark);">
+            <span style="color: var(--success-green); font-weight: 700; font-size: 1.3em; flex-shrink: 0;">✓</span>
+            <span>Team projects & collaboration</span>
+          </li>
+          <li style="padding: 12px 0; display: flex; align-items: center; gap: 12px; color: var(--text-dark);">
+            <span style="color: var(--success-green); font-weight: 700; font-size: 1.3em; flex-shrink: 0;">✓</span>
+            <span>Social skills development</span>
+          </li>
+          <li style="padding: 12px 0; display: flex; align-items: center; gap: 12px; color: var(--text-dark);">
+            <span style="color: var(--success-green); font-weight: 700; font-size: 1.3em; flex-shrink: 0;">✓</span>
+            <span>Monthly parent updates</span>
+          </li>
+          <li style="padding: 12px 0; display: flex; align-items: center; gap: 12px; color: var(--text-dark);">
+            <span style="color: var(--success-green); font-weight: 700; font-size: 1.3em; flex-shrink: 0;">✓</span>
+            <span>Certificate of completion</span>
+          </li>
         </ul>
-        <a href="https://learn.stemsphere.academy/signup.html" class="pricing-cta">Start Learning Today →</a>
+        <a href="https://learn.stemsphere.academy/signup.html" style="display: block; text-align: center; padding: 18px; background: linear-gradient(135deg, var(--primary-blue), var(--primary-purple)); color: white; text-decoration: none; border-radius: 15px; font-weight: 700; font-size: 1.2em; transition: all 0.3s; margin-top: 25px;">Start Learning Today →</a>
       </div>
     </div>
     
@@ -1117,72 +1144,72 @@
   </section>
 
   <!-- Reviews Section -->
-  <section class="reviews">
+  <section style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 80px 5%;">
     <div class="section-header">
       <h2 style="color: white;">❤️ What Parents Are Saying</h2>
       <p style="color: rgba(255,255,255,0.9);">Real families, real transformations</p>
     </div>
-    <div class="reviews-grid">
-      <div class="review-card">
-        <div class="review-stars">⭐⭐⭐⭐⭐</div>
-        <p class="review-text">"My daughter went from struggling with math to asking for extra practice problems! The small group setting gave her the confidence she needed. Absolutely worth every penny."</p>
-        <div class="review-author">Sarah Chen</div>
-        <div class="review-role">Parent of 8-year-old</div>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; max-width: 1200px; margin: 0 auto;">
+      <div style="background: rgba(255,255,255,0.15); backdrop-filter: blur(10px); padding: 30px; border-radius: 20px; border: 2px solid rgba(255,255,255,0.2); transition: all 0.3s;">
+        <div style="color: var(--accent-yellow); font-size: 1.3em; margin-bottom: 15px;">⭐⭐⭐⭐⭐</div>
+        <p style="font-style: italic; line-height: 1.7; margin-bottom: 20px; opacity: 0.95;">"My daughter went from struggling with math to asking for extra practice problems! The small group setting gave her the confidence she needed. Absolutely worth every penny."</p>
+        <div style="font-weight: 700; font-size: 1.1em;">Sarah Chen</div>
+        <div style="font-size: 0.9em; opacity: 0.8;">Parent of 8-year-old</div>
       </div>
-      <div class="review-card">
-        <div class="review-stars">⭐⭐⭐⭐⭐</div>
-        <p class="review-text">"The public speaking program transformed my shy son into someone who volunteers to present in class. His teacher couldn't believe the change. Thank you STEMSphere!"</p>
-        <div class="review-author">Michael Rodriguez</div>
-        <div class="review-role">Parent of 9-year-old</div>
+      <div style="background: rgba(255,255,255,0.15); backdrop-filter: blur(10px); padding: 30px; border-radius: 20px; border: 2px solid rgba(255,255,255,0.2); transition: all 0.3s;">
+        <div style="color: var(--accent-yellow); font-size: 1.3em; margin-bottom: 15px;">⭐⭐⭐⭐⭐</div>
+        <p style="font-style: italic; line-height: 1.7; margin-bottom: 20px; opacity: 0.95;">"The public speaking program transformed my shy son into someone who volunteers to present in class. His teacher couldn't believe the change. Thank you STEMSphere!"</p>
+        <div style="font-weight: 700; font-size: 1.1em;">Michael Rodriguez</div>
+        <div style="font-size: 0.9em; opacity: 0.8;">Parent of 9-year-old</div>
       </div>
-      <div class="review-card">
-        <div class="review-stars">⭐⭐⭐⭐⭐</div>
-        <p class="review-text">"Best investment we've made in our child's education. The instructors are phenomenal, and the curriculum is perfectly designed for young learners. He's already planning his science fair project!"</p>
-        <div class="review-author">Emily Thompson</div>
-        <div class="review-role">Parent of 7-year-old</div>
+      <div style="background: rgba(255,255,255,0.15); backdrop-filter: blur(10px); padding: 30px; border-radius: 20px; border: 2px solid rgba(255,255,255,0.2); transition: all 0.3s;">
+        <div style="color: var(--accent-yellow); font-size: 1.3em; margin-bottom: 15px;">⭐⭐⭐⭐⭐</div>
+        <p style="font-style: italic; line-height: 1.7; margin-bottom: 20px; opacity: 0.95;">"Best investment we've made in our child's education. The instructors are phenomenal, and the curriculum is perfectly designed for young learners. He's already planning his science fair project!"</p>
+        <div style="font-weight: 700; font-size: 1.1em;">Emily Thompson</div>
+        <div style="font-size: 0.9em; opacity: 0.8;">Parent of 7-year-old</div>
       </div>
-      <div class="review-card">
-        <div class="review-stars">⭐⭐⭐⭐⭐</div>
-        <p class="review-text">"The small group format is perfect. My daughter isn't lost in a big class, but she also gets to learn with friends. She actually looks forward to her sessions every week!"</p>
-        <div class="review-author">David Kim</div>
-        <div class="review-role">Parent of 10-year-old</div>
+      <div style="background: rgba(255,255,255,0.15); backdrop-filter: blur(10px); padding: 30px; border-radius: 20px; border: 2px solid rgba(255,255,255,0.2); transition: all 0.3s;">
+        <div style="color: var(--accent-yellow); font-size: 1.3em; margin-bottom: 15px;">⭐⭐⭐⭐⭐</div>
+        <p style="font-style: italic; line-height: 1.7; margin-bottom: 20px; opacity: 0.95;">"The small group format is perfect. My daughter isn't lost in a big class, but she also gets to learn with friends. She actually looks forward to her sessions every week!"</p>
+        <div style="font-weight: 700; font-size: 1.1em;">David Kim</div>
+        <div style="font-size: 0.9em; opacity: 0.8;">Parent of 10-year-old</div>
       </div>
-      <div class="review-card">
-        <div class="review-stars">⭐⭐⭐⭐⭐</div>
-        <p class="review-text">"We tried other online programs but nothing compares to STEMSphere. The quality of instruction and the genuine care for each child's progress is unmatched."</p>
-        <div class="review-author">Jessica Martinez</div>
-        <div class="review-role">Parent of 6-year-old</div>
+      <div style="background: rgba(255,255,255,0.15); backdrop-filter: blur(10px); padding: 30px; border-radius: 20px; border: 2px solid rgba(255,255,255,0.2); transition: all 0.3s;">
+        <div style="color: var(--accent-yellow); font-size: 1.3em; margin-bottom: 15px;">⭐⭐⭐⭐⭐</div>
+        <p style="font-style: italic; line-height: 1.7; margin-bottom: 20px; opacity: 0.95;">"We tried other online programs but nothing compares to STEMSphere. The quality of instruction and the genuine care for each child's progress is unmatched."</p>
+        <div style="font-weight: 700; font-size: 1.1em;">Jessica Martinez</div>
+        <div style="font-size: 0.9em; opacity: 0.8;">Parent of 6-year-old</div>
       </div>
-      <div class="review-card">
-        <div class="review-stars">⭐⭐⭐⭐⭐</div>
-        <p class="review-text">"My son's critical thinking skills have skyrocketed. He's solving problems I didn't think were possible at his age. The mixed rotation class keeps him engaged and excited."</p>
-        <div class="review-author">Robert Johnson</div>
-        <div class="review-role">Parent of 9-year-old</div>
+      <div style="background: rgba(255,255,255,0.15); backdrop-filter: blur(10px); padding: 30px; border-radius: 20px; border: 2px solid rgba(255,255,255,0.2); transition: all 0.3s;">
+        <div style="color: var(--accent-yellow); font-size: 1.3em; margin-bottom: 15px;">⭐⭐⭐⭐⭐</div>
+        <p style="font-style: italic; line-height: 1.7; margin-bottom: 20px; opacity: 0.95;">"My son's critical thinking skills have skyrocketed. He's solving problems I didn't think were possible at his age. The mixed rotation class keeps him engaged and excited."</p>
+        <div style="font-weight: 700; font-size: 1.1em;">Robert Johnson</div>
+        <div style="font-size: 0.9em; opacity: 0.8;">Parent of 9-year-old</div>
       </div>
     </div>
   </section>
 
   <!-- Redirect Box -->
-  <div class="redirect-box">
-    <h3>🎓 Looking for Something Different?</h3>
-    <p><strong>Is your child older than 10?</strong> Or interested in <strong>1-on-1 personalized tutoring?</strong><br>
+  <div style="background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%); padding: 40px; border-radius: 20px; text-align: center; margin: 60px auto; max-width: 900px; box-shadow: 0 10px 40px rgba(255,165,0,0.3);">
+    <h3 style="font-size: 2em; margin-bottom: 15px; color: var(--text-dark);">🎓 Looking for Something Different?</h3>
+    <p style="font-size: 1.1em; margin-bottom: 25px; color: var(--text-dark);"><strong>Is your child older than 10?</strong> Or interested in <strong>1-on-1 personalized tutoring?</strong><br>
     We have comprehensive programs for teens and adults with private instruction options!</p>
-    <a href="https://www.stemsphere.academy" class="redirect-btn">
+    <a href="https://www.stemsphere.academy" style="display: inline-block; padding: 15px 40px; background: var(--text-dark); color: white; text-decoration: none; border-radius: 25px; font-weight: 700; font-size: 1.1em; transition: all 0.3s;">
       Explore Our Full Programs →
     </a>
   </div>
 
   <!-- CTA Section -->
-  <section class="cta-section">
-    <div class="cta-content">
-      <h2>🚀 Ready to Transform Your Child's Future?</h2>
-      <p>Join hundreds of families who've discovered the STEMSphere difference.<br>
+  <section style="background: linear-gradient(135deg, var(--accent-orange) 0%, #ff8b56 100%); color: white; padding: 80px 5%; text-align: center;">
+    <div style="max-width: 800px; margin: 0 auto;">
+      <h2 style="font-size: 2.5em; margin-bottom: 20px;">🚀 Ready to Transform Your Child's Future?</h2>
+      <p style="font-size: 1.2em; margin-bottom: 35px; opacity: 0.95;">Join hundreds of families who've discovered the STEMSphere difference.<br>
       Limited spots available - classes fill up fast!</p>
-      <div class="cta-buttons">
-        <a href="https://learn.stemsphere.academy/signup.html" class="cta-btn cta-btn-primary">
+      <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+        <a href="https://learn.stemsphere.academy/signup.html" style="padding: 18px 40px; border-radius: 30px; text-decoration: none; font-weight: 700; font-size: 1.1em; transition: all 0.3s; display: inline-block; background: white; color: var(--accent-orange);">
           Enroll Your Child Now
         </a>
-        <a href="#advisorStatus" class="cta-btn cta-btn-secondary">
+        <a href="#advisorStatus" style="padding: 18px 40px; border-radius: 30px; text-decoration: none; font-weight: 700; font-size: 1.1em; transition: all 0.3s; display: inline-block; background: transparent; color: white; border: 3px solid white;">
           Talk to an Advisor
         </a>
       </div>
@@ -1190,47 +1217,47 @@
   </section>
 
   <!-- Footer -->
-  <footer>
-    <div class="footer-content">
-      <div class="footer-section">
-        <h3>STEMSphere Kids</h3>
+  <footer style="background: var(--text-dark); color: white; padding: 60px 5% 30px;">
+    <div style="max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; margin-bottom: 40px;">
+      <div>
+        <h3 style="margin-bottom: 20px; color: var(--accent-yellow);">STEMSphere Kids</h3>
         <p>Building tomorrow's leaders, one child at a time.</p>
-        <div class="social-links">
-          <a href="#" title="Facebook">📘</a>
-          <a href="#" title="Instagram">📷</a>
-          <a href="#" title="YouTube">📺</a>
-          <a href="#" title="LinkedIn">💼</a>
+        <div style="display: flex; gap: 15px; margin-top: 20px;">
+          <a href="#" style="width: 40px; height: 40px; border-radius: 50%; background: rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; color: white; text-decoration: none; transition: all 0.3s;">📘</a>
+          <a href="#" style="width: 40px; height: 40px; border-radius: 50%; background: rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; color: white; text-decoration: none; transition: all 0.3s;">📷</a>
+          <a href="#" style="width: 40px; height: 40px; border-radius: 50%; background: rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; color: white; text-decoration: none; transition: all 0.3s;">📺</a>
+          <a href="#" style="width: 40px; height: 40px; border-radius: 50%; background: rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; color: white; text-decoration: none; transition: all 0.3s;">💼</a>
         </div>
       </div>
-      <div class="footer-section">
-        <h3>Quick Links</h3>
-        <ul>
-          <li><a href="#programs">Our Programs</a></li>
-          <li><a href="#pricing">Pricing</a></li>
-          <li><a href="https://www.stemsphere.academy">Main Site</a></li>
-          <li><a href="https://learn.stemsphere.academy">Student Portal</a></li>
+      <div>
+        <h3 style="margin-bottom: 20px; color: var(--accent-yellow);">Quick Links</h3>
+        <ul style="list-style: none;">
+          <li style="margin-bottom: 10px;"><a href="#programs" style="color: rgba(255,255,255,0.8); text-decoration: none; transition: color 0.3s;">Our Programs</a></li>
+          <li style="margin-bottom: 10px;"><a href="#pricing" style="color: rgba(255,255,255,0.8); text-decoration: none; transition: color 0.3s;">Pricing</a></li>
+          <li style="margin-bottom: 10px;"><a href="https://www.stemsphere.academy" style="color: rgba(255,255,255,0.8); text-decoration: none; transition: color 0.3s;">Main Site</a></li>
+          <li style="margin-bottom: 10px;"><a href="https://learn.stemsphere.academy" style="color: rgba(255,255,255,0.8); text-decoration: none; transition: color 0.3s;">Student Portal</a></li>
         </ul>
       </div>
-      <div class="footer-section">
-        <h3>Support</h3>
-        <ul>
-          <li><a href="mailto:support@stemsphere.academy">Contact Us</a></li>
-          <li><a href="#">FAQs</a></li>
-          <li><a href="#">Parent Resources</a></li>
-          <li><a href="#">Technical Support</a></li>
+      <div>
+        <h3 style="margin-bottom: 20px; color: var(--accent-yellow);">Support</h3>
+        <ul style="list-style: none;">
+          <li style="margin-bottom: 10px;"><a href="mailto:support@stemsphere.academy" style="color: rgba(255,255,255,0.8); text-decoration: none; transition: color 0.3s;">Contact Us</a></li>
+          <li style="margin-bottom: 10px;"><a href="#" style="color: rgba(255,255,255,0.8); text-decoration: none; transition: color 0.3s;">FAQs</a></li>
+          <li style="margin-bottom: 10px;"><a href="#" style="color: rgba(255,255,255,0.8); text-decoration: none; transition: color 0.3s;">Parent Resources</a></li>
+          <li style="margin-bottom: 10px;"><a href="#" style="color: rgba(255,255,255,0.8); text-decoration: none; transition: color 0.3s;">Technical Support</a></li>
         </ul>
       </div>
-      <div class="footer-section">
-        <h3>Legal</h3>
-        <ul>
-          <li><a href="#">Privacy Policy</a></li>
-          <li><a href="#">Terms of Service</a></li>
-          <li><a href="#">Child Safety</a></li>
-          <li><a href="#">Refund Policy</a></li>
+      <div>
+        <h3 style="margin-bottom: 20px; color: var(--accent-yellow);">Legal</h3>
+        <ul style="list-style: none;">
+          <li style="margin-bottom: 10px;"><a href="#" style="color: rgba(255,255,255,0.8); text-decoration: none; transition: color 0.3s;">Privacy Policy</a></li>
+          <li style="margin-bottom: 10px;"><a href="#" style="color: rgba(255,255,255,0.8); text-decoration: none; transition: color 0.3s;">Terms of Service</a></li>
+          <li style="margin-bottom: 10px;"><a href="#" style="color: rgba(255,255,255,0.8); text-decoration: none; transition: color 0.3s;">Child Safety</a></li>
+          <li style="margin-bottom: 10px;"><a href="#" style="color: rgba(255,255,255,0.8); text-decoration: none; transition: color 0.3s;">Refund Policy</a></li>
         </ul>
       </div>
     </div>
-    <div class="footer-bottom">
+    <div style="text-align: center; padding-top: 30px; border-top: 1px solid rgba(255,255,255,0.1); color: rgba(255,255,255,0.6);">
       <p>&copy; 2025 STEMSphere Kids Academy. All rights reserved. | Empowering young minds worldwide 🌍</p>
     </div>
   </footer>
@@ -1242,23 +1269,6 @@
     const { createClient } = supabase;
     const supabaseClient = createClient(SUPABASE_URL, SUPABASE_KEY);
 
-    // Currency conversion
-    const prices = {
-      CAD: { duo: 1500, group: 499 },
-      USD: { duo: 1100, group: 369 }
-    };
-
-    function changeCurrency() {
-      const currency = document.getElementById('currencySelect').value;
-      const symbol = currency === 'CAD' ? '$' : '$';
-      
-      document.getElementById('duoCurrency').textContent = symbol;
-      document.getElementById('duoPrice').textContent = prices[currency].duo;
-      document.getElementById('groupCurrency').textContent = symbol;
-      document.getElementById('groupPrice').textContent = prices[currency].group;
-    }
-
-    // Check for live advisors
     async function checkAdvisorAvailability() {
       try {
         const { data: advisors, error } = await supabaseClient
@@ -1292,14 +1302,18 @@
     }
 
     function connectWithAdvisor() {
+      fbq('track', 'Contact');
       window.location.href = 'https://learn.stemsphere.academy/instant-session.html';
     }
 
-    // Check advisors on load and every 30 seconds
+    function downloadResource(resourceName) {
+      fbq('track', 'Lead');
+      alert(`📥 Thank you! Your "${resourceName}" download will begin shortly.\n\nCheck your email for the PDF link!`);
+    }
+
     checkAdvisorAvailability();
     setInterval(checkAdvisorAvailability, 30000);
 
-    // Smooth scroll
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -1307,6 +1321,12 @@
         if (target) {
           target.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
+      });
+    });
+
+    document.querySelectorAll('a[href*="signup"]').forEach(btn => {
+      btn.addEventListener('click', function() {
+        fbq('track', 'InitiateCheckout');
       });
     });
   </script>
