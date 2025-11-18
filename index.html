@@ -24,15 +24,6 @@
   <noscript><img height="1" width="1" style="display:none"
     src="https://www.facebook.com/tr?id=580774084540990&ev=PageView&noscript=1"
   /></noscript>
-  <!-- End Facebook Pixel Code -->
-
-  <!-- Google Tag Manager -->
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-XXXXXX');</script>
-  <!-- End Google Tag Manager -->
 
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   
@@ -71,7 +62,6 @@
       overflow-x: hidden;
     }
 
-    /* FLOATING LOGIN/SIGNUP */
     .auth-floater {
       position: fixed;
       top: 20px;
@@ -111,7 +101,6 @@
       box-shadow: 0 6px 20px rgba(74, 144, 226, 0.4);
     }
 
-    /* GOOGLE TRANSLATE */
     #google_translate_element {
       position: fixed;
       top: 80px;
@@ -123,7 +112,6 @@
       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     }
 
-    /* HEADER */
     header {
       background: linear-gradient(135deg, #4A90E2 0%, #9B59B6 100%);
       color: white;
@@ -199,7 +187,6 @@
       color: var(--primary-blue);
     }
 
-    /* HERO SECTION */
     .hero {
       background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
       padding: 60px 5% 80px;
@@ -248,17 +235,10 @@
     }
 
     @keyframes fadeInUp {
-      from {
-        opacity: 0;
-        transform: translateY(30px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
-    /* VIDEO SECTION */
     .video-section {
       max-width: 1200px;
       margin: -50px auto 0;
@@ -309,64 +289,110 @@
       margin-left: 5px;
     }
 
-    /* LIVE ADVISOR STATUS */
-    .advisor-status {
-      margin-top: 20px;
+    .instant-session-container {
+      max-width: 1200px;
+      margin: 30px auto;
+      padding: 0 5%;
+    }
+    .advisor-banner {
+      background: linear-gradient(135deg, #00d9ff 0%, #00b8d4 100%);
+      border-radius: 20px;
+      padding: 40px;
       text-align: center;
-      padding: 15px;
-      background: white;
-      border-radius: 15px;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 10px 40px rgba(0, 217, 255, 0.3);
+      position: relative;
+      overflow: hidden;
     }
-    .advisor-status.online {
-      border: 3px solid var(--success-green);
+    .advisor-banner::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+      animation: pulse-glow 3s ease-in-out infinite;
     }
-    .advisor-status.offline {
-      border: 3px solid var(--text-light);
+    @keyframes pulse-glow {
+      0%, 100% { transform: scale(1); opacity: 0.5; }
+      50% { transform: scale(1.1); opacity: 0.8; }
     }
-    .status-indicator {
+    .advisor-content {
+      position: relative;
+      z-index: 2;
+    }
+    .live-indicator {
       display: inline-flex;
       align-items: center;
       gap: 10px;
-      font-weight: 700;
-      font-size: 1.1em;
+      background: rgba(255, 255, 255, 0.2);
+      padding: 10px 25px;
+      border-radius: 30px;
+      margin-bottom: 20px;
+      backdrop-filter: blur(10px);
     }
-    .status-dot {
+    .live-dot {
       width: 12px;
       height: 12px;
+      background: #00ff88;
       border-radius: 50%;
-      animation: pulse 2s infinite;
+      animation: pulse-dot 1.5s ease-in-out infinite;
+      box-shadow: 0 0 10px #00ff88;
     }
-    .status-dot.online {
-      background: var(--success-green);
-      box-shadow: 0 0 10px var(--success-green);
+    @keyframes pulse-dot {
+      0%, 100% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.2); opacity: 0.7; }
     }
-    .status-dot.offline {
-      background: var(--text-light);
-    }
-    @keyframes pulse {
-      0%, 100% { opacity: 1; }
-      50% { opacity: 0.5; }
-    }
-    .advisor-cta {
-      margin-top: 10px;
-      padding: 12px 30px;
-      background: var(--success-green);
+    .advisor-banner h3 {
+      font-size: 2em;
       color: white;
-      border: none;
-      border-radius: 25px;
+      margin-bottom: 15px;
       font-weight: 700;
-      cursor: pointer;
-      transition: all 0.3s;
-      font-size: 1em;
     }
-    .advisor-cta:hover {
-      background: #00B572;
-      transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(0, 208, 132, 0.4);
+    .advisor-banner p {
+      font-size: 1.2em;
+      color: rgba(255, 255, 255, 0.95);
+      margin-bottom: 25px;
+    }
+    .book-session-btn {
+      display: inline-block;
+      padding: 18px 45px;
+      background: white;
+      color: #00b8d4;
+      text-decoration: none;
+      border-radius: 30px;
+      font-weight: 700;
+      font-size: 1.2em;
+      transition: all 0.3s;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    }
+    .book-session-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      background: #fff;
     }
 
-    /* PUBLIC SPEAKING SPOTLIGHT */
+    .scroll-indicator {
+      text-align: center;
+      margin: 40px 0;
+    }
+    .scroll-arrow {
+      font-size: 3em;
+      color: var(--primary-blue);
+      animation: bounce 2s infinite;
+    }
+    @keyframes bounce {
+      0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+      40% { transform: translateY(-20px); }
+      60% { transform: translateY(-10px); }
+    }
+    .scroll-text {
+      margin-top: 10px;
+      font-size: 1.1em;
+      color: var(--text-light);
+      font-weight: 600;
+    }
+
     .speaking-spotlight {
       padding: 100px 5%;
       background: linear-gradient(135deg, #1e3c72 0%, #2a5298 50%, #7e22ce 100%);
@@ -398,7 +424,6 @@
       border-radius: 20px;
       overflow: hidden;
       box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
-      position: relative;
     }
     .speaking-image img {
       width: 100%;
@@ -489,7 +514,6 @@
       box-shadow: 0 10px 30px rgba(255, 107, 53, 0.5);
     }
 
-    /* BLOG SECTIONS */
     .blog-section {
       padding: 80px 5%;
       max-width: 1400px;
@@ -571,57 +595,6 @@
       font-size: 1.3em;
     }
 
-    /* DOWNLOAD SECTION */
-    .download-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 30px;
-      margin-top: 50px;
-    }
-    .download-card {
-      background: white;
-      border-radius: 20px;
-      padding: 35px;
-      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
-      transition: all 0.4s;
-      border: 3px solid transparent;
-      text-align: center;
-    }
-    .download-card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 20px 60px rgba(74, 144, 226, 0.3);
-      border-color: var(--primary-blue);
-    }
-    .download-icon {
-      font-size: 4em;
-      margin-bottom: 20px;
-    }
-    .download-card h4 {
-      font-size: 1.6em;
-      margin-bottom: 15px;
-      color: var(--text-dark);
-    }
-    .download-card p {
-      color: var(--text-light);
-      margin-bottom: 25px;
-      line-height: 1.6;
-    }
-    .download-btn {
-      display: inline-block;
-      padding: 15px 35px;
-      background: linear-gradient(135deg, var(--primary-blue), var(--primary-purple));
-      color: white;
-      text-decoration: none;
-      border-radius: 25px;
-      font-weight: 700;
-      transition: all 0.3s;
-    }
-    .download-btn:hover {
-      transform: scale(1.05);
-      box-shadow: 0 8px 25px rgba(74, 144, 226, 0.4);
-    }
-
-    /* PROGRAMS SECTION */
     .section {
       max-width: 1400px;
       margin: 0 auto;
@@ -732,25 +705,24 @@
       box-shadow: 0 8px 25px rgba(74, 144, 226, 0.4);
     }
 
-    /* Continue to PART 2 for remaining styles... */
+    @media (max-width: 768px) {
+      .hero h2 { font-size: 2em; }
+      .hero p { font-size: 1.1em; }
+      .speaking-container, .blog-grid { grid-template-columns: 1fr; }
+      .blog-grid.reverse { direction: ltr; }
+      .auth-floater { top: 10px; right: 10px; padding: 8px 15px; }
+      #google_translate_element { position: static; margin: 10px auto; width: fit-content; }
+    }
   </style>
 </head>
 <body>
-  <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXX"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  <!-- End Google Tag Manager (noscript) -->
-
-  <!-- Auth Floater -->
   <div class="auth-floater">
     <a href="https://learn.stemsphere.academy/login.html" class="login-btn">Login</a>
     <a href="https://learn.stemsphere.academy/signup.html" class="signup-btn">Sign Up</a>
   </div>
 
-  <!-- Google Translate -->
   <div id="google_translate_element"></div>
 
-  <!-- Header -->
   <header>
     <div class="header-content">
       <div class="logo-section">
@@ -767,7 +739,6 @@
     </div>
   </header>
 
-  <!-- Hero Section -->
   <section class="hero">
     <div class="hero-content">
       <h2>🌟 Elite Education for Tomorrow's Innovators</h2>
@@ -776,7 +747,6 @@
     </div>
   </section>
 
-  <!-- Video Section -->
   <section class="video-section">
     <div class="video-container">
       <div class="video-placeholder">
@@ -785,20 +755,53 @@
         <p>Watch how we're shaping the next generation of leaders</p>
       </div>
     </div>
-    
-    <!-- Live Advisor Status -->
-    <div class="advisor-status" id="advisorStatus">
-      <div class="status-indicator">
-        <span class="status-dot" id="statusDot"></span>
-        <span id="statusText">Checking advisor availability...</span>
+  </section>
+
+  <div class="instant-session-container" id="advisorContainer" style="display:none;">
+    <div class="advisor-banner">
+      <div class="advisor-content">
+        <div class="live-indicator">
+          <span class="live-dot"></span>
+          <span style="color: white; font-weight: 700; font-size: 1.1em;">ENROLLMENT ADVISOR ONLINE</span>
+        </div>
+        <h3>🎓 Book Your FREE Enrollment Session Now!</h3>
+        <p>An enrollment advisor is available right now to answer your questions and help you get started</p>
+        <a href="https://learn.stemsphere.academy/instant-session.html" class="book-session-btn">
+          📞 Book Free Enrollment Session →
+        </a>
       </div>
-      <button class="advisor-cta" id="advisorBtn" onclick="connectWithAdvisor()" style="display:none;">
-        💬 Talk to an Enrollment Advisor Now
-      </button>
+    </div>
+  </div>
+
+  <div class="scroll-indicator">
+    <div class="scroll-arrow">↓</div>
+    <p class="scroll-text">Discover How We Transform Young Minds</p>
+  </div>
+
+  <section class="blog-section">
+    <div class="blog-header">
+      <h2>🔬 The Science Gap That's Holding Kids Back</h2>
+      <p>Why traditional education fails to ignite curiosity—and what we do differently</p>
+    </div>
+    <div class="blog-grid">
+      <div class="blog-image">
+        <img src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=800&q=80" alt="Kids doing science experiments">
+      </div>
+      <div class="blog-content">
+        <h3>Most Kids Are Being Left Behind in STEM</h3>
+        <p>By age 10, <strong>67% of children have already decided they're "not good at science."</strong> Not because they can't do it—but because nobody showed them it could be fun, hands-on, and exciting.</p>
+        <p>Traditional classrooms focus on memorization. We focus on <strong>discovery, experimentation, and real-world applications</strong> that make kids say "WOW!" instead of "Why do I need to know this?"</p>
+        <ul class="blog-list">
+          <li>Live virtual experiments kids can recreate at home</li>
+          <li>Engineering challenges that teach problem-solving</li>
+          <li>Biology, chemistry, and physics made tangible and exciting</li>
+          <li>Small groups mean every question gets answered—curiosity never gets ignored</li>
+        </ul>
+        <p><strong>The result?</strong> Kids who can't wait for their next science class. Kids who start asking "how does that work?" about everything around them. Kids who see themselves as future scientists, engineers, and innovators.</p>
+      </div>
     </div>
   </section>
 
-  <!-- Public Speaking Spotlight -->
   <section class="speaking-spotlight">
     <div class="speaking-container">
       <div class="speaking-image">
@@ -831,32 +834,6 @@
       </div>
     </div>
   </section>
-  <!-- Blog Section 1: The Science Gap -->
-  <section class="blog-section">
-    <div class="blog-header">
-      <h2>🔬 The Science Gap That's Holding Kids Back</h2>
-      <p>Why traditional education fails to ignite curiosity—and what we do differently</p>
-    </div>
-    <div class="blog-grid">
-      <div class="blog-image">
-        <img src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=800&q=80" alt="Kids doing science experiments">
-      </div>
-      <div class="blog-content">
-        <h3>Most Kids Are Being Left Behind in STEM</h3>
-        <p>By age 10, <strong>67% of children have already decided they're "not good at science."</strong> Not because they can't do it—but because nobody showed them it could be fun, hands-on, and exciting.</p>
-        <p>Traditional classrooms focus on memorization. We focus on <strong>discovery, experimentation, and real-world applications</strong> that make kids say "WOW!" instead of "Why do I need to know this?"</p>
-        <ul class="blog-list">
-          <li>Live virtual experiments kids can recreate at home</li>
-          <li>Engineering challenges that teach problem-solving</li>
-          <li>Biology, chemistry, and physics made tangible and exciting</li>
-          <li>Small groups mean every question gets answered—curiosity never gets ignored</li>
-        </ul>
-        <p><strong>The result?</strong> Kids who can't wait for their next science class. Kids who start asking "how does that work?" about everything around them. Kids who see themselves as future scientists, engineers, and innovators.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Blog Section 2: The Math Confidence Crisis -->
   <section class="blog-section alt-bg">
     <div class="blog-header">
       <h2>🧮 The Math Confidence Crisis (And How to Fix It)</h2>
@@ -881,7 +858,6 @@
     </div>
   </section>
 
-  <!-- Blog Section 3: The Social Learning Advantage -->
   <section class="blog-section">
     <div class="blog-header">
       <h2>👥 Why Small Group Learning Beats Private Tutoring</h2>
@@ -906,7 +882,6 @@
     </div>
   </section>
 
-  <!-- Blog Section 4: The Leadership Gap -->
   <section class="blog-section alt-bg">
     <div class="blog-header">
       <h2>🎯 The Leadership Skills Schools Don't Teach</h2>
@@ -931,41 +906,6 @@
     </div>
   </section>
 
-  <!-- Free Resources Section -->
-  <section class="blog-section" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); color: white;">
-    <div class="blog-header">
-      <h2 style="color: white;">🎁 Free Resources for Parents</h2>
-      <p style="color: rgba(255,255,255,0.95);">Download our expert guides and start transforming your child's learning today</p>
-    </div>
-    <div class="download-grid">
-      <div class="download-card">
-        <div class="download-icon">📚</div>
-        <h4>The Parent's Guide to STEM Learning</h4>
-        <p>15 activities you can do at home to spark curiosity and build foundational STEM skills in kids ages 6-10.</p>
-        <a href="#" class="download-btn" onclick="downloadResource('stem-guide')">Download Free PDF →</a>
-      </div>
-      <div class="download-card">
-        <div class="download-icon">🎤</div>
-        <h4>5-Minute Confidence Builders</h4>
-        <p>Simple daily exercises to help shy kids develop public speaking confidence and overcome stage fright.</p>
-        <a href="#" class="download-btn" onclick="downloadResource('confidence-guide')">Download Free PDF →</a>
-      </div>
-      <div class="download-card">
-        <div class="download-icon">🧮</div>
-        <h4>Math Games That Actually Work</h4>
-        <p>20 fun games that make math exciting and build number sense without worksheets or stress.</p>
-        <a href="#" class="download-btn" onclick="downloadResource('math-games')">Download Free PDF →</a>
-      </div>
-      <div class="download-card">
-        <div class="download-icon">⭐</div>
-        <h4>Is Your Child Ready? Assessment</h4>
-        <p>Free 5-minute assessment to identify your child's learning style and recommend the perfect program.</p>
-        <a href="#" class="download-btn" onclick="downloadResource('assessment')">Take Free Assessment →</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Programs Section -->
   <section class="section" id="programs">
     <div class="section-header">
       <h2>🎓 Our Signature Programs for Young Leaders</h2>
@@ -973,16 +913,16 @@
     </div>
     <div class="programs-grid">
       <div class="program-card">
-        <img class="program-image" src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=800" alt="Kids Public Speaking">
+        <img class="program-image" src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=800" alt="Kids Science Program">
         <div class="program-content">
-          <h3>🎤 Kids Public Speaking Mastery</h3>
-          <p>Transform shy kids into confident communicators. Master presentation skills, storytelling, and leadership presence.</p>
+          <h3>🔬 Early Junior Scientist Program</h3>
+          <p>Ignite curiosity with hands-on STEM exploration. Physics, chemistry, biology—preparing the next generation of innovators.</p>
           <ul class="program-features">
-            <li>Confidence-building techniques</li>
-            <li>Storytelling & persuasion skills</li>
-            <li>Stage presence mastery</li>
-            <li>Peer presentation practice</li>
-            <li>Leadership communication</li>
+            <li>Live virtual experiments</li>
+            <li>Scientific method mastery</li>
+            <li>Engineering challenges</li>
+            <li>Nature & biology exploration</li>
+            <li>Future scientist mindset</li>
           </ul>
           <a href="#pricing" class="program-cta">Enroll Now →</a>
         </div>
@@ -1006,16 +946,16 @@
       </div>
 
       <div class="program-card">
-        <img class="program-image" src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=800" alt="Kids Science Program">
+        <img class="program-image" src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=800" alt="Kids Public Speaking">
         <div class="program-content">
-          <h3>🔬 Early Junior Scientist Program</h3>
-          <p>Ignite curiosity with hands-on STEM exploration. Physics, chemistry, biology—preparing the next generation of innovators.</p>
+          <h3>🎤 Kids Public Speaking Mastery</h3>
+          <p>Transform shy kids into confident communicators. Master presentation skills, storytelling, and leadership presence.</p>
           <ul class="program-features">
-            <li>Live virtual experiments</li>
-            <li>Scientific method mastery</li>
-            <li>Engineering challenges</li>
-            <li>Nature & biology exploration</li>
-            <li>Future scientist mindset</li>
+            <li>Confidence-building techniques</li>
+            <li>Storytelling & persuasion skills</li>
+            <li>Stage presence mastery</li>
+            <li>Peer presentation practice</li>
+            <li>Leadership communication</li>
           </ul>
           <a href="#pricing" class="program-cta">Enroll Now →</a>
         </div>
@@ -1040,7 +980,6 @@
     </div>
   </section>
 
-  <!-- Pricing Section -->
   <section class="section" style="background: var(--bg-light);" id="pricing">
     <div class="section-header">
       <h2>💎 Investment in Your Child's Future</h2>
@@ -1088,7 +1027,7 @@
             <span>Direct parent communication</span>
           </li>
         </ul>
-        <a href="https://learn.stemsphere.academy/signup.html" style="display: block; text-align: center; padding: 18px; background: linear-gradient(135deg, var(--primary-blue), var(--primary-purple)); color: white; text-decoration: none; border-radius: 15px; font-weight: 700; font-size: 1.2em; transition: all 0.3s; margin-top: 25px;">Secure Your Spot →</a>
+        <a href="https://learn.stemsphere.academy/login.html" style="display: block; text-align: center; padding: 18px; background: linear-gradient(135deg, var(--primary-blue), var(--primary-purple)); color: white; text-decoration: none; border-radius: 15px; font-weight: 700; font-size: 1.2em; transition: all 0.3s; margin-top: 25px;">Book Free Enrollment Session →</a>
       </div>
 
       <div style="background: white; border-radius: 25px; padding: 40px; box-shadow: 0 10px 40px rgba(0,0,0,0.1); transition: all 0.4s; border: 3px solid var(--accent-orange); position: relative; transform: scale(1.05);">
@@ -1133,7 +1072,7 @@
             <span>Certificate of completion</span>
           </li>
         </ul>
-        <a href="https://learn.stemsphere.academy/signup.html" style="display: block; text-align: center; padding: 18px; background: linear-gradient(135deg, var(--primary-blue), var(--primary-purple)); color: white; text-decoration: none; border-radius: 15px; font-weight: 700; font-size: 1.2em; transition: all 0.3s; margin-top: 25px;">Start Learning Today →</a>
+        <a href="https://learn.stemsphere.academy/login.html" style="display: block; text-align: center; padding: 18px; background: linear-gradient(135deg, var(--primary-blue), var(--primary-purple)); color: white; text-decoration: none; border-radius: 15px; font-weight: 700; font-size: 1.2em; transition: all 0.3s; margin-top: 25px;">Book Free Enrollment Session →</a>
       </div>
     </div>
     
@@ -1143,7 +1082,6 @@
     </div>
   </section>
 
-  <!-- Reviews Section -->
   <section style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 80px 5%;">
     <div class="section-header">
       <h2 style="color: white;">❤️ What Parents Are Saying</h2>
@@ -1189,7 +1127,36 @@
     </div>
   </section>
 
-  <!-- Redirect Box -->
+  <section style="padding: 80px 5%; background: var(--bg-light);">
+    <div style="max-width: 1200px; margin: 0 auto; text-align: center;">
+      <h2 style="font-size: 2.5em; margin-bottom: 20px; background: linear-gradient(135deg, var(--primary-blue), var(--primary-purple)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">🎁 Free Parent Resources</h2>
+      <p style="font-size: 1.2em; color: var(--text-light); margin-bottom: 50px;">Download our expert guides created by education specialists</p>
+      
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px;">
+        <div style="background: white; padding: 35px; border-radius: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.1); transition: all 0.3s; text-align: center;">
+          <div style="font-size: 4em; margin-bottom: 20px;">📘</div>
+          <h4 style="font-size: 1.5em; margin-bottom: 15px; color: var(--text-dark);">Ultimate Parent's Guide to STEM Learning</h4>
+          <p style="color: var(--text-light); margin-bottom: 25px; line-height: 1.6;">Everything you need to know about supporting your child's STEM education journey. Activities, tips, and expert advice.</p>
+          <a href="#" onclick="downloadResource('stem-guide'); return false;" style="display: inline-block; padding: 15px 35px; background: linear-gradient(135deg, var(--primary-blue), var(--primary-purple)); color: white; text-decoration: none; border-radius: 25px; font-weight: 700; transition: all 0.3s;">Download Free PDF →</a>
+        </div>
+        
+        <div style="background: white; padding: 35px; border-radius: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.1); transition: all 0.3s; text-align: center;">
+          <div style="font-size: 4em; margin-bottom: 20px;">🧠</div>
+          <h4 style="font-size: 1.5em; margin-bottom: 15px; color: var(--text-dark);">The Confidence Blueprint for Kids</h4>
+          <p style="color: var(--text-light); margin-bottom: 25px; line-height: 1.6;">Proven strategies to help shy children build unshakeable confidence through public speaking and leadership skills.</p>
+          <a href="#" onclick="downloadResource('confidence-guide'); return false;" style="display: inline-block; padding: 15px 35px; background: linear-gradient(135deg, var(--primary-blue), var(--primary-purple)); color: white; text-decoration: none; border-radius: 25px; font-weight: 700; transition: all 0.3s;">Download Free PDF →</a>
+        </div>
+        
+        <div style="background: white; padding: 35px; border-radius: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.1); transition: all 0.3s; text-align: center;">
+          <div style="font-size: 4em; margin-bottom: 20px;">🎯</div>
+          <h4 style="font-size: 1.5em; margin-bottom: 15px; color: var(--text-dark);">Math Mastery at Home: 20 Fun Games</h4>
+          <p style="color: var(--text-light); margin-bottom: 25px; line-height: 1.6;">Turn screen time into learning time with games that actually build mathematical thinking and problem-solving skills.</p>
+          <a href="#" onclick="downloadResource('math-games'); return false;" style="display: inline-block; padding: 15px 35px; background: linear-gradient(135deg, var(--primary-blue), var(--primary-purple)); color: white; text-decoration: none; border-radius: 25px; font-weight: 700; transition: all 0.3s;">Download Free PDF →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <div style="background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%); padding: 40px; border-radius: 20px; text-align: center; margin: 60px auto; max-width: 900px; box-shadow: 0 10px 40px rgba(255,165,0,0.3);">
     <h3 style="font-size: 2em; margin-bottom: 15px; color: var(--text-dark);">🎓 Looking for Something Different?</h3>
     <p style="font-size: 1.1em; margin-bottom: 25px; color: var(--text-dark);"><strong>Is your child older than 10?</strong> Or interested in <strong>1-on-1 personalized tutoring?</strong><br>
@@ -1199,66 +1166,37 @@
     </a>
   </div>
 
-  <!-- CTA Section -->
   <section style="background: linear-gradient(135deg, var(--accent-orange) 0%, #ff8b56 100%); color: white; padding: 80px 5%; text-align: center;">
     <div style="max-width: 800px; margin: 0 auto;">
       <h2 style="font-size: 2.5em; margin-bottom: 20px;">🚀 Ready to Transform Your Child's Future?</h2>
       <p style="font-size: 1.2em; margin-bottom: 35px; opacity: 0.95;">Join hundreds of families who've discovered the STEMSphere difference.<br>
       Limited spots available - classes fill up fast!</p>
       <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
-        <a href="https://learn.stemsphere.academy/signup.html" style="padding: 18px 40px; border-radius: 30px; text-decoration: none; font-weight: 700; font-size: 1.1em; transition: all 0.3s; display: inline-block; background: white; color: var(--accent-orange);">
-          Enroll Your Child Now
-        </a>
-        <a href="#advisorStatus" style="padding: 18px 40px; border-radius: 30px; text-decoration: none; font-weight: 700; font-size: 1.1em; transition: all 0.3s; display: inline-block; background: transparent; color: white; border: 3px solid white;">
-          Talk to an Advisor
+        <a href="https://learn.stemsphere.academy/login.html" style="padding: 18px 40px; border-radius: 30px; text-decoration: none; font-weight: 700; font-size: 1.1em; transition: all 0.3s; display: inline-block; background: white; color: var(--accent-orange);">
+          Book Free Enrollment Session
         </a>
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer style="background: var(--text-dark); color: white; padding: 60px 5% 30px;">
-    <div style="max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; margin-bottom: 40px;">
-      <div>
-        <h3 style="margin-bottom: 20px; color: var(--accent-yellow);">STEMSphere Kids</h3>
-        <p>Building tomorrow's leaders, one child at a time.</p>
-        <div style="display: flex; gap: 15px; margin-top: 20px;">
-          <a href="#" style="width: 40px; height: 40px; border-radius: 50%; background: rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; color: white; text-decoration: none; transition: all 0.3s;">📘</a>
-          <a href="#" style="width: 40px; height: 40px; border-radius: 50%; background: rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; color: white; text-decoration: none; transition: all 0.3s;">📷</a>
-          <a href="#" style="width: 40px; height: 40px; border-radius: 50%; background: rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; color: white; text-decoration: none; transition: all 0.3s;">📺</a>
-          <a href="#" style="width: 40px; height: 40px; border-radius: 50%; background: rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; color: white; text-decoration: none; transition: all 0.3s;">💼</a>
+  <footer style="background: #1a1a1a; color: #fff; padding: 3rem 5% 2rem; font-family: 'Segoe UI', sans-serif;">
+    <div style="max-width: 1200px; margin: 0 auto;">
+      <div style="text-align: center; margin-bottom: 2rem;">
+        <img src="https://learn.stemsphere.academy/assets/favconsp1.2.png" alt="STEMSphere" style="width: 60px; height: 60px; margin-bottom: 1rem; border-radius: 12px;">
+        <h3 style="font-size: 1.8em; margin-bottom: 0.5rem; background: linear-gradient(to right, #4A90E2, #9B59B6); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">STEMSphere Kids Academy</h3>
+        <p style="color: rgba(255,255,255,0.7); font-size: 1.1em;">Where Future Leaders Begin 🚀</p>
+      </div>
+      
+      <div style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 2rem; text-align: center;">
+        <p style="color: rgba(255,255,255,0.6); font-size: 0.95em; margin-bottom: 1rem;">
+          © 2025 STEMSphere Academy. All rights reserved. | Empowering young minds worldwide 🌍
+        </p>
+        <div style="display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap; font-size: 0.9em;">
+          <a href="#" style="color: rgba(255,255,255,0.6); text-decoration: none; transition: color 0.3s;">Privacy Policy</a>
+          <a href="#" style="color: rgba(255,255,255,0.6); text-decoration: none; transition: color 0.3s;">Terms of Service</a>
+          <a href="mailto:support@stemsphere.academy" style="color: rgba(255,255,255,0.6); text-decoration: none; transition: color 0.3s;">Contact Support</a>
         </div>
       </div>
-      <div>
-        <h3 style="margin-bottom: 20px; color: var(--accent-yellow);">Quick Links</h3>
-        <ul style="list-style: none;">
-          <li style="margin-bottom: 10px;"><a href="#programs" style="color: rgba(255,255,255,0.8); text-decoration: none; transition: color 0.3s;">Our Programs</a></li>
-          <li style="margin-bottom: 10px;"><a href="#pricing" style="color: rgba(255,255,255,0.8); text-decoration: none; transition: color 0.3s;">Pricing</a></li>
-          <li style="margin-bottom: 10px;"><a href="https://www.stemsphere.academy" style="color: rgba(255,255,255,0.8); text-decoration: none; transition: color 0.3s;">Main Site</a></li>
-          <li style="margin-bottom: 10px;"><a href="https://learn.stemsphere.academy" style="color: rgba(255,255,255,0.8); text-decoration: none; transition: color 0.3s;">Student Portal</a></li>
-        </ul>
-      </div>
-      <div>
-        <h3 style="margin-bottom: 20px; color: var(--accent-yellow);">Support</h3>
-        <ul style="list-style: none;">
-          <li style="margin-bottom: 10px;"><a href="mailto:support@stemsphere.academy" style="color: rgba(255,255,255,0.8); text-decoration: none; transition: color 0.3s;">Contact Us</a></li>
-          <li style="margin-bottom: 10px;"><a href="#" style="color: rgba(255,255,255,0.8); text-decoration: none; transition: color 0.3s;">FAQs</a></li>
-          <li style="margin-bottom: 10px;"><a href="#" style="color: rgba(255,255,255,0.8); text-decoration: none; transition: color 0.3s;">Parent Resources</a></li>
-          <li style="margin-bottom: 10px;"><a href="#" style="color: rgba(255,255,255,0.8); text-decoration: none; transition: color 0.3s;">Technical Support</a></li>
-        </ul>
-      </div>
-      <div>
-        <h3 style="margin-bottom: 20px; color: var(--accent-yellow);">Legal</h3>
-        <ul style="list-style: none;">
-          <li style="margin-bottom: 10px;"><a href="#" style="color: rgba(255,255,255,0.8); text-decoration: none; transition: color 0.3s;">Privacy Policy</a></li>
-          <li style="margin-bottom: 10px;"><a href="#" style="color: rgba(255,255,255,0.8); text-decoration: none; transition: color 0.3s;">Terms of Service</a></li>
-          <li style="margin-bottom: 10px;"><a href="#" style="color: rgba(255,255,255,0.8); text-decoration: none; transition: color 0.3s;">Child Safety</a></li>
-          <li style="margin-bottom: 10px;"><a href="#" style="color: rgba(255,255,255,0.8); text-decoration: none; transition: color 0.3s;">Refund Policy</a></li>
-        </ul>
-      </div>
-    </div>
-    <div style="text-align: center; padding-top: 30px; border-top: 1px solid rgba(255,255,255,0.1); color: rgba(255,255,255,0.6);">
-      <p>&copy; 2025 STEMSphere Kids Academy. All rights reserved. | Empowering young minds worldwide 🌍</p>
     </div>
   </footer>
 
@@ -1278,37 +1216,21 @@
           .eq('is_advisor', true)
           .eq('advisor_available', true);
 
-        const statusDiv = document.getElementById('advisorStatus');
-        const statusDot = document.getElementById('statusDot');
-        const statusText = document.getElementById('statusText');
-        const advisorBtn = document.getElementById('advisorBtn');
+        const container = document.getElementById('advisorContainer');
 
         if (advisors && advisors.length > 0) {
-          statusDiv.classList.add('online');
-          statusDiv.classList.remove('offline');
-          statusDot.classList.add('online');
-          statusText.textContent = `🟢 ${advisors.length} Enrollment Advisor${advisors.length > 1 ? 's' : ''} Available Now!`;
-          advisorBtn.style.display = 'inline-block';
+          container.style.display = 'block';
         } else {
-          statusDiv.classList.add('offline');
-          statusDiv.classList.remove('online');
-          statusDot.classList.add('offline');
-          statusText.textContent = '🔴 No advisors online right now - but you can still enroll below!';
-          advisorBtn.style.display = 'none';
+          container.style.display = 'none';
         }
       } catch (error) {
         console.error('Error checking advisors:', error);
       }
     }
 
-    function connectWithAdvisor() {
-      fbq('track', 'Contact');
-      window.location.href = 'https://learn.stemsphere.academy/instant-session.html';
-    }
-
     function downloadResource(resourceName) {
       fbq('track', 'Lead');
-      alert(`📥 Thank you! Your "${resourceName}" download will begin shortly.\n\nCheck your email for the PDF link!`);
+      alert(`📥 Thank you for your interest!\n\nYour "${resourceName}" will be sent to your email shortly.\n\nCheck your inbox in the next few minutes!`);
     }
 
     checkAdvisorAvailability();
@@ -1324,7 +1246,7 @@
       });
     });
 
-    document.querySelectorAll('a[href*="signup"]').forEach(btn => {
+    document.querySelectorAll('a[href*="login"]').forEach(btn => {
       btn.addEventListener('click', function() {
         fbq('track', 'InitiateCheckout');
       });
