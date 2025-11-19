@@ -47,6 +47,12 @@
       scroll-behavior: smooth;
     }
 
+    /* 🎯 ANNUAL PROMOTION ANIMATIONS */
+    @keyframes sparkle {
+      0%, 100% { opacity: 0; transform: scale(0); }
+      50% { opacity: 1; transform: scale(1); }
+    }
+
     #fallback-translator {
       position: fixed;
       top: 10px;
@@ -683,178 +689,21 @@
   </div>
 </div>
 
-<!-- START: LANGUAGE TRANSLATOR (ALL 130+ LANGUAGES) -->
+<!-- START: LANGUAGE TRANSLATOR (COMPACT VERSION) -->
 <div id="fallback-translator">
   <select onchange="translatePage(this.value)">
     <option value="en" selected>🌐 English</option>
-    
-    <optgroup label="─── Popular Languages ───">
-      <option value="es">Español (Spanish)</option>
-      <option value="fr">Français (French)</option>
-      <option value="de">Deutsch (German)</option>
-      <option value="zh-CN">简体中文 (Chinese Simplified)</option>
-      <option value="zh-TW">繁體中文 (Chinese Traditional)</option>
-      <option value="ja">日本語 (Japanese)</option>
-      <option value="ko">한국어 (Korean)</option>
-      <option value="ar">العربية (Arabic)</option>
-      <option value="hi">हिन्दी (Hindi)</option>
-      <option value="pt">Português (Portuguese)</option>
-      <option value="ru">Русский (Russian)</option>
-      <option value="it">Italiano (Italian)</option>
-    </optgroup>
-    
-    <optgroup label="─── A-C ───">
-      <option value="af">Afrikaans</option>
-      <option value="sq">Albanian (Shqip)</option>
-      <option value="am">Amharic (አማርኛ)</option>
-      <option value="ar">Arabic (العربية)</option>
-      <option value="hy">Armenian (Հայերեն)</option>
-      <option value="as">Assamese (অসমীয়া)</option>
-      <option value="ay">Aymara</option>
-      <option value="az">Azerbaijani (Azərbaycan)</option>
-      <option value="bm">Bambara</option>
-      <option value="eu">Basque (Euskara)</option>
-      <option value="be">Belarusian (Беларуская)</option>
-      <option value="bn">Bengali (বাংলা)</option>
-      <option value="bho">Bhojpuri (भोजपुरी)</option>
-      <option value="bs">Bosnian (Bosanski)</option>
-      <option value="bg">Bulgarian (Български)</option>
-      <option value="ca">Catalan (Català)</option>
-      <option value="ceb">Cebuano</option>
-      <option value="ny">Chichewa (Nyanja)</option>
-      <option value="zh-CN">Chinese Simplified (简体中文)</option>
-      <option value="zh-TW">Chinese Traditional (繁體中文)</option>
-      <option value="co">Corsican (Corsu)</option>
-      <option value="hr">Croatian (Hrvatski)</option>
-      <option value="cs">Czech (Čeština)</option>
-    </optgroup>
-    
-    <optgroup label="─── D-G ───">
-      <option value="da">Danish (Dansk)</option>
-      <option value="dv">Dhivehi (ދިވެހި)</option>
-      <option value="doi">Dogri (डोगरी)</option>
-      <option value="nl">Dutch (Nederlands)</option>
-      <option value="eo">Esperanto</option>
-      <option value="et">Estonian (Eesti)</option>
-      <option value="ee">Ewe</option>
-      <option value="tl">Filipino (Tagalog)</option>
-      <option value="fi">Finnish (Suomi)</option>
-      <option value="fr">French (Français)</option>
-      <option value="fy">Frisian (Frysk)</option>
-      <option value="gl">Galician (Galego)</option>
-      <option value="ka">Georgian (ქართული)</option>
-      <option value="de">German (Deutsch)</option>
-      <option value="el">Greek (Ελληνικά)</option>
-      <option value="gn">Guarani</option>
-      <option value="gu">Gujarati (ગુજરાતી)</option>
-    </optgroup>
-    
-    <optgroup label="─── H-K ───">
-      <option value="ht">Haitian Creole (Kreyòl)</option>
-      <option value="ha">Hausa</option>
-      <option value="haw">Hawaiian (ʻŌlelo Hawaiʻi)</option>
-      <option value="iw">Hebrew (עברית)</option>
-      <option value="hi">Hindi (हिन्दी)</option>
-      <option value="hmn">Hmong</option>
-      <option value="hu">Hungarian (Magyar)</option>
-      <option value="is">Icelandic (Íslenska)</option>
-      <option value="ig">Igbo</option>
-      <option value="ilo">Ilocano</option>
-      <option value="id">Indonesian (Bahasa Indonesia)</option>
-      <option value="ga">Irish (Gaeilge)</option>
-      <option value="it">Italian (Italiano)</option>
-      <option value="ja">Japanese (日本語)</option>
-      <option value="jw">Javanese (Basa Jawa)</option>
-      <option value="kn">Kannada (ಕನ್ನಡ)</option>
-      <option value="kk">Kazakh (Қазақ)</option>
-      <option value="km">Khmer (ភាសាខ្មែរ)</option>
-      <option value="rw">Kinyarwanda</option>
-      <option value="gom">Konkani (कोंकणी)</option>
-      <option value="ko">Korean (한국어)</option>
-      <option value="kri">Krio</option>
-      <option value="ku">Kurdish (Kurdî)</option>
-      <option value="ckb">Kurdish (Sorani) (کوردی)</option>
-      <option value="ky">Kyrgyz (Кыргызча)</option>
-    </optgroup>
-    
-    <optgroup label="─── L-O ───">
-      <option value="lo">Lao (ລາວ)</option>
-      <option value="la">Latin (Latina)</option>
-      <option value="lv">Latvian (Latviešu)</option>
-      <option value="ln">Lingala</option>
-      <option value="lt">Lithuanian (Lietuvių)</option>
-      <option value="lg">Luganda</option>
-      <option value="lb">Luxembourgish (Lëtzebuergesch)</option>
-      <option value="mk">Macedonian (Македонски)</option>
-      <option value="mai">Maithili (मैथिली)</option>
-      <option value="mg">Malagasy</option>
-      <option value="ms">Malay (Bahasa Melayu)</option>
-      <option value="ml">Malayalam (മലയാളം)</option>
-      <option value="mt">Maltese (Malti)</option>
-      <option value="mi">Maori (Te Reo Māori)</option>
-      <option value="mr">Marathi (मराठी)</option>
-      <option value="mni-Mtei">Meiteilon (Manipuri)</option>
-      <option value="lus">Mizo</option>
-      <option value="mn">Mongolian (Монгол)</option>
-      <option value="my">Myanmar (Burmese) (မြန်မာ)</option>
-      <option value="ne">Nepali (नेपाली)</option>
-      <option value="no">Norwegian (Norsk)</option>
-      <option value="or">Odia (Oriya) (ଓଡ଼ିଆ)</option>
-      <option value="om">Oromo</option>
-    </optgroup>
-    
-    <optgroup label="─── P-S ───">
-      <option value="ps">Pashto (پښتو)</option>
-      <option value="fa">Persian (Farsi) (فارسی)</option>
-      <option value="pl">Polish (Polski)</option>
-      <option value="pt">Portuguese (Português)</option>
-      <option value="pa">Punjabi (ਪੰਜਾਬੀ)</option>
-      <option value="qu">Quechua</option>
-      <option value="ro">Romanian (Română)</option>
-      <option value="ru">Russian (Русский)</option>
-      <option value="sm">Samoan</option>
-      <option value="sa">Sanskrit (संस्कृतम्)</option>
-      <option value="gd">Scots Gaelic (Gàidhlig)</option>
-      <option value="nso">Sepedi</option>
-      <option value="sr">Serbian (Српски)</option>
-      <option value="st">Sesotho</option>
-      <option value="sn">Shona</option>
-      <option value="sd">Sindhi (سنڌي)</option>
-      <option value="si">Sinhala (සිංහල)</option>
-      <option value="sk">Slovak (Slovenčina)</option>
-      <option value="sl">Slovenian (Slovenščina)</option>
-      <option value="so">Somali (Soomaali)</option>
-      <option value="es">Spanish (Español)</option>
-      <option value="su">Sundanese (Basa Sunda)</option>
-      <option value="sw">Swahili (Kiswahili)</option>
-      <option value="sv">Swedish (Svenska)</option>
-    </optgroup>
-    
-    <optgroup label="─── T-Z ───">
-      <option value="tg">Tajik (Тоҷикӣ)</option>
-      <option value="ta">Tamil (தமிழ்)</option>
-      <option value="tt">Tatar (Татар)</option>
-      <option value="te">Telugu (తెలుగు)</option>
-      <option value="th">Thai (ไทย)</option>
-      <option value="ti">Tigrinya (ትግርኛ)</option>
-      <option value="ts">Tsonga</option>
-      <option value="tr">Turkish (Türkçe)</option>
-      <option value="tk">Turkmen (Türkmen)</option>
-      <option value="ak">Twi (Akan)</option>
-      <option value="uk">Ukrainian (Українська)</option>
-      <option value="ur">Urdu (اردو)</option>
-      <option value="ug">Uyghur (ئۇيغۇر)</option>
-      <option value="uz">Uzbek (Oʻzbek)</option>
-      <option value="vi">Vietnamese (Tiếng Việt)</option>
-      <option value="cy">Welsh (Cymraeg)</option>
-      <option value="xh">Xhosa (isiXhosa)</option>
-      <option value="yi">Yiddish (ייִדיש)</option>
-      <option value="yo">Yoruba (Èdè Yorùbá)</option>
-      <option value="zu">Zulu (isiZulu)</option>
-    </optgroup>
+    <option value="es">Español</option>
+    <option value="fr">Français</option>
+    <option value="de">Deutsch</option>
+    <option value="zh-CN">中文</option>
+    <option value="ja">日本語</option>
+    <option value="ko">한국어</option>
+    <option value="ar">العربية</option>
+    <option value="hi">हिन्दी</option>
+    <option value="pt">Português</option>
   </select>
 </div>
-<!-- END: LANGUAGE TRANSLATOR -->
 
 <script>
   function translatePage(lang) {
@@ -897,14 +746,12 @@
 </section>
 
 <div id="highIntentCTA">
-  <!-- Live Chat Button (shows when advisor available) - ABOVE RED BUTTON -->
   <div id="liveChatWrapper" style="display:none; margin-bottom: 1rem;">
     <button onclick="openAnonymousAdvisorChat()" id="liveChatBtn">
       💬 Chat with Advisor NOW - Free!
     </button>
   </div>
   
-  <!-- Status Indicator (shows when advisor is online) -->
   <div id="advisorStatusIndicator" style="display: none; margin: 1rem auto;">
     <span style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.75rem 1.5rem; background: rgba(0,255,136,0.2); border: 2px solid #00ff88; border-radius: 8px; color: #fff; font-weight: 600;">
       <span style="width: 10px; height: 10px; background: #00ff88; border-radius: 50%; animation: pulse 2s infinite;"></span>
@@ -912,7 +759,6 @@
     </span>
   </div>
   
-  <!-- Regular CTA (always visible) -->
   <a href="https://learn.stemsphere.academy/login.html">
     🚀 Book Your Free Enrollment Session Now
   </a>
@@ -1065,6 +911,36 @@
           <div class="price-main">$995</div>
           <span class="period">12 Classes (3 Months)</span>
           <span class="weekly-price">Only $83/week</span>
+          
+          <!-- 🎯 ANNUAL PROMOTION FOR TRIO -->
+          <div style="margin: 1rem 0; padding: 1.2rem; background: linear-gradient(135deg, #ffd700, #ffed4e); border-radius: 10px; border: 3px solid #ff6b00; box-shadow: 0 6px 20px rgba(255,107,0,0.4); position: relative;">
+            <div style="position: absolute; top: -3px; right: -3px; width: 25px; height: 25px; background: radial-gradient(circle, #fff 0%, transparent 70%); border-radius: 50%; animation: sparkle 2s infinite;"></div>
+            
+            <div style="text-align: center;">
+              <div style="background: #ff6b00; color: #fff; display: inline-block; padding: 0.4rem 1.2rem; border-radius: 20px; font-weight: 800; font-size: 0.9em; margin-bottom: 0.75rem;">
+                🎉 40% OFF ANNUAL!
+              </div>
+              
+              <h4 style="margin: 0.5rem 0; color: #000; font-size: clamp(0.95em, 2.5vw, 1.15em); font-weight: 800;">
+                1-Year Membership Special
+              </h4>
+              
+              <div style="background: rgba(255,255,255,0.9); padding: 1rem; border-radius: 8px; border: 2px solid #ff6b00; margin: 0.75rem 0;">
+                <div style="font-size: clamp(0.75em, 2vw, 0.85em); color: #666; font-weight: 600; margin-bottom: 0.5rem;">48 Classes (1 Full Year)</div>
+                <div style="font-size: clamp(1.8em, 5vw, 2.5em); font-weight: 800; color: #ff6b00; margin: 0.25rem 0;">$2,388</div>
+                <div style="font-size: clamp(0.85em, 2.2vw, 1em); color: #28a745; font-weight: 700; margin: 0.25rem 0;">Save $1,592!</div>
+                <div style="font-size: clamp(0.75em, 2vw, 0.85em); color: #007bff; font-weight: 700; margin-top: 0.5rem;">That's only $46/week!</div>
+              </div>
+              
+              <p style="margin: 0.75rem 0 0.5rem 0; font-size: clamp(0.65em, 1.6vw, 0.72em); color: #333; font-style: italic; line-height: 1.3;">
+                *First-time enrollments only. Ask your advisor if promotion is available.
+              </p>
+              
+              <a href="https://learn.stemsphere.academy/login.html" style="display: inline-block; margin-top: 0.6rem; background: linear-gradient(135deg, #28a745, #20c997); color: #fff; padding: clamp(0.5rem, 1.8vw, 0.7rem) clamp(1rem, 3.5vw, 1.5rem); border-radius: 6px; text-decoration: none; font-weight: 800; font-size: clamp(0.8em, 2vw, 0.9em); box-shadow: 0 3px 12px rgba(40,167,69,0.4);">
+                🚀 Book Free Session
+              </a>
+            </div>
+          </div>
         </div>
         <ul class="pricing-features">
           <li>Just 3 students per class</li>
@@ -1088,6 +964,36 @@
           <div class="price-main">$799</div>
           <span class="period">12 Classes (3 Months)</span>
           <span class="weekly-price">Only $66/week</span>
+          
+          <!-- 🎯 ANNUAL PROMOTION FOR SMALL GROUP -->
+          <div style="margin: 1rem 0; padding: 1.2rem; background: linear-gradient(135deg, #ffd700, #ffed4e); border-radius: 10px; border: 3px solid #ff6b00; box-shadow: 0 6px 20px rgba(255,107,0,0.4); position: relative;">
+            <div style="position: absolute; top: -3px; right: -3px; width: 25px; height: 25px; background: radial-gradient(circle, #fff 0%, transparent 70%); border-radius: 50%; animation: sparkle 2s infinite;"></div>
+            
+            <div style="text-align: center;">
+              <div style="background: #ff6b00; color: #fff; display: inline-block; padding: 0.4rem 1.2rem; border-radius: 20px; font-weight: 800; font-size: 0.9em; margin-bottom: 0.75rem;">
+                🎉 40% OFF ANNUAL!
+              </div>
+              
+              <h4 style="margin: 0.5rem 0; color: #000; font-size: clamp(0.95em, 2.5vw, 1.15em); font-weight: 800;">
+                1-Year Membership Special
+              </h4>
+              
+              <div style="background: rgba(255,255,255,0.9); padding: 1rem; border-radius: 8px; border: 2px solid #ff6b00; margin: 0.75rem 0;">
+                <div style="font-size: clamp(0.75em, 2vw, 0.85em); color: #666; font-weight: 600; margin-bottom: 0.5rem;">48 Classes (1 Full Year)</div>
+                <div style="font-size: clamp(1.8em, 5vw, 2.5em); font-weight: 800; color: #ff6b00; margin: 0.25rem 0;">$1,918</div>
+                <div style="font-size: clamp(0.85em, 2.2vw, 1em); color: #28a745; font-weight: 700; margin: 0.25rem 0;">Save $1,278!</div>
+                <div style="font-size: clamp(0.75em, 2vw, 0.85em); color: #007bff; font-weight: 700; margin-top: 0.5rem;">That's only $37/week!</div>
+              </div>
+              
+              <p style="margin: 0.75rem 0 0.5rem 0; font-size: clamp(0.65em, 1.6vw, 0.72em); color: #333; font-style: italic; line-height: 1.3;">
+                *First-time enrollments only. Ask your advisor if promotion is available.
+              </p>
+              
+              <a href="https://learn.stemsphere.academy/login.html" style="display: inline-block; margin-top: 0.6rem; background: linear-gradient(135deg, #28a745, #20c997); color: #fff; padding: clamp(0.5rem, 1.8vw, 0.7rem) clamp(1rem, 3.5vw, 1.5rem); border-radius: 6px; text-decoration: none; font-weight: 800; font-size: clamp(0.8em, 2vw, 0.9em); box-shadow: 0 3px 12px rgba(40,167,69,0.4);">
+                🚀 Book Free Session
+              </a>
+            </div>
+          </div>
         </div>
         <ul class="pricing-features">
           <li>6 students per class</li>
@@ -1218,12 +1124,10 @@
 <div id="anonymousAdvisorChatModal" style="display: none; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(0,0,0,0.8); z-index: 9999; align-items: center; justify-content: center;">
   <div style="background: #fff; border-radius: 16px; width: 90%; max-width: 700px; max-height: 90vh; display: flex; flex-direction: column; box-shadow: 0 20px 60px rgba(0,0,0,0.5);">
     
-    <!-- Header with Customer Service Team Stack (GREEN) -->
     <div style="background: linear-gradient(135deg, #00ff88, #00c853); color: #000; padding: 1.5rem 2rem; border-radius: 16px 16px 0 0; position: relative;">
       <button onclick="closeAnonymousChat()" style="position: absolute; top: 1rem; right: 1rem; background: rgba(0,0,0,0.2); color: #000; border: none; width: 40px; height: 40px; border-radius: 50%; cursor: pointer; font-size: 1.5em; font-weight: 700; display: flex; align-items: center; justify-content: center; transition: all 0.3s;">×</button>
       
       <div style="display: flex; align-items: center; gap: 1rem;">
-        <!-- Stacked Customer Service Team Avatars -->
         <div style="position: relative; width: 180px; height: 100px;">
           <img src="https://i.postimg.cc/mrbw5b7S/Tutor1.png" alt="Support Team" style="position: absolute; top: 0; left: 0; width: 70px; height: 70px; border-radius: 50%; border: 3px solid #fff; object-fit: cover; box-shadow: 0 4px 12px rgba(0,0,0,0.3); z-index: 4;" loading="lazy">
           <img src="https://i.postimg.cc/bvzTBz19/Tutor2.png" alt="Support Team" style="position: absolute; top: 0; left: 40px; width: 70px; height: 70px; border-radius: 50%; border: 3px solid #fff; object-fit: cover; box-shadow: 0 4px 12px rgba(0,0,0,0.3); z-index: 3;" loading="lazy">
@@ -1238,7 +1142,6 @@
       </div>
     </div>
 
-    <!-- Messages Container -->
     <div id="anonymousChatMessages" style="flex: 1; overflow-y: auto; padding: 1.5rem; background: #f8f9fa; min-height: 300px; max-height: 400px;">
       <div style="text-align: center; padding: 2rem; color: #999;">
         <div style="font-size: 3em; margin-bottom: 1rem;">💬</div>
@@ -1246,7 +1149,6 @@
       </div>
     </div>
 
-    <!-- Input Box -->
     <div style="padding: 1.5rem; background: #fff; border-top: 2px solid #eee; border-radius: 0 0 16px 16px;">
       <textarea id="anonymousChatInput" placeholder="Ask about courses, pricing, schedules..." style="width: 100%; padding: 1rem; border: 2px solid #ddd; border-radius: 8px; font-size: 1em; font-family: inherit; resize: vertical; min-height: 80px; margin-bottom: 1rem; background: #f5f5f5; color: #999; cursor: not-allowed;" disabled readonly></textarea>
       <button onclick="redirectToLogin()" style="width: 100%; background: linear-gradient(135deg, #007bff, #0056b3); color: #fff; padding: 1rem; border: none; border-radius: 8px; font-size: 1.1em; font-weight: 700; cursor: pointer; transition: all 0.3s;">
@@ -1691,91 +1593,6 @@
   animation: pulse 2s infinite;
 }
 
-.blog-section {
-  background: linear-gradient(135deg, #1a1a2e, #16213e);
-  padding: 3rem 1rem;
-}
-
-.blog-section h2 {
-  font-size: 2.2rem;
-  text-align: center;
-  margin-bottom: 0.8rem;
-  background: linear-gradient(135deg, #fff, #00c6ff);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-.blog-section p.intro {
-  text-align: center;
-  max-width: 800px;
-  margin: 0 auto 2rem;
-  font-size: 1.1rem;
-  color: rgba(255,255,255,0.8);
-}
-
-.blog-content-wrapper {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
-  align-items: center;
-  padding: 0 1rem;
-}
-
-.blog-image {
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
-}
-
-.blog-image img {
-  width: 100%;
-  height: auto;
-  display: block;
-  transition: transform 0.5s;
-}
-
-.blog-image:hover img {
-  transform: scale(1.05);
-}
-
-.blog-text h3 {
-  font-size: 1.8rem;
-  margin-bottom: 0.8rem;
-  color: #00c6ff;
-}
-
-.blog-text p {
-  font-size: 1rem;
-  line-height: 1.7;
-  color: rgba(255,255,255,0.9);
-  margin-bottom: 0.8rem;
-}
-
-.blog-list {
-  list-style: none;
-  margin: 1rem 0;
-}
-
-.blog-list li {
-  padding: 0.5rem 0;
-  padding-left: 1.8em;
-  position: relative;
-  font-size: 1rem;
-  color: rgba(255,255,255,0.9);
-}
-
-.blog-list li::before {
-  content: '→';
-  position: absolute;
-  left: 0;
-  color: #00ff88;
-  font-weight: 700;
-  font-size: 1.2em;
-}
-
 .cta-banner {
   background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
   padding: 2.5rem 1rem;
@@ -1900,10 +1717,6 @@ footer {
     gap: 1rem;
   }
   
-  .pricing-card.featured {
-    transform: scale(1);
-  }
-  
   .features-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
@@ -1919,6 +1732,7 @@ footer {
     gap: 1.5rem;
   }
 }
+
 @media (max-width: 480px) {
   .features-grid,
   .ebook-grid {
@@ -1929,7 +1743,6 @@ footer {
     grid-template-columns: 1fr;
   }
 }
-
 </style>
 
 <script defer src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
