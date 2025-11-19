@@ -1921,8 +1921,39 @@ async function checkAdvisorAvailability() {
   }
 }
 
-window.openAnonymousAdvisorChat = function() {
-  window.location.href = 'https://learn.stemsphere.academy/instant-session.html';
+window.openAnonymousAdvisorChat = async function() {
+  const { data: advisors } = await supabaseClient
+    .from('profiles')
+    .select('id, full_name, profile_photo_url, bio, years_experience, education, fun_fact, teaching_video_url')
+    .eq('role', 'teacher')
+    .eq('is_advisor', true)
+    .eq('advisor_available', true)
+    .limit(1);
+
+  if (!advisors || advisors.length === 0) {
+    alert('⚠️ No advisors available right now. Please sign up or try again later!\n\nCreate an account: ' + window.location.origin + '/login.html');
+    return;
+  }
+
+  currentAdvisorId = advisors[0].id;
+  currentAdvisorData = advisors[0];
+  document.getElementById('anonymousAdvisorChatModal').style.display = 'flex';
+  
+  const container = document.getElementById('anonymousChatMessages');
+  container.innerHTML = `
+    <div style="text-align: center; padding: 2rem; color: #999;">
+      <div style="font-size: 3em; margin-bottom: 1rem;">💬</div>
+      <p style="font-size: 1.1em; color: #666;">Login or sign up to start chatting with our team!</p>
+    </div>
+  `;
+}
+
+window.redirectToLogin = function() {
+  window.location.href = 'https://learn.stemsphere.academy/login.html';
+}
+
+window.closeAnonymousChat = function() {
+  document.getElementById('anonymousAdvisorChatModal').style.display = 'none';
 }
 
 checkAdvisorAvailability();
