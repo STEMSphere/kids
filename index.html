@@ -749,19 +749,22 @@
 </section>
 
 <div id="highIntentCTA">
+  <!-- Live Chat Button (shows when advisor available) - ABOVE RED BUTTON -->
   <div id="liveChatWrapper" style="display:none; margin-bottom: 1rem;">
     <button onclick="openAnonymousAdvisorChat()" id="liveChatBtn">
       💬 Chat with Advisor NOW - Free!
     </button>
   </div>
   
-  <div id="advisorStatusIndicator" style="display: none;">
-    <span>
-      <span class="status-dot"></span>
+  <!-- Status Indicator (shows when advisor is online) -->
+  <div id="advisorStatusIndicator" style="display: none; margin: 1rem auto;">
+    <span style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.75rem 1.5rem; background: rgba(0,255,136,0.2); border: 2px solid #00ff88; border-radius: 8px; color: #fff; font-weight: 600;">
+      <span style="width: 10px; height: 10px; background: #00ff88; border-radius: 50%; animation: pulse 2s infinite;"></span>
       Advisor Online Now
     </span>
   </div>
   
+  <!-- Regular CTA (always visible) -->
   <a href="https://learn.stemsphere.academy/login.html">
     🚀 Book Your Free Enrollment Session Now
   </a>
